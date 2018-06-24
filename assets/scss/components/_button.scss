@@ -1,0 +1,101 @@
+.button {
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  display: inline-flex;
+  font-family: inherit;
+  line-height: 1.5;
+  padding: 0.5em 0.75em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition-property: border-color, background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  white-space: nowrap;
+}
+
+.button:active,
+.button:focus,
+.button:hover {
+  border-color: #aaa;
+}
+
+@mixin button-color-variant($bg, $text) {
+  background-color: $bg;
+  border-color: $bg;
+  color: $text;
+
+  &:focus,
+  &:hover {
+    background-color: darken($bg, 5%);
+    border-color: darken($bg, 5%);
+  }
+}
+
+.button--primary {
+  @include button-color-variant($color-primary, $color-text-light);
+}
+
+.button--secondary {
+  @include button-color-variant($color-secondary, $color-text-light);
+}
+
+.button--info {
+  @include button-color-variant(#0065c4, $color-text-light);
+}
+
+.button--success {
+  @include button-color-variant(#00a500, $color-text-light);
+}
+
+.button--warning {
+  @include button-color-variant(#eca500, $color-text-light);
+}
+
+.button--danger {
+  @include button-color-variant(#d50000, $color-text-light);
+}
+
+.button--small {
+  font-size: 0.75em;
+}
+
+.button--medium {
+  font-size: 1.2em;
+}
+
+.button--big {
+  font-size: 1.4em;
+}
+
+.button--rounded {
+  border-radius: 0.25em;
+}
+
+.button--shadow {
+  box-shadow: 0.15em 0.2em 0 rgba(0, 0, 0, 0.25);
+  transition-property: box-shadow, margin;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+
+.button--shadow:active,
+.button--shadow:focus,
+.button--shadow:hover {
+  box-shadow: none;
+  margin-bottom: -0.1em;
+  margin-top: 0.1em;
+}
+
+.button__icon {
+  font-size: 1.5em;
+  margin: -0.25em 0;
+}
+
+.button__icon:first-child {
+  margin-right: 0.5em;
+}
+
+.button__icon:last-child {
+  margin-left: 0.5em;
+}

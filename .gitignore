@@ -1,0 +1,18 @@
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+
+# VScode config
+.vscode
+
+# Nuxt generate
+dist
+
+# Environment files
+.env
+.envl

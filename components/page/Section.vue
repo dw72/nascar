@@ -1,0 +1,102 @@
+<template>
+  <section class="section">
+    <header v-show="header === 'visible'" v-if="header !== 'removed'" class="section__header">
+      <slot name="header">
+        <h2 v-if="title">{{ title }}</h2>
+        <hr v-if="title || description">
+        <p v-if="description">{{ description }}</p>
+      </slot>
+    </header>
+    <div class="section__content">
+      <slot/>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+  props: {
+    title: { type: String, default: '' },
+    description: { type: String, default: '' },
+    header: {
+      type: String,
+      default: 'visible',
+      validator: value => {
+        return ['visible', 'hidden', 'removed'].includes(value)
+      }
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+.section {
+  background: inherit;
+  display: flex;
+  flex-direction: column;
+
+  &:first-child {
+    margin-top: -1em;
+  }
+
+  &:last-child {
+    margin-bottom: -1em;
+  }
+}
+
+.section--full-width {
+  margin-left: -1em;
+  margin-right: -1em;
+  padding: 0 1em;
+}
+
+@media screen and (min-width: 960px) {
+  .section--horizontal {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.section__header {
+  background: inherit;
+  text-align: center;
+  margin: 1em 0;
+}
+
+.section__header hr {
+  background: inherit;
+  border: 0;
+  width: 8em;
+  border-bottom: 2px solid rgba($color-primary, 0.25);
+  position: relative;
+  overflow: visible;
+
+  &::after {
+    background: inherit;
+    color: rgba($color-secondary, 0.45);
+    content: "\f10b";
+    font-family: "Material Design Icons";
+    font-size: 1.5em;
+    padding: 0 0.5em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.section__header p {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.section__content {
+  margin: 1em 0;
+}
+
+.section__content,
+.section__content > div[class$="wrapper"] {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+</style>
