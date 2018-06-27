@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { testimonials } from '@/assets/data/testimonials.json'
+import testimonials from '@/assets/data/testimonials.json'
 import PageSection from '@/components/page/Section.vue'
 import Testimonial from './Testimonial.vue'
 
