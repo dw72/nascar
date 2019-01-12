@@ -1,10 +1,10 @@
 <template>
   <main :class="{'not-android': !isAndroid}">
-    <slider />
-    <services-list />
-    <call-to-action />
-    <strengths-list />
-    <testimonials-list />
+    <slider/>
+    <services-list/>
+    <call-to-action/>
+    <strengths-list/>
+    <testimonials-list/>
   </main>
 </template>
 
@@ -16,11 +16,19 @@ import StrengthsList from '@/components/front/StrengthsList.vue'
 import TestimonialsList from '@/components/front/TestimonialsList.vue'
 
 export default {
-  components: { Slider, ServicesList, CallToAction, StrengthsList, TestimonialsList },
+  components: {
+    Slider,
+    ServicesList,
+    CallToAction,
+    StrengthsList,
+    TestimonialsList
+  },
   asyncData: ({ req }) => ({
     userAgent: req
       ? req.headers['user-agent']
-      : typeof navigator !== 'undefined' ? navigator.userAgent : 'No user agent (generated)'
+      : typeof navigator !== 'undefined'
+        ? navigator.userAgent
+        : 'No user agent (generated)'
   }),
   computed: {
     isAndroid() {
@@ -29,8 +37,8 @@ export default {
       }
     }
   },
-  async fetch({ store }) {
-    await store.dispatch('slider/FETCH_SLIDES_REQUEST')
+  async created() {
+    await this.$store.dispatch('slider/FETCH_SLIDES_REQUEST')
   }
 }
 </script>

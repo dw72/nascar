@@ -1,6 +1,9 @@
+const pkg = require('./package')
 require('dotenv').config()
 
 module.exports = {
+  mode: 'spa',
+
   /*
   ** Headers of the page
   */
@@ -18,20 +21,23 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat%7CExo+2' },
-      { rel: 'stylesheet', href: 'https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css' }
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Montserrat%7CExo+2'
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css'
+      }
     ]
   },
+
   /*
-  ** Environment variables
-  */
-  env: {
-    GMAPS_API_KEY: process.env.GMAPS_API_KEY
-  },
-  /*
-  ** Customize the progress bar color
+  ** Customize the progress-bar color
   */
   loading: { color: '#3B8070' },
+
   /*
   ** Router configuration
   */
@@ -39,15 +45,65 @@ module.exports = {
     linkActiveClass: 'menu__link--active',
     linkExactActiveClass: 'menu__link--exact'
   },
+
+  /*
+  ** Global CSS
+  */
+  css: ['swiper/dist/css/swiper.css', '@/assets/scss/theme.scss'],
+
+  /*
+  ** Plugins to load before mounting the App
+  */
+  plugins: [
+    { src: '@/plugins/swiper', ssr: false },
+    { src: '@/plugins/vue-googlemaps', ssr: false }
+  ],
+
+  /*
+  ** Nuxt.js modules
+  */
+  modules: [
+    // Doc: https://github.com/nuxt-community/axios-module#usage
+    '@nuxtjs/axios',
+    '@nuxtjs/dotenv',
+    'nuxt-sass-resources-loader'
+  ],
+  /*
+  ** Axios module configuration
+  */
+  axios: {
+    // See https://github.com/nuxt-community/axios-module#options
+  },
+  /*
+  ** Nuxt SASS resources loader module configuration
+  */
+  sassResources: [
+    '@/assets/scss/variables/*.scss',
+    '@/assets/scss/mixins/**/*.scss'
+  ],
+
+  /*
+  ** Environment variables
+  */
+  env: {
+    GMAPS_API_KEY: process.env.GMAPS_API_KEY
+  },
+
+  /*
+  ** Nuxt generate config
+  */
+  generate: { fallback: true, subFolders: false },
+
   /*
   ** Build configuration
   */
   build: {
     /*
-    ** Run ESLint on save
+    ** You can extend webpack config here
     */
-    extend(config, { isDev, isClient }) {
-      if (isDev && isClient) {
+    extend(config, ctx) {
+      // Run ESLint on save
+      if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
@@ -55,12 +111,6 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    },
-    extractCSS: true
-  },
-  generate: { fallback: true, subFolders: false },
-  css: ['swiper/dist/css/swiper.css', '@/assets/scss/theme.scss'],
-  modules: ['@nuxtjs/dotenv', '@nuxtjs/axios', 'nuxt-sass-resources-loader'],
-  sassResources: ['@/assets/scss/variables/*.scss', '@/assets/scss/mixins/**/*.scss'],
-  plugins: [{ src: '@/plugins/swiper', ssr: false }, { src: '@/plugins/vue-googlemaps', ssr: false }]
+    }
+  }
 }

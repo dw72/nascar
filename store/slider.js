@@ -18,7 +18,9 @@ export const actions = {
     const { data } = await this.$axios.get('https://www.premio.pl')
     const page = HTMLParser.parse(data, {})
     // @ts-ignore
-    const banners = page.querySelectorAll('#carousel-top-carousel .item .banner')
+    const banners = page.querySelectorAll(
+      '#carousel-top-carousel .item .banner'
+    )
     const slides = banners.map(item => {
       const link = item.querySelector('a')
       const image = item.querySelector('img')
