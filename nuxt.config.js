@@ -1,4 +1,3 @@
-const pkg = require('./package')
 require('dotenv').config()
 
 module.exports = {
@@ -54,10 +53,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-    { src: '@/plugins/swiper', ssr: false },
-    { src: '@/plugins/vue-googlemaps', ssr: false }
-  ],
+  plugins: [{ src: '@/plugins/vue-googlemaps', ssr: false }],
 
   /*
   ** Nuxt.js modules
@@ -66,6 +62,7 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
     '@nuxtjs/dotenv',
+    '@nuxtjs/pwa',
     'nuxt-sass-resources-loader'
   ],
   /*
@@ -73,6 +70,39 @@ module.exports = {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+    proxy: true
+  },
+  proxy: {
+    'http://localhost:3000/.netlify/': {
+      target: 'http://localhost:9000',
+      pathRewrite: { '^/.netlify/functions/': '' }
+    }
+  },
+  /*
+  ** PWA module configuration
+  */
+  workbox: {
+    offlineAssets: ['/.netlify/functions/.*'],
+    runtimeCaching: [
+      {
+        urlPattern: '^https://www.premio.pl/assets/.*',
+        handler: 'cache-first',
+        strategyOptions: {
+          cacheName: 'premio-slider-images',
+          cacheableResponse: { statuses: [0, 200] },
+          cacheExpiration: {
+            maxEntries: 10,
+            maxAgeSeconds: 120
+          }
+        }
+      }
+    ]
+  },
+  manifest: {
+    name: 'PPHU Nascar',
+    short_name: 'Nascar',
+    theme_color: '#00569d',
+    background_color: '#00569d'
   },
   /*
   ** Nuxt SASS resources loader module configuration

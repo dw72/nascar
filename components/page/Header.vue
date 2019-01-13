@@ -12,7 +12,7 @@
       </div>
     </div>
 
-    <navigation/>
+    <navigation />
   </header>
 </template>
 

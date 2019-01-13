@@ -9,7 +9,8 @@
       :key="testimonial.client"
       :client="testimonial.client"
       :city="testimonial.city"
-      :opinion="testimonial.opinion" />
+      :opinion="testimonial.opinion"
+    />
   </page-section>
 </template>
 

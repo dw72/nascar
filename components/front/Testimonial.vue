@@ -1,7 +1,7 @@
 <template>
   <div class="testimonial">
     <div class="testimonial__header">
-      <span class="mdi mdi-account-circle"/>
+      <span class="mdi mdi-account-circle" />
       <h3>
         {{ client }}
         <small>- {{ city }}</small>

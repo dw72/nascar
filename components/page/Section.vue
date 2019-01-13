@@ -8,7 +8,7 @@
       </slot>
     </header>
     <div class="section__content">
-      <slot/>
+      <slot />
     </div>
   </section>
 </template>

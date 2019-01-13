@@ -1,10 +1,10 @@
 <template>
   <main :class="{'not-android': !isAndroid}">
-    <slider/>
-    <services-list/>
-    <call-to-action/>
-    <strengths-list/>
-    <testimonials-list/>
+    <slider />
+    <services-list />
+    <call-to-action />
+    <strengths-list />
+    <testimonials-list />
   </main>
 </template>
 
@@ -35,10 +35,8 @@ export default {
       if (this.userAgent) {
         return this.userAgent.toLowerCase().includes('android')
       }
+      return false
     }
-  },
-  async created() {
-    await this.$store.dispatch('slider/FETCH_SLIDES_REQUEST')
   }
 }
 </script>

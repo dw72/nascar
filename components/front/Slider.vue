@@ -1,35 +1,26 @@
 <template>
-  <page-section class="slider" header="hidden" title="Promocje">
-    <div class="swiper">
-      <div v-swiper:slider="options">
-        <div class="swiper-wrapper">
-          <div v-for="(slide, idx) in slides" :key="idx" class="swiper-slide">
-            <a
-              v-if="slide.url"
-              :href="slide.url"
-              target="_blank"
-              rel="nofollow"
-              tabindex="-1"
-            >
-              <img :src="slide.img" :alt="slide.alt">
-            </a>
-            <img v-else :src="slide.img" :alt="slide.alt">
-          </div>
-        </div>
-        <div class="swiper-pagination"/>
-        <div class="swiper-button swiper-button-prev" @click="slider.slidePrev()"/>
-        <div class="swiper-button swiper-button-next" @click="slider.slideNext()"/>
-      </div>
-    </div>
+  <page-section v-if="slides.length > 0" class="slider" header="hidden" title="Promocje">
+    <swiper :options="options">
+      <swiper-slide v-for="(slide, idx) in slides" :key="idx">
+        <a v-if="slide.url" :href="slide.url" target="_blank" rel="nofollow" tabindex="-1">
+          <img :src="slide.img" :alt="slide.alt">
+        </a>
+        <img v-else :src="slide.img" :alt="slide.alt">
+      </swiper-slide>
+      <div slot="pagination" class="swiper-pagination"/>
+      <div slot="button-prev" class="swiper-button swiper-button-prev"/>
+      <div slot="button-next" class="swiper-button swiper-button-next"/>
+    </swiper>
   </page-section>
 </template>
 
 <script>
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import { mapState } from 'vuex'
 import PageSection from '@/components/page/Section.vue'
 
 export default {
-  components: { PageSection },
+  components: { PageSection, swiper, swiperSlide },
   data() {
     return {
       options: {
@@ -44,15 +35,18 @@ export default {
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
-          renderBullet: (idx, className) => `<a href="#" class="${className}">${idx + 1}</a>`
+          renderBullet: (idx, className) =>
+            `<a href="#" class="${className}">${idx + 1}</a>`
         },
-        slidesPerView: 1,
-        spaceBetween: 16
+        slidesPerView: 'auto'
       }
     }
   },
   computed: {
     ...mapState('slider', ['slides'])
+  },
+  async mounted() {
+    await this.$store.dispatch('slider/FETCH_SLIDES_REQUEST')
   }
 }
 </script>
@@ -72,7 +66,7 @@ export default {
   display: none;
 }
 
-.swiper:hover .swiper-button,
+.swiper-container:hover .swiper-button,
 .swiper-button:focus {
   display: initial;
 }
@@ -80,7 +74,7 @@ export default {
 .swiper-pagination {
   display: flex;
   justify-content: flex-end;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.55em;
   padding-right: 2em;
 

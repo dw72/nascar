@@ -12,12 +12,12 @@
             <h3>PPHU Nascar</h3>
           </div>
           <div class="contact__address">
-            <span class="mdi mdi-map-marker"/>
+            <span class="mdi mdi-map-marker" />
             <span>ul. Ostrowska 157,</span>
             <span>63-700 Krotoszyn</span>
           </div>
           <div class="contact__email">
-            <span class="mdi mdi-email"/>
+            <span class="mdi mdi-email" />
             <span>biuro@nascar.com.pl</span>
           </div>
         </div>
@@ -27,11 +27,11 @@
             <h4 class="department__name">{{ department.name }}</h4>
             <div class="department__content">
               <div class="department__phone">
-                <span class="mdi mdi-phone"/>
+                <span class="mdi mdi-phone" />
                 <span>{{ department.phone }}</span>
               </div>
               <div class="department__open">
-                <span class="mdi mdi-clock"/>
+                <span class="mdi mdi-clock" />
                 <div>
                   <p v-for="item in department.opening" :key="item.day">
                     <span>{{ item.day }} </span>

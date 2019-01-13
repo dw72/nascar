@@ -12,7 +12,7 @@
       aria-controls="main-menu"
       @click="toggle"
     >
-      <span class="navbar__burger"><span/><span/><span/></span>
+      <span class="navbar__burger"><span /><span /><span /></span>
       <span aria-hidden="true">Menu</span>
     </button>
     <ul
@@ -21,10 +21,11 @@
         'menu': true,
         'navbar__menu': true,
         'navbar__menu--active': active
-    }">
+      }"
+    >
       <li class="menu__item">
         <nuxt-link class="menu__link menu__link--main-page" to="/">
-          <span class="mdi mdi-home navbar__icon"/>
+          <span class="mdi mdi-home navbar__icon" />
           <span>Strona główna</span>
         </nuxt-link>
       </li>
@@ -35,7 +36,7 @@
     <ul class="navbar__actions menu">
       <li class="menu__item">
         <a class="menu__link" href="https://nascar.premio.pl/reservation">
-          <span class="mdi mdi-calendar-check navbar__icon"/>
+          <span class="mdi mdi-calendar-check navbar__icon" />
           <span>Zarezerwuj termin</span>
         </a>
       </li>
