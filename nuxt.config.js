@@ -85,7 +85,7 @@ module.exports = {
     runtimeCaching: [
       {
         urlPattern: '^https://www.premio.pl/assets/.*',
-        handler: 'cache-first',
+        handler: 'cacheFirst',
         strategyOptions: {
           cacheName: 'premio-slider-images',
           cacheableResponse: { statuses: [0, 200] },
