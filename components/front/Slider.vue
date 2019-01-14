@@ -28,6 +28,7 @@ export default {
         autoplay: { delay: 5000 },
         keyboard: { enabled: true },
         loop: true,
+        lazy: true,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev'

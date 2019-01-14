@@ -1,3 +1,6 @@
+import { getSlider, putSlider } from '@/services/storage.js'
+import { differenceInCalendarDays } from 'date-fns'
+
 export const FETCH_SLIDES_REQUEST = 'FETCH_SLIDES_REQUEST'
 export const FETCH_SLIDES_SUCCESS = 'FETCH_SLIDES_SUCCESS'
 
@@ -13,10 +16,22 @@ export const mutations = {
 
 export const actions = {
   async [FETCH_SLIDES_REQUEST]({ commit }) {
-    const { data } = await this.$axios.get(
-      '/.netlify/functions/getPremioSlider'
-    )
+    let slider = await getSlider()
 
-    commit(FETCH_SLIDES_SUCCESS, data)
+    if (
+      !slider ||
+      differenceInCalendarDays(new Date(), new Date(slider.date)) >= 7
+    ) {
+      const { data } = await this.$axios.get(
+        '/.netlify/functions/getPremioSlider'
+      )
+
+      console.log(data)
+      slider = { slides: data }
+
+      putSlider(slider.slides)
+    }
+
+    commit(FETCH_SLIDES_SUCCESS, slider.slides)
   }
 }
