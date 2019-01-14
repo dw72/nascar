@@ -1,4 +1,4 @@
 [build]
-  command = "npm run generate"
+  command = "npm run deploy"
   functions = "lambda" #  netlify-lambda reads this
   publish = "dist"
