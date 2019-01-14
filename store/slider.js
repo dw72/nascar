@@ -20,7 +20,7 @@ export const actions = {
 
     if (
       !slider ||
-      differenceInCalendarDays(new Date(), new Date(slider.date)) >= 7
+      differenceInCalendarDays(new Date(), new Date(slider.date)) >= 1
     ) {
       const { data } = await this.$axios.get(
         '/.netlify/functions/getPremioSlider'
