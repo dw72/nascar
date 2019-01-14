@@ -82,3 +82,6 @@ dist
 
 # Service worker
 sw.*
+
+# Lambda functions build output
+lambda/
