@@ -82,7 +82,6 @@ module.exports = {
   ** PWA module configuration
   */
   workbox: {
-    offlineAssets: ['/.netlify/functions/.*'],
     runtimeCaching: [
       {
         urlPattern: '^https://www.premio.pl/assets/.*',
