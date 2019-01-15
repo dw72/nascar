@@ -22,10 +22,6 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Montserrat%7CExo+2'
-      },
-      {
-        rel: 'stylesheet',
         href:
           'https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css'
       }
@@ -63,11 +59,10 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/dotenv',
     '@nuxtjs/pwa',
-    'nuxt-sass-resources-loader'
+    'nuxt-sass-resources-loader',
+    'nuxt-webfontloader',
+    'nuxt-svg-loader'
   ],
-  /*
-  ** Axios module configuration
-  */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
     proxy: true
@@ -78,13 +73,10 @@ module.exports = {
       pathRewrite: { '^/.netlify/functions/': '' }
     }
   },
-  /*
-  ** PWA module configuration
-  */
   workbox: {
     runtimeCaching: [
       {
-        urlPattern: '^https://www.premio.pl/assets/.*',
+        urlPattern: '^https://www.premio.pl/assets/resized_images/.*',
         handler: 'cacheFirst',
         strategyOptions: {
           cacheName: 'premio-slider-images',
@@ -103,13 +95,15 @@ module.exports = {
     theme_color: '#00569d',
     background_color: '#00569d'
   },
-  /*
-  ** Nuxt SASS resources loader module configuration
-  */
   sassResources: [
     '@/assets/scss/variables/*.scss',
     '@/assets/scss/mixins/**/*.scss'
   ],
+  webfontloader: {
+    google: {
+      families: ['Montserrat', 'Exo+2']
+    }
+  },
 
   /*
   ** Environment variables

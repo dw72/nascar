@@ -1,56 +1,50 @@
+
 <template>
   <header class="page__header">
-
     <div class="branding">
       <div class="branding__nascar">
         <h1 class="hidden">PPHU Nascar</h1>
-        <img src="/images/logo/nascar.svg" alt="">
+        <nascar-logo/>
       </div>
       <div class="branding__premio">
         <h2 class="hidden">Przedstawiciel Premio - Opony i Autoserwis</h2>
-        <img src="/images/logo/premio.svg" alt="">
+        <premio-logo/>
       </div>
     </div>
 
-    <navigation />
+    <navigation/>
   </header>
 </template>
 
 <script>
+import NascarLogo from '@/assets/images/logo/nascar.svg'
+import PremioLogo from '@/assets/images/logo/premio.svg'
+
 import Navigation from './Navigation.vue'
 
 export default {
-  components: { Navigation }
+  components: { NascarLogo, PremioLogo, Navigation }
 }
 </script>
 
 <style>
-  .branding {
-    align-items: flex-end;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 2em;
-    margin-bottom: 2em;
-  }
+.branding {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
 
-  .branding__nascar img {
-    width: 250px;
+@media screen and (min-width: 768px) {
+  .branding {
+    justify-content: space-between;
   }
 
   .branding__premio,
   .slider {
-    display: none;
+    display: block;
   }
-
-  @media screen and (min-width: 768px) {
-    .branding {
-      justify-content: space-between;
-    }
-
-    .branding__premio,
-    .slider {
-      display: block;
-    }
-  }
+}
 </style>
