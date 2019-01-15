@@ -26,7 +26,6 @@ export const actions = {
         '/.netlify/functions/getPremioSlider'
       )
 
-      console.log(data)
       slider = { slides: data }
 
       putSlider(slider.slides)
