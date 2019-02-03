@@ -6,8 +6,9 @@
     <page-section
       class="diagnostic-services"
       title="Stacja kontroli pojazdów"
-      description="Posiadamy wieloletnie doświadczenie w tej dziedzinie co przekłada sięna wysoką jakość świadczonych przez nas usług. Oferujemy:"
+      description="Posiadamy wieloletnie doświadczenie co przekłada się na wysoką jakość świadczonych przez nas usług."
     >
+      <h3>Oferujemy:</h3>
       <div class="services-list">
         <div>
           <Icon name="shield-check-outline"/>
@@ -78,6 +79,11 @@ export default {
 
 <style lang="scss">
 .diagnostic-services {
+  h3 {
+    margin-top: 0;
+    text-align: center;
+  }
+
   .services-list {
     display: flex;
     flex-direction: column;
