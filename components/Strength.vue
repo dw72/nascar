@@ -1,13 +1,17 @@
 <template>
   <div class="strength">
-    <span :class="`strength__icon mdi mdi-${icon}`" aria-hidden="true" />
+    <!-- <span :class="`strength__icon mdi mdi-${icon}`" aria-hidden="true" /> -->
+    <Icon class="strength__icon" :name="icon"/>
     <h3 class="strength__title">{{ name }}</h3>
     <p class="strength__text">{{ description }}</p>
   </div>
 </template>
 
 <script>
+import Icon from '@/components/Icon'
+
 export default {
+  components: { Icon },
   props: {
     name: { type: String, required: true },
     description: { type: String, required: true },
@@ -22,14 +26,6 @@ export default {
   display: flex;
   flex-direction: column;
   margin-bottom: 1em;
-}
-
-.strength__icon {
-  border: 2px dashed rgba($color-primary, 0.25);
-  border-radius: 50%;
-  color: $color-icon;
-  font-size: 3em;
-  padding: 0 0.25em;
 }
 
 .strength__title {

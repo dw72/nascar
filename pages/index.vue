@@ -1,19 +1,19 @@
 <template>
   <main :class="{'not-android': !isAndroid}">
-    <slider />
-    <services-list />
-    <call-to-action />
-    <strengths-list />
-    <testimonials-list />
+    <slider/>
+    <services-list/>
+    <call-to-action/>
+    <strengths-list/>
+    <testimonials-list/>
   </main>
 </template>
 
 <script>
-import Slider from '@/components/front/Slider.vue'
-import ServicesList from '@/components/front/ServicesList.vue'
-import CallToAction from '@/components/front/CallToAction.vue'
-import StrengthsList from '@/components/front/StrengthsList.vue'
-import TestimonialsList from '@/components/front/TestimonialsList.vue'
+import Slider from '@/components/Slider.vue'
+import ServicesList from '@/components/ServicesList.vue'
+import CallToAction from '@/components/CallToAction.vue'
+import StrengthsList from '@/components/StrengthsList.vue'
+import TestimonialsList from '@/components/TestimonialsList.vue'
 
 export default {
   components: {

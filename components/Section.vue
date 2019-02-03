@@ -22,6 +22,7 @@ export default {
     fullWidth: { type: Boolean, default: false },
     noPadding: { type: Boolean, default: false },
     horizontal: { type: Boolean, default: false },
+    flex: { type: Boolean, default: false },
     header: {
       type: String,
       default: 'visible',
@@ -36,7 +37,8 @@ export default {
         section: true,
         'section--full-width': this.fullWidth,
         'section--no-padding': this.noPadding,
-        'section--horizontal': this.horizontal
+        'section--horizontal': this.horizontal,
+        'section--flex': this.flex
       }
     }
   }
@@ -107,18 +109,19 @@ export default {
 }
 
 .section__header p {
-  margin-left: 1em;
-  margin-right: 1em;
+  margin: 1em 1em 0;
 }
 
 .section__content {
   margin: 1em 0;
 }
 
-.section__content,
-.section__content > div[class$='wrapper'] {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+.section--flex {
+  .section__content,
+  .section__content > div[class$='wrapper'] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
 </style>

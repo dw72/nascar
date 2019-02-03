@@ -1,28 +1,30 @@
 <template>
   <main>
-    <page-section class="section--full-width images" header="hidden">
+    <!-- <page-section full-width no-padding class="images" header="removed">
       <img src="images/dignostic_software.jpg" alt class="image">
-    </page-section>
-    <page-section title="Stacja kontroli pojazdów">
+    </page-section>-->
+    <page-section
+      class="diagnostic-services"
+      title="Stacja kontroli pojazdów"
+      description="Posiadamy wieloletnie doświadczenie w tej dziedzinie co przekłada sięna wysoką jakość świadczonych przez nas usług. Oferujemy:"
+    >
+      <div class="services-list">
+        <div>
+          <Icon name="shield-check-outline"/>
+          <p>Obowiązkowe przeglądy rejestracyjne i badania okresowe samochodów osobowych, motocykli i ciągników rolniczych.</p>
+        </div>
+        <div>
+          <Icon name="alarm-plus"/>
+          <p>Wstępne przeglądy pozwalające na wykrycie i usunięcie usterek, które mogą wpłynąć na wynik obowiązkowego badania okresowego.</p>
+        </div>
+        <div>
+          <Icon name="map-outline"/>
+          <p>Sprawdzenie pojazdu przed kupnem, okresem letnim bądź zimowym oraz przed dłuższą podróżą.</p>
+        </div>
+      </div>
+      <p>Obsługujemy także pojazdy sprowadzone z zagranicy, powypadkowe i zasilane gazem.</p>
       <p>
-        Każdy samochód składa się z podzespołów, które poddawane są dużym obciążeniom. Pod wpływem eksploatacji, zużywają się i stają wadliwe.
-        Osiągi Twojego pojazdu pogarszają się, a Ty ryzykujesz swoje bezpieczeństwo. Ponadto, usterki, które nie zostaną wykryte odpowiednio wcześniej,
-        mogą prowadzić do kosztownych napraw w późniejszym etapie. Dlatego
-        <span
-          class="strong"
-        >przeglądy wykonywane regularnie to większa niezawodność pojazdu</span>.
-      </p>
-      <p>
-        Oferujemy obsługę diagnostyczną, przeglądy rejestracyjne oraz badania techniczne samochodów osobowych, motocykli i ciągników rolniczych.
-        W tym pojazdów sprowadzonych z zagranicy, powypadkowych i zasilanych gazem.
-      </p>
-      <p>
-        Posiadamy wieloletnie doświadczenie w tej dziedzinie co przekłada się
-        na wysoką jakość świadczonych przez nas usług. Pracujemy używając nowoczesnego sprzętu firmy
-        <a
-          href="http://www.wsop.pl"
-          rel="nofollow"
-        >WSOP</a> w tym profesjonalnej linii diagnostycznej drugiej generacji
+        Wykorzystujemy nowoczesną linię diagnostyczną
         <a
           href="http://www.wsop.pl/produkty/certus-made-in-poland/"
           rel="nofollow"
@@ -41,10 +43,11 @@
 </template>
 
 <script>
-import PageSection from '@/components/page/Section.vue'
+import PageSection from '@/components/Section.vue'
+import Icon from '@/components/Icon'
 
 export default {
-  components: { PageSection },
+  components: { PageSection, Icon },
   head() {
     return {
       title: 'Stacja kontroli'
@@ -74,32 +77,36 @@ export default {
 </script>
 
 <style lang="scss">
-.strong {
-  font-weight: bold;
-}
+.diagnostic-services {
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em 1em 0;
+    width: 100%;
 
-p {
-  margin: 0 0 1em;
-  // text-align: center;
-}
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+    }
 
-p:last-child {
-  margin-bottom: 0;
-}
+    > div {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1em;
+      flex-basis: 30%;
+    }
+  }
 
-.images {
-  display: block;
-  padding: 0;
-
-  .section__content {
-    margin: 0;
+  p {
+    text-align: center;
   }
 }
 
 table {
   border-spacing: 0;
   border-collapse: collapse;
-  width: 95%;
+  width: 100%;
 }
 
 td {
@@ -114,6 +121,6 @@ td:nth-child(2) {
 }
 
 tr:nth-child(2n + 1) td {
-  background-color: #d0e0ed;
+  background-color: rgba($color-primary, 0.1);
 }
 </style>

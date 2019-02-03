@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import PageSection from '@/components/page/Section.vue'
+import PageSection from '@/components/Section.vue'
 
 export default {
   components: { PageSection }

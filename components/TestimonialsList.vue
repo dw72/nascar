@@ -1,5 +1,6 @@
 <template>
   <page-section
+    flex
     full-width
     class="testimonials"
     title="Opinie naszych klientów"
@@ -17,7 +18,7 @@
 
 <script>
 import testimonials from '@/assets/data/testimonials.json'
-import PageSection from '@/components/page/Section.vue'
+import PageSection from '@/components/Section.vue'
 import Testimonial from './Testimonial.vue'
 
 export default {

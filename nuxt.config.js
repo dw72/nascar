@@ -23,7 +23,7 @@ module.exports = {
       {
         rel: 'stylesheet',
         href:
-          'https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css'
+          'https://cdn.materialdesignicons.com/3.4.93/css/materialdesignicons.min.css'
       }
     ]
   },

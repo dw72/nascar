@@ -10,7 +10,7 @@
 
 html {
   font-weight: 400;
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -29,7 +29,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 img {
@@ -45,6 +45,10 @@ img {
   display: none;
 }
 
+.strong {
+  font-weight: bold;
+}
+
 // COMPONENTS
 
-@import "./components/_button.scss";
+@import './components/_button.scss';

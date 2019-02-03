@@ -1,12 +1,13 @@
 <template>
   <page-section
+    flex
     class="strengths"
     title="Dlaczego warto nam zaufać?"
     description="Wszyscy, którzy skorzystali z naszych usług jednoznacznie wskazują na nasz profesjonalizm i zaangażowanie w rozwiązywanie postawionych przed nami problemów. Zgodnie podkreślają nasze najważniejsze atuty."
   >
     <div class="strengths__wrapper">
       <div class="strengths__image">
-        <img src="/images/mechanic.png" alt="">
+        <img src="/images/mechanic.png" alt>
       </div>
       <div class="strengths__items">
         <strength
@@ -23,7 +24,7 @@
 
 <script>
 import strengths from '@/assets/data/strengths.json'
-import PageSection from '@/components/page/Section.vue'
+import PageSection from '@/components/Section.vue'
 import Strength from './Strength.vue'
 
 export default {
