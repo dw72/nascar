@@ -1,6 +1,7 @@
 <template>
   <page-section
-    class="section--full-width testimonials"
+    full-width
+    class="testimonials"
     title="Opinie naszych klientów"
     description="Opinie klientów są dla nas bardzo ważne, ponieważ pozwalają nam ciągle doskonalić naszą ofertę i jakość wykonywaych usług tak by wychodziły na przeciw ich oczekiwaniom."
   >
@@ -34,13 +35,14 @@ export default {
   background: darken($color-background, 5%);
 
   .not-android & {
-    @supports (background-attachment: fixed) and (background-position-x: center) and (background-size: cover) {
+    @supports (background-attachment: fixed) and (background-position-x: center)
+      and (background-size: cover) {
       background: linear-gradient(
           to bottom,
           rgba(darken($color-background, 5%), 0.95),
           rgba(darken($color-background, 5%), 0.98)
         ),
-        url("/images/engine.jpg");
+        url('/images/engine.jpg');
       background-attachment: fixed;
       background-position-x: center;
       background-repeat: no-repeat;

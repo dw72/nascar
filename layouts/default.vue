@@ -1,8 +1,8 @@
 <template>
   <div ref="container" class="container">
-    <page-header />
-    <nuxt class="page__content" />
-    <page-footer />
+    <page-header/>
+    <nuxt class="page__content"/>
+    <page-footer/>
   </div>
 </template>
 
@@ -21,8 +21,13 @@ html {
   color: $color-text;
   font-family: 'Exo 2', 'Helvetica Neue', Arial, sans-serif;
 
-  @supports (background-attachment: fixed) and (background-position-x: center) and (background-size: cover) {
-    background: linear-gradient(to bottom, rgba(darken($color-primary, 15%), 0.75), rgba($color-primary, 0.98)),
+  @supports (background-attachment: fixed) and (background-position-x: center)
+    and (background-size: cover) {
+    background: linear-gradient(
+        to bottom,
+        rgba(darken($color-primary, 15%), 0.75),
+        rgba($color-primary, 0.98)
+      ),
       url('/images/engine.jpg');
     background-attachment: fixed;
     background-position-x: center;

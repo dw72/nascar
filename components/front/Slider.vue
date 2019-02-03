@@ -1,5 +1,12 @@
 <template>
-  <page-section v-if="slides.length > 0" class="slider" header="hidden" title="Promocje">
+  <page-section
+    v-if="slides.length > 0"
+    class="slider"
+    header="removed"
+    title="Promocje"
+    full-width
+    no-padding
+  >
     <swiper :options="options">
       <swiper-slide v-for="(slide, idx) in slides" :key="idx">
         <a v-if="slide.url" :href="slide.url" target="_blank" rel="nofollow" tabindex="-1">
@@ -56,7 +63,6 @@ export default {
 .slider .section__content {
   display: none;
   overflow: hidden;
-  margin: 0 -1em;
 
   @media screen and (min-width: 768px) {
     display: initial;

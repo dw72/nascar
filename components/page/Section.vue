@@ -1,9 +1,9 @@
 <template>
-  <section class="section">
+  <section :class="classNames">
     <header v-show="header === 'visible'" v-if="header !== 'removed'" class="section__header">
       <slot name="header">
         <h2 v-if="title">{{ title }}</h2>
-        <hr v-if="(title || description) && !nohr">
+        <hr v-if="(title || description) && !noDivider">
         <p v-if="description">{{ description }}</p>
       </slot>
     </header>
@@ -18,12 +18,25 @@ export default {
   props: {
     title: { type: String, default: '' },
     description: { type: String, default: '' },
-    nohr: { type: Boolean, default: false },
+    noDivider: { type: Boolean, default: false },
+    fullWidth: { type: Boolean, default: false },
+    noPadding: { type: Boolean, default: false },
+    horizontal: { type: Boolean, default: false },
     header: {
       type: String,
       default: 'visible',
       validator: value => {
         return ['visible', 'hidden', 'removed'].includes(value)
+      }
+    }
+  },
+  computed: {
+    classNames() {
+      return {
+        section: true,
+        'section--full-width': this.fullWidth,
+        'section--no-padding': this.noPadding,
+        'section--horizontal': this.horizontal
       }
     }
   }
@@ -49,6 +62,14 @@ export default {
   margin-left: -1em;
   margin-right: -1em;
   padding: 0 1em;
+}
+
+.section--no-padding {
+  padding: 0;
+
+  .section__content {
+    margin: 0;
+  }
 }
 
 @media screen and (min-width: 960px) {
