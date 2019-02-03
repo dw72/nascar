@@ -2,7 +2,7 @@
   <div class="service">
     <div class="service__header">
       <h3 class="service__title">{{ name }}</h3>
-      <img :src="image" alt="" class="service__image">
+      <img :src="image" alt class="service__image">
     </div>
     <div class="service__content">
       <p>{{ description }}</p>
@@ -25,6 +25,7 @@ export default {
   display: flex;
   flex-direction: column;
   margin-bottom: 1em;
+  min-height: 220px;
 }
 
 .service__header {
@@ -51,7 +52,8 @@ export default {
   height: 0;
   border-style: solid;
   border-width: 0.5em 0.5em 0 0;
-  border-color: darken($color-secondary, 15%) transparent transparent transparent;
+  border-color: darken($color-secondary, 15%) transparent transparent
+    transparent;
 }
 
 .service__content {

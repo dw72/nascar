@@ -49,7 +49,10 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [{ src: '@/plugins/vue-googlemaps', ssr: false }],
+  plugins: [
+    { src: '@/plugins/vue-googlemaps', ssr: false },
+    { src: '@/plugins/vue-airtable', ssr: false }
+  ],
 
   /*
   ** Nuxt.js modules
@@ -59,7 +62,7 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/dotenv',
     '@nuxtjs/pwa',
-    'nuxt-sass-resources-loader',
+    '@nuxtjs/style-resources',
     'nuxt-webfontloader',
     'nuxt-svg-loader'
   ],
@@ -95,10 +98,12 @@ module.exports = {
     theme_color: '#00569d',
     background_color: '#00569d'
   },
-  sassResources: [
-    '@/assets/scss/variables/*.scss',
-    '@/assets/scss/mixins/**/*.scss'
-  ],
+  styleResources: {
+    sass: [
+      '~assets/scss/variables/_*.scss',
+      '~assets/scss/components/**/_*.scss'
+    ]
+  },
   webfontloader: {
     google: {
       families: ['Montserrat', 'Exo+2']

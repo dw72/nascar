@@ -3,12 +3,12 @@
     <header v-show="header === 'visible'" v-if="header !== 'removed'" class="section__header">
       <slot name="header">
         <h2 v-if="title">{{ title }}</h2>
-        <hr v-if="title || description">
+        <hr v-if="(title || description) && !nohr">
         <p v-if="description">{{ description }}</p>
       </slot>
     </header>
     <div class="section__content">
-      <slot />
+      <slot/>
     </div>
   </section>
 </template>
@@ -18,6 +18,7 @@ export default {
   props: {
     title: { type: String, default: '' },
     description: { type: String, default: '' },
+    nohr: { type: Boolean, default: false },
     header: {
       type: String,
       default: 'visible',
@@ -75,8 +76,8 @@ export default {
   &::after {
     background: inherit;
     color: rgba($color-secondary, 0.45);
-    content: "\f10b";
-    font-family: "Material Design Icons";
+    content: '\f10b';
+    font-family: 'Material Design Icons';
     font-size: 1.5em;
     padding: 0 0.5em;
     position: absolute;
@@ -94,7 +95,7 @@ export default {
 }
 
 .section__content,
-.section__content > div[class$="wrapper"] {
+.section__content > div[class$='wrapper'] {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
