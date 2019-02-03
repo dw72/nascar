@@ -18,7 +18,7 @@
 <script>
 import services from '@/assets/data/services.json'
 import PageSection from '@/components/Section.vue'
-import ServiceCard from './Service.vue'
+import Service from './Service.vue'
 
 export default {
   components: { PageSection, Service },
