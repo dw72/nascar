@@ -1,5 +1,4 @@
 <template>
-
   <nav class="navbar">
     <h2 class="hidden">Menu główne</h2>
     <button
@@ -12,7 +11,11 @@
       aria-controls="main-menu"
       @click="toggle"
     >
-      <span class="navbar__burger"><span /><span /><span /></span>
+      <span class="navbar__burger">
+        <span/>
+        <span/>
+        <span/>
+      </span>
       <span aria-hidden="true">Menu</span>
     </button>
     <ul
@@ -25,7 +28,7 @@
     >
       <li class="menu__item">
         <nuxt-link class="menu__link menu__link--main-page" to="/">
-          <span class="mdi mdi-home navbar__icon" />
+          <span class="mdi mdi-home navbar__icon"/>
           <span>Strona główna</span>
         </nuxt-link>
       </li>
@@ -36,13 +39,12 @@
     <ul class="navbar__actions menu">
       <li class="menu__item">
         <a class="menu__link" href="https://nascar.premio.pl/reservation">
-          <span class="mdi mdi-calendar-check navbar__icon" />
+          <span class="mdi mdi-calendar-check navbar__icon"/>
           <span>Zarezerwuj termin</span>
         </a>
       </li>
     </ul>
   </nav>
-
 </template>
 
 <script>
@@ -50,10 +52,9 @@ export default {
   data() {
     return {
       routes: [
+        { path: '/regeneracja-dpf', title: 'Regenracja filtrów' },
         { path: '/stacja-kontroli', title: 'Stacja kontroli' },
         { path: '/serwis', title: 'Serwis' },
-        { path: '/opony', title: 'Opony' },
-        { path: '/felgi', title: 'Felgi' },
         { path: '/myjnia', title: 'Myjnia' },
         { path: '/uslugi-finansowe', title: 'Usługi finansowe' }
       ],

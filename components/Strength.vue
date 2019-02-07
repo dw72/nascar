@@ -1,7 +1,7 @@
 <template>
   <div class="strength">
     <!-- <span :class="`strength__icon mdi mdi-${icon}`" aria-hidden="true" /> -->
-    <Icon class="strength__icon" :name="icon"/>
+    <Icon :name="icon" bordered/>
     <h3 class="strength__title">{{ name }}</h3>
     <p class="strength__text">{{ description }}</p>
   </div>

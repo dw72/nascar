@@ -1,5 +1,5 @@
 <template>
-  <div ref="container" class="container">
+  <div ref="container" class="container" :class="{'not-android': !isAndroid}">
     <page-header/>
     <nuxt class="page__content"/>
     <page-footer/>
@@ -11,7 +11,15 @@ import PageHeader from './partials/Header.vue'
 import PageFooter from './partials/Footer.vue'
 
 export default {
-  components: { PageHeader, PageFooter }
+  components: { PageHeader, PageFooter },
+  computed: {
+    isAndroid() {
+      if (this.userAgent) {
+        return this.userAgent.toLowerCase().includes('android')
+      }
+      return false
+    }
+  }
 }
 </script>
 

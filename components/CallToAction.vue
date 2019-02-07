@@ -1,16 +1,15 @@
 <template>
-  <page-section full-width horizontal class="call-to-action">
-    <template slot="header">
+  <page-section full-width header="removed" class="call-to-action">
+    <slot>
       <h2>Twoje auto potrzebuje fachowej pomocy?</h2>
-      <!-- <h3>Zadzwoń: +48 62 7226848</h3> -->
-    </template>
-    <a
-      href="https://nascar.premio.pl/reservation"
-      class="button button--big button--secondary button--rounded button--shadow"
-    >
-      <span class="mdi mdi-calendar-check button__icon"/>
-      <span>Zarezerwuj termin</span>
-    </a>
+      <a
+        href="https://nascar.premio.pl/reservation"
+        class="button button--big button--secondary button--rounded button--shadow"
+      >
+        <span class="mdi mdi-calendar-check button__icon"/>
+        <span>Zarezerwuj termin</span>
+      </a>
+    </slot>
   </page-section>
 </template>
 
@@ -28,6 +27,19 @@ export default {
   background: lighten($color-primary, 10%);
   color: $color-text-light;
   padding: 2em 1em;
+
+  .section__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+
+    @media screen and (min-width: 960px) {
+      flex-direction: row;
+    }
+  }
 
   .not-android & {
     @supports (background-attachment: fixed) and (background-position-x: center)

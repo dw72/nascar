@@ -1,5 +1,5 @@
 <template>
-  <main :class="{'not-android': !isAndroid}">
+  <main>
     <slider/>
     <services-list/>
     <call-to-action/>
@@ -29,14 +29,6 @@ export default {
       : typeof navigator !== 'undefined'
         ? navigator.userAgent
         : 'No user agent (generated)'
-  }),
-  computed: {
-    isAndroid() {
-      if (this.userAgent) {
-        return this.userAgent.toLowerCase().includes('android')
-      }
-      return false
-    }
-  }
+  })
 }
 </script>
