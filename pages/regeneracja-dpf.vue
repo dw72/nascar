@@ -71,8 +71,8 @@
     <call-to-action>
       <h2>Gwarantujemy nawet do 99% skuteczności regenracji !</h2>
     </call-to-action>
-    <page-section title="Cena usługi">Dupa</page-section>
-    <page-section title="Zamów usługę">Dupa</page-section>
+    <page-section title="Cena usługi">Tu będzie cennik</page-section>
+    <page-section title="Zamów usługę">A tu formularz</page-section>
   </main>
 </template>
 
@@ -101,10 +101,6 @@ export default {
     margin-top: -1em;
   }
 }
-
-// .method-cons {
-//   background-color: darken($color-background, 5%);
-// }
 
 .method-cons__content {
   align-items: center;
