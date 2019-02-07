@@ -78,11 +78,11 @@
 
 <script>
 import PageSection from '@/components/Section'
-import icon from '@/components/icon'
+import Icon from '@/components/Icon'
 import CallToAction from '@/components/CallToAction'
 
 export default {
-  components: { PageSection, icon, CallToAction },
+  components: { PageSection, Icon, CallToAction },
   head() {
     return {
       title: 'Regeneracja filtrów DPF / FAP'

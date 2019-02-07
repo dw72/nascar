@@ -3,15 +3,15 @@
     <page-section class="diagnostic-services" title="Stacja kontroli pojazdów">
       <div class="services-list">
         <div>
-          <Icon name="shield-check-outline" bordered/>
+          <icon name="shield-check-outline" bordered/>
           <p>Obowiązkowe przeglądy rejestracyjne i badania okresowe samochodów osobowych, motocykli i ciągników rolniczych.</p>
         </div>
         <div>
-          <Icon name="alarm-plus" bordered/>
+          <icon name="alarm-plus" bordered/>
           <p>Wstępne przeglądy pozwalające na wykrycie i usunięcie usterek, które mogą wpłynąć na wynik obowiązkowego badania okresowego.</p>
         </div>
         <div>
-          <Icon name="map-outline" bordered/>
+          <icon name="map-outline" bordered/>
           <p>Sprawdzenie pojazdu przed kupnem, okresem letnim bądź zimowym oraz przed dłuższą podróżą.</p>
         </div>
       </div>
