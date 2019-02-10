@@ -81,46 +81,13 @@
     >
       <div class="pricelist">
         <price-card
+          v-for="(price, idx) in pricelist"
+          :key="idx"
           class="pricelist__card"
-          icon="car-hatchback"
-          title="Samochody osobowe"
-          price="399"
-        >
-          <ul>
-            <li>Odbiór od klienta</li>
-            <li>Diagnostyka</li>
-            <li>Regenracja</li>
-            <li>Odesłanie klientowi</li>
-          </ul>
-        </price-card>
-        <price-card
-          class="pricelist__card"
-          icon="van-utility"
-          title="Samochody dostawcze"
-          price="499"
-          promo-price="399"
-        >
-          <ul>
-            <li>Odbiór od klienta</li>
-            <li>Diagnostyka</li>
-            <li>Regenracja</li>
-            <li>Odesłanie klientowi</li>
-          </ul>
-        </price-card>
-        <price-card class="pricelist__card" icon="truck" title="Samochody ciężarowe" price="1299">
-          <ul>
-            <li>Odbiór od klienta</li>
-            <li>Diagnostyka</li>
-            <li>Regenracja</li>
-            <li>Odesłanie klientowi</li>
-          </ul>
-        </price-card>
-        <price-card
-          class="pricelist__card"
-          icon="tractor"
-          title="Pojazdy rolnicze i inne"
-          price="599"
-          promo-price="399"
+          :icon="price.icon"
+          :title="price.name"
+          :price="price.price"
+          :promo-price="price.promoPrice"
         >
           <ul>
             <li>Odbiór od klienta</li>
@@ -141,6 +108,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 import PageSection from '@/components/Section'
 import Icon from '@/components/Icon'
 import CallToAction from '@/components/CallToAction'
@@ -152,6 +121,12 @@ export default {
     return {
       title: 'Regeneracja filtrów DPF / FAP'
     }
+  },
+  computed: {
+    ...mapState('regeneration', ['pricelist'])
+  },
+  async created() {
+    await this.$store.dispatch('regeneration/REGENERATION_PRICELIST_REQUEST')
   }
 }
 </script>

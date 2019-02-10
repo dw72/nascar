@@ -18,7 +18,7 @@ import Icon from '@/components/Icon'
 export default {
   components: { Icon },
   props: {
-    icon: { type: String, default: '' },
+    icon: { type: String, default: 'car' },
     title: { type: String, default: '' },
     price: { type: Number, default: 0 },
     promoPrice: { type: Number, default: 0 }

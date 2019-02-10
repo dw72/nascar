@@ -49,10 +49,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-    { src: '@/plugins/vue-googlemaps', ssr: false },
-    { src: '@/plugins/vue-airtable', ssr: false }
-  ],
+  plugins: [{ src: '@/plugins/vue-googlemaps', ssr: false }],
 
   /*
   ** Nuxt.js modules

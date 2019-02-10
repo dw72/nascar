@@ -31,7 +31,7 @@
     </page-section>
     <page-section title="Cennik badań technicznych">
       <table>
-        <tr v-for="(price, idx) in prices" :key="idx">
+        <tr v-for="(price, idx) in pricelist" :key="idx">
           <td>{{ price.name }}</td>
           <td>{{ price.price }} zł</td>
         </tr>
@@ -41,6 +41,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 import PageSection from '@/components/Section.vue'
 import Icon from '@/components/Icon'
 
@@ -51,25 +53,11 @@ export default {
       title: 'Stacja kontroli'
     }
   },
-  data() {
-    return {
-      prices: []
-    }
+  computed: {
+    ...mapState('diagnostic', ['pricelist'])
   },
-  created() {
-    this.$base('Cennik - Stacja kontroli')
-      .select({
-        view: 'Badania okresowe'
-      })
-      .eachPage(records => {
-        records.forEach(record => {
-          this.prices.push({
-            name: record.get('Usługa'),
-            price: record.get('Cena')
-          })
-        })
-      })
-    console.log(this.prices)
+  async created() {
+    await this.$store.dispatch('diagnostic/DIAGNOSTIC_PRICELIST_REQUEST')
   }
 }
 </script>
