@@ -76,7 +76,7 @@
     </call-to-action>
     <page-section
       flex
-      title="Cennik regenracji"
+      title="Cennik usługi"
       description="Poniższe ceny sa cenami brutto i nie zawierają kosztu demontażu i montażu filtra."
     >
       <div class="pricelist">
@@ -93,6 +93,7 @@
             <li>Odbiór od klienta</li>
             <li>Diagnostyka</li>
             <li>Regenracja</li>
+            <li>Raport kontrolny</li>
             <li>Odesłanie klientowi</li>
           </ul>
         </price-card>
@@ -100,8 +101,8 @@
     </page-section>
     <page-section
       class="form"
-      title="Zamów usługę"
-      description="Wypełnij poniższy formularz, a wyślemy do Ciebie kuriera, który odbierze filtr do regenracji. Po wykonaniu usługi i dokonaniu opłaty ten sam kurier odwiezie filtr spowrotem do Ciebie."
+      title="Zamów kuriera"
+      description="Wypełnij poniższy formularz, a wyślemy do Ciebie kuriera, który odbierze filtr DPF / FAP do regenracji. Po wykonaniu usługi i dokonaniu opłaty ten sam kurier dostarczy filtr spowrotem do Ciebie."
       full-width
     >A tu formularz</page-section>
   </main>
