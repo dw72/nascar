@@ -1,5 +1,10 @@
 <template>
-  <span class="icon mdi" :class="classNames" aria-hidden="true"/>
+  <div
+    class="icon"
+    :class="{'icon--bordered': bordered, 'icon--small': size === 'small', 'icon--large': size === 'large'}"
+  >
+    <span class="mdi" :class="`mdi-${name}`" aria-hidden="true"/>
+  </div>
 </template>
 
 <script>
@@ -8,19 +13,12 @@ export default {
     name: { type: String, default: '', validator: value => !!value },
     size: {
       type: String,
-      default: '',
-      validator: value => (value ? ['small', 'large'].includes(value) : true)
+      default: 'medium',
+      validator: value =>
+        value ? ['medium', 'small', 'large'].includes(value) : true
     },
-    bordered: { type: Boolean, default: false }
-  },
-  computed: {
-    classNames() {
-      const classes = {}
-      classes['icon--bordered'] = this.bordered
-      classes[`mdi-${this.name}`] = true
-      if (this.size) classes[`icon--${this.size}`] = true
-      return classes
-    }
+    bordered: { type: Boolean, default: false },
+    borderTop: { type: Boolean, default: false }
   }
 }
 </script>
@@ -34,6 +32,7 @@ export default {
   font-size: 3em;
   width: 1.75em;
   height: 1.75em;
+  position: relative;
 }
 
 .icon--bordered {
@@ -43,5 +42,9 @@ export default {
 
 .icon--small {
   font-size: 1.5em;
+}
+
+.icon--large {
+  font-size: 4.5em;
 }
 </style>

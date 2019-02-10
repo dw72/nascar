@@ -69,9 +69,65 @@
       </div>
     </page-section>
     <call-to-action>
-      <h2>Gwarantujemy nawet do 99% skuteczności regenracji !</h2>
+      <h2>Gwarantujemy nawet do 99% skuteczności regeneracji !</h2>
     </call-to-action>
-    <page-section title="Cena usługi">Tu będzie cennik</page-section>
+    <page-section
+      flex
+      title="Cennik regenracji"
+      description="Poniższe ceny sa cenami brutto i nie zawierają demontażu i ponownego montażu filtra."
+    >
+      <div class="pricelist">
+        <price-card
+          class="pricelist__card"
+          icon="car-hatchback"
+          title="Samochody osobowe"
+          price="399"
+        >
+          <ul>
+            <li>Odbiór od klienta</li>
+            <li>Diagnostyka</li>
+            <li>Regenracja</li>
+            <li>Wysyłka do klienta</li>
+          </ul>
+        </price-card>
+        <price-card
+          class="pricelist__card"
+          icon="van-utility"
+          title="Samochody dostawcze"
+          price="499"
+          promo-price="399"
+        >
+          <ul>
+            <li>Odbiór od klienta</li>
+            <li>Diagnostyka</li>
+            <li>Regenracja</li>
+            <li>Wysyłka do klienta</li>
+          </ul>
+        </price-card>
+        <price-card class="pricelist__card" icon="truck" title="Samochody ciężarowe" price="1299">
+          <ul>
+            <li>Odbiór od klienta</li>
+            <li>Diagnostyka</li>
+            <li>Regenracja</li>
+            <li>Wysyłka do klienta</li>
+          </ul>
+        </price-card>
+        <price-card
+          class="pricelist__card"
+          icon="tractor"
+          title="Pojazdy rolnicze i inne"
+          price="599"
+          promo-price="399"
+        >
+          <ul>
+            <li>Odbiór od klienta</li>
+            <li>Diagnostyka</li>
+            <li>Regenracja</li>
+            <li>Wysyłka do klienta</li>
+          </ul>
+        </price-card>
+      </div>
+    </page-section>
     <page-section title="Zamów usługę">A tu formularz</page-section>
   </main>
 </template>
@@ -80,9 +136,10 @@
 import PageSection from '@/components/Section'
 import Icon from '@/components/Icon'
 import CallToAction from '@/components/CallToAction'
+import PriceCard from '@/components/PriceCard'
 
 export default {
-  components: { PageSection, Icon, CallToAction },
+  components: { PageSection, Icon, CallToAction, PriceCard },
   head() {
     return {
       title: 'Regeneracja filtrów DPF / FAP'
@@ -121,7 +178,7 @@ export default {
 
   img {
     padding: 1em;
-    width: 60%;
+    width: 70%;
 
     @media screen and (min-width: 980px) {
       width: 90%;
@@ -176,6 +233,31 @@ export default {
 
     @media screen and (min-width: 768px) {
       flex-basis: 20%;
+    }
+  }
+}
+
+.pricelist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: -1em;
+  width: 100%;
+
+  @media screen and (min-width: 580px) {
+    flex-direction: row;
+  }
+
+  .pricelist__card {
+    margin-bottom: 1em;
+    flex-basis: 100%;
+
+    @media screen and(min-width: 580px) {
+      flex-basis: 45%;
+    }
+
+    @media screen and(min-width: 980px) {
+      flex-basis: 23%;
     }
   }
 }
