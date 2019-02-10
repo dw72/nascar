@@ -1,15 +1,14 @@
 <template>
   <main>
-    <page-section class="desc" title="Regeneracja filtrów DPF / FAP">
+    <page-section
+      class="description"
+      title="Regeneracja filtrów DPF / FAP"
+      description="Filtr cząstek stałych sprawia kłopoty? Jeżeli na skutek długotrwałej eksploatacji samochodu w warunkach miejskich lub awarii układu sterowania,
+        filtr cząstek stałych DPF w twoim samochodzie został całkowicie zablokowany cząstkami sadzy nie musisz go już usuwać!"
+    >
       <p>
-        Filtr cząstek stałych sprawia kłopoty? Jeżeli na skutek długotrwałej eksploatacji samochodu w warunkach miejskich lub awarii układu sterowania,
-        filtr cząstek stałych DPF w twoim samochodzie został całkowicie zablokowany cząstkami sadzy nie musisz go już usuwać!
         <strong>Zregeneruj go u Nas!</strong>
       </p>
-      <!-- <p>
-        Przed przystąpieniem do regeneracji filtra dokonamy jego dokładnych oględzin, aby upewnić się, czy Twój filtr DPF kwalifikuje się do naprawy,
-        nie jest wytopiony, popękany, ukruszony i czy nie jest zaklejony jakimiś substancjami chemicznymi lub uszczelniającymi.
-      </p>-->
     </page-section>
     <page-section class="regeneration-const" header="removed">
       <ul>
@@ -67,6 +66,10 @@
           </li>
         </ul>
       </div>
+      <p>
+        Przed przystąpieniem do regeneracji filtra dokonamy jego dokładnych oględzin, aby upewnić się, czy Twój filtr DPF kwalifikuje się do naprawy,
+        nie jest wytopiony, popękany, ukruszony i czy nie jest zaklejony jakimiś substancjami chemicznymi lub uszczelniającymi.
+      </p>
     </page-section>
     <call-to-action>
       <h2>Gwarantujemy nawet do 99% skuteczności regeneracji !</h2>
@@ -74,7 +77,7 @@
     <page-section
       flex
       title="Cennik regenracji"
-      description="Poniższe ceny sa cenami brutto i nie zawierają demontażu i ponownego montażu filtra."
+      description="Poniższe ceny sa cenami brutto i nie zawierają kosztu demontażu i montażu filtra."
     >
       <div class="pricelist">
         <price-card
@@ -87,7 +90,7 @@
             <li>Odbiór od klienta</li>
             <li>Diagnostyka</li>
             <li>Regenracja</li>
-            <li>Wysyłka do klienta</li>
+            <li>Odesłanie klientowi</li>
           </ul>
         </price-card>
         <price-card
@@ -101,7 +104,7 @@
             <li>Odbiór od klienta</li>
             <li>Diagnostyka</li>
             <li>Regenracja</li>
-            <li>Wysyłka do klienta</li>
+            <li>Odesłanie klientowi</li>
           </ul>
         </price-card>
         <price-card class="pricelist__card" icon="truck" title="Samochody ciężarowe" price="1299">
@@ -109,7 +112,7 @@
             <li>Odbiór od klienta</li>
             <li>Diagnostyka</li>
             <li>Regenracja</li>
-            <li>Wysyłka do klienta</li>
+            <li>Odesłanie klientowi</li>
           </ul>
         </price-card>
         <price-card
@@ -123,12 +126,17 @@
             <li>Odbiór od klienta</li>
             <li>Diagnostyka</li>
             <li>Regenracja</li>
-            <li>Wysyłka do klienta</li>
+            <li>Odesłanie klientowi</li>
           </ul>
         </price-card>
       </div>
     </page-section>
-    <page-section title="Zamów usługę">A tu formularz</page-section>
+    <page-section
+      class="form"
+      title="Zamów usługę"
+      description="Wypełnij poniższy formularz, a wyślemy do Ciebie kuriera, który odbierze filtr do regenracji. Po wykonaniu usługi i dokonaniu opłaty ten sam kurier odwiezie filtr spowrotem do Ciebie."
+      full-width
+    >A tu formularz</page-section>
   </main>
 </template>
 
@@ -149,72 +157,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.desc {
+.description {
   p {
-    text-align: center;
-  }
-
-  p:first-child {
     margin-top: -1em;
-  }
-}
-
-.method-cons__content {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-
-  @media screen and (min-width: 980px) {
-    flex-direction: row;
-  }
-}
-
-.method-cons__image {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  flex-basis: 48%;
-
-  img {
-    padding: 1em;
-    width: 70%;
-
-    @media screen and (min-width: 980px) {
-      width: 90%;
-    }
-  }
-}
-
-.method-cons__list {
-  flex-basis: 45%;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  list-style-type: none;
-  padding: 0;
-
-  @media screen and (min-width: 580px) {
-    display: flex;
-  }
-
-  @media screen and (min-width: 980px) {
-    display: initial;
-  }
-
-  li {
-    align-items: center;
-    display: flex;
-    justify-content: flex-start;
-    flex-basis: 45%;
-
-    .icon {
-      flex-shrink: 0;
-      margin-right: 0.25em;
-    }
+    text-align: center;
   }
 }
 
 .regeneration-const {
+  margin: -1em 0 -2em;
+
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -237,11 +189,75 @@ export default {
   }
 }
 
+.method-cons {
+  p {
+    text-align: center;
+  }
+
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    @media screen and (min-width: 980px) {
+      flex-direction: row;
+    }
+  }
+
+  &__image {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-basis: 48%;
+
+    img {
+      padding: 1em;
+      width: 70%;
+
+      @media screen and (min-width: 980px) {
+        width: 90%;
+      }
+    }
+  }
+
+  ul {
+    flex-basis: 45%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+
+    @media screen and (min-width: 580px) {
+      display: flex;
+    }
+
+    @media screen and (min-width: 980px) {
+      display: initial;
+    }
+  }
+
+  li {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    flex-basis: 45%;
+
+    .icon {
+      flex-shrink: 0;
+      margin-right: 0.25em;
+    }
+
+    p {
+      text-align: left;
+    }
+  }
+}
+
 .pricelist {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-bottom: -1em;
   width: 100%;
 
   @media screen and (min-width: 580px) {
@@ -260,5 +276,9 @@ export default {
       flex-basis: 23%;
     }
   }
+}
+
+.form {
+  background: darken($color-background, 5%);
 }
 </style>

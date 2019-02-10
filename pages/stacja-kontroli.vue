@@ -1,6 +1,10 @@
 <template>
   <main>
-    <page-section class="diagnostic-services" title="Stacja kontroli pojazdów">
+    <page-section
+      class="diagnostic-services"
+      title="Stacja kontroli pojazdów"
+      description="Posiadamy wieloletnie doświadczenie co przekłada się na wysoką jakość świadczonych przez nas usług. Wykonujemy:"
+    >
       <div class="services-list">
         <div>
           <icon name="shield-check-outline" bordered/>
@@ -15,19 +19,16 @@
           <p>Sprawdzenie pojazdu przed kupnem, okresem letnim bądź zimowym oraz przed dłuższą podróżą.</p>
         </div>
       </div>
+      <p>Obsługujemy także pojazdy sprowadzone z zagranicy, powypadkowe i zasilane gazem.</p>
       <p>
-        Posiadamy wieloletnie doświadczenie co przekłada się na wysoką jakość świadczonych przez nas usług.
-        Wykorzystujemy nowoczesną linię diagnostyczną
+        Do wykonywania badań wykorzystujemy nowoczesną linię diagnostyczną
         <a
           href="http://www.wsop.pl/produkty/certus-made-in-poland/"
           rel="nofollow"
-        >CERTUS Race Line EVO2</a>.
-        Obsługujemy także pojazdy sprowadzone z zagranicy, powypadkowe i zasilane gazem.
+        >CERTUS Race Line EVO2</a>
+        .
       </p>
     </page-section>
-    <!-- <page-section full-width no-padding class="images" header="removed">
-      <img src="images/dignostic_software.jpg" alt class="image">
-    </page-section>-->
     <page-section title="Cennik badań technicznych">
       <table>
         <tr v-for="(price, idx) in prices" :key="idx">
@@ -56,7 +57,7 @@ export default {
     }
   },
   created() {
-    this.$base('Stacja kontroli')
+    this.$base('Cennik - Stacja kontroli')
       .select({
         view: 'Badania okresowe'
       })

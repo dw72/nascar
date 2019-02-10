@@ -34,7 +34,7 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   margin-top: 3em;
-  min-height: 350px;
+  min-height: 380px;
   padding: 1em;
   width: 100%;
 
@@ -44,7 +44,7 @@ export default {
   }
 
   h2 {
-    color: rgba($color-primary, 0.85);
+    color: $color-primary;
     font-size: 0.85em;
     line-height: 1;
     margin-bottom: 0;
@@ -61,7 +61,7 @@ export default {
     flex-direction: column;
     justify-content: center;
 
-    font-size: 2.5em;
+    font-size: 2.25em;
     margin: 0.5em 0;
 
     .striked {
@@ -90,7 +90,7 @@ export default {
 
   .content {
     border-top: 1px solid #f0f0f0;
-    color: rgba($color-primary, 0.7);
+    color: $color-primary;
     width: 90%;
   }
 
