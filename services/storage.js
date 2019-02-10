@@ -1,7 +1,7 @@
 import { openDb } from 'idb'
 
 const IDB_NAME = 'pphu-nascar'
-const IDB_VERSION = 1
+const IDB_VERSION = 2
 
 let db
 
@@ -12,6 +12,13 @@ const getDB = () => {
         switch (upgradeDb.oldVersion) {
           case 0:
             upgradeDb.createObjectStore('slider', { keyPath: 'id' })
+          case 1:
+            upgradeDb.createObjectStore('diagnostics-pricelist', {
+              keyPath: 'id'
+            })
+            upgradeDb.createObjectStore('regeneration-pricelist', {
+              keyPath: 'id'
+            })
         }
       })
     } catch (err) {
@@ -35,4 +42,18 @@ export const getSlider = async () => {
 export const putSlider = async slides => {
   const store = await getStore('slider', 'readwrite')
   await store.put({ id: 1, date: new Date(), slides })
+}
+
+export const getData = async storeName => {
+  const store = await getStore(storeName)
+  return store.getAll()
+}
+
+export const putData = async (storeName, data) => {
+  const store = await getStore(storeName, 'readwrite')
+  await Promise.all(
+    data.map((item, index) => {
+      store.put({ id: index, ...item })
+    })
+  )
 }

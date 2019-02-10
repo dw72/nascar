@@ -1,38 +1,57 @@
 import airtable from '@/services/airtable'
+import { getData, putData } from '@/services/storage'
 
 const REGENERATION_PRICELIST_REQUEST = 'REGENERATION_PRICELIST_REQUEST'
-const REGENERATION_ADD_PRICE = 'REGENERATION_ADD_PRICE'
-const REGENERATION_CLEAR_PRICELIST = 'REGENERATION_CLEAR_PRICELIST'
+const REGENERATION_PRICELIST_SUCCESS = 'REGENERATION_PRICELIST_SUCCESS'
 
 export const state = () => ({
   pricelist: []
 })
 
+const store = 'regeneration-pricelist'
+
 export const getters = {}
 
 export const mutations = {
-  [REGENERATION_CLEAR_PRICELIST]: state => {
-    state.pricelist = []
-  },
-  [REGENERATION_ADD_PRICE]: (state, price) => {
-    state.pricelist.push(price)
+  [REGENERATION_PRICELIST_SUCCESS]: (state, pricelist) => {
+    state.pricelist = pricelist
   }
 }
 
 export const actions = {
   async [REGENERATION_PRICELIST_REQUEST]({ commit }) {
-    commit(REGENERATION_CLEAR_PRICELIST)
-    airtable('Cennik - Regenracja DPF')
-      .select({ view: 'Cennik' })
-      .eachPage(data =>
-        data.forEach(item => {
-          commit(REGENERATION_ADD_PRICE, {
-            name: item.get('Typ pojazdu'),
-            icon: item.get('Ikona'),
-            price: item.get('Cena'),
-            promoPrice: item.get('Promocja')
-          })
-        })
-      )
+    const dbPromise = getData(store)
+    const apiPromise = new Promise((resolve, reject) => {
+      let prices = []
+      airtable('Cennik - Regeneracja DPF')
+        .select({ view: 'Cennik', maxRecords: 4 })
+        .eachPage(
+          (data, fetchNextPage) => {
+            data.forEach(item => {
+              prices.push({
+                name: item.get('Typ pojazdu'),
+                icon: item.get('Ikona'),
+                price: item.get('Cena'),
+                promoPrice: item.get('Promocja')
+              })
+            })
+
+            fetchNextPage()
+          },
+          err => {
+            if (err) {
+              reject(err)
+            } else {
+              putData(store, prices)
+              resolve(prices)
+            }
+          }
+        )
+    })
+
+    let dbData = await dbPromise
+    const pricelist = dbData.length ? dbData : await apiPromise
+
+    commit(REGENERATION_PRICELIST_SUCCESS, pricelist)
   }
 }
