@@ -68,9 +68,17 @@ export default {
       font-size: 0.6em;
       margin-bottom: -0.5em;
       margin-left: -2em;
+      position: relative;
 
       &::after {
+        background-color: $color-secondary;
         content: '';
+        position: absolute;
+        width: 130%;
+        height: 2px;
+        top: 50%;
+        left: -15%;
+        transform: rotate(-10deg);
       }
     }
 
