@@ -4,7 +4,7 @@
       <h2>Twoje auto potrzebuje fachowej pomocy?</h2>
       <a
         href="https://nascar.premio.pl/reservation"
-        class="button button--big button--secondary button--rounded button--shadow"
+        class="button button--big button--secondary button--rounded"
       >
         <span class="mdi mdi-calendar-check button__icon"/>
         <span>Zarezerwuj termin</span>

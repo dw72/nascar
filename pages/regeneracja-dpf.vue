@@ -4,7 +4,8 @@
       class="description"
       title="Regeneracja filtrów DPF / FAP"
       description="Filtr cząstek stałych sprawia kłopoty? Jeżeli na skutek długotrwałej eksploatacji samochodu w warunkach miejskich lub awarii układu sterowania,
-        filtr cząstek stałych DPF w twoim samochodzie został całkowicie zablokowany cząstkami sadzy nie musisz go już usuwać!"
+        filtr cząstek stałych DPF w twoim samochodzie został całkowicie zablokowany cząstkami sadzy nie musisz go już usuwać!
+      "
     >
       <p>
         <strong>Zregeneruj go u Nas!</strong>
@@ -33,7 +34,11 @@
     <page-section
       class="method-cons"
       title="Zalety naszej metody"
-      description="Wykorzystujemy siłę hydrodynamiki przepływu wody oraz siłę impulsu sprężonego powietrza z kompresora. Ruch płynu roboczego wymuszany jest przez zewnętrzne ciśnienie, które musi pokonać opory przepływu w kanałach filtra. Strugi cieczy mieszają się tworząc wiry, które w łatwy sposób przenikają i usuwają cząstki stałe w mikroporowatych przegrodach kanałów filtra."
+      description="
+        Wykorzystujemy siłę hydrodynamiki przepływu wody oraz siłę impulsu sprężonego powietrza z kompresora.
+        Ruch płynu roboczego wymuszany jest przez zewnętrzne ciśnienie, które musi pokonać opory przepływu w kanałach filtra.
+        Strugi cieczy mieszają się tworząc wiry, które w łatwy sposób przenikają i usuwają cząstki stałe w mikroporowatych przegrodach kanałów filtra.
+      "
     >
       <div class="method-cons__content">
         <div class="method-cons__image">
@@ -76,7 +81,7 @@
     </call-to-action>
     <page-section
       flex
-      title="Cennik usługi"
+      title="Cennik regeneracji"
       description="Poniższe ceny sa cenami brutto i nie zawierają kosztu demontażu i montażu filtra."
     >
       <div class="pricelist">
@@ -100,11 +105,15 @@
       </div>
     </page-section>
     <page-section
-      class="form"
-      title="Zamów kuriera"
-      description="Wypełnij poniższy formularz, a wyślemy do Ciebie kuriera, który odbierze filtr DPF / FAP do regenracji. Po wykonaniu usługi i dokonaniu opłaty ten sam kurier dostarczy filtr spowrotem do Ciebie."
+      key="form"
+      class="order-form"
+      title="Zamów usługę"
+      description="Wypełnij poniższy formularz, a wyślemy do Ciebie kuriera, który odbierze filtr DPF / FAP do regenracji.
+          Po wykonaniu usługi i dokonaniu opłaty ten sam kurier dostarczy filtr spowrotem do Ciebie."
       full-width
-    >A tu formularz</page-section>
+    >
+      <order-form/>
+    </page-section>
   </main>
 </template>
 
@@ -115,16 +124,17 @@ import PageSection from '@/components/Section'
 import Icon from '@/components/Icon'
 import CallToAction from '@/components/CallToAction'
 import PriceCard from '@/components/PriceCard'
+import OrderForm from '@/components/RegenerationOrderForm'
 
 export default {
-  components: { PageSection, Icon, CallToAction, PriceCard },
+  components: { PageSection, Icon, CallToAction, PriceCard, OrderForm },
   head() {
     return {
       title: 'Regeneracja filtrów DPF / FAP'
     }
   },
   computed: {
-    ...mapState('regeneration', ['pricelist'])
+    ...mapState('regeneration', ['pricelist', 'orderId'])
   },
   async created() {
     await this.$store.dispatch('regeneration/REGENERATION_PRICELIST_REQUEST')
@@ -189,7 +199,7 @@ export default {
 
     img {
       padding: 1em;
-      width: 70%;
+      width: 80%;
 
       @media screen and (min-width: 980px) {
         width: 90%;
@@ -214,7 +224,7 @@ export default {
   }
 
   li {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     justify-content: flex-start;
     flex-basis: 45%;
@@ -225,6 +235,7 @@ export default {
     }
 
     p {
+      margin-top: 0.5em;
       text-align: left;
     }
   }
@@ -254,7 +265,7 @@ export default {
   }
 }
 
-.form {
+.order-form {
   background: darken($color-background, 5%);
 }
 </style>
