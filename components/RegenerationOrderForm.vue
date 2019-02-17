@@ -111,7 +111,7 @@
         </div>
         <input ref="trap" v-model="order.trap" class="trap" type="text">
         <div class="field-group">
-          <button class="button button--primary button--rounded" type="submit">Wyślij</button>
+          <button class="button button--primary button--rounded" type="submit">Wyślij zamówienie</button>
         </div>
       </form>
       <div v-else class="ordered" :style="{'min-height': formHeight + 'px'}">
@@ -222,6 +222,7 @@ label {
 
 input {
   border: 1px solid #c4c7c8;
+  border-radius: 5px;
   box-shadow: inset 0 1px 1px #f1f1f1;
   font-family: 'Exo 2', sans-serif;
   font-size: 0.95em;
@@ -267,7 +268,7 @@ button {
   font-size: 0.95em;
   justify-content: center;
   margin: 1em 0 2em;
-  width: 20em;
+  width: 15em;
 }
 
 .ordered {
