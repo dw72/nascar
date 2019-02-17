@@ -145,7 +145,7 @@ export default {
     }),
     placeOrder() {
       this.$validator.validateAll().then(result => {
-        if (result && !order.trap) {
+        if (result && !this.order.trap) {
           this.$store.dispatch(
             'regeneration/REGENERATION_PLACE_ORDER',
             this.order
@@ -215,15 +215,17 @@ form {
 }
 
 label {
-  font-size: 0.8em;
+  font-size: 0.85em;
   font-weight: bold;
   margin-bottom: 0.25em;
 }
 
 input {
   border: 1px solid #c4c7c8;
-  padding: 0.75em;
   box-shadow: inset 0 1px 1px #f1f1f1;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 0.95em;
+  padding: 0.75em;
 
   &::placeholder {
     opacity: 0.5;
@@ -262,7 +264,7 @@ input {
 
 button {
   cursor: pointer;
-  font-size: 0.9em;
+  font-size: 0.95em;
   justify-content: center;
   margin: 1em 0 2em;
   width: 20em;
