@@ -109,6 +109,7 @@
             <span v-visible="errors.has('email')" class="message">{{ errors.first('email') }}</span>
           </div>
         </div>
+        <input ref="trap" v-model="order.trap" class="trap" type="text">
         <div class="field-group">
           <button class="button button--primary button--rounded" type="submit">Wyślij</button>
         </div>
@@ -135,13 +136,16 @@ export default {
   computed: {
     ...mapState('regeneration', ['orderId', 'formHeight'])
   },
+  mounted() {
+    this.$refs.trap.tabIndex = -1
+  },
   methods: {
     ...mapMutations('regeneration', {
       setFormHeight: 'REGENERATION_SET_FORM_HEIGHT'
     }),
     placeOrder() {
       this.$validator.validateAll().then(result => {
-        if (result) {
+        if (result && !order.trap) {
           this.$store.dispatch(
             'regeneration/REGENERATION_PLACE_ORDER',
             this.order
@@ -201,6 +205,13 @@ form {
   display: flex;
   flex-direction: column;
   margin-bottom: 1em;
+}
+
+.trap {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  visibility: hidden;
 }
 
 label {
