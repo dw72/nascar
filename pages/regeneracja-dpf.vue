@@ -186,7 +186,7 @@ export default {
     flex-direction: column;
     justify-content: space-around;
 
-    @media screen and (min-width: 980px) {
+    @media screen and (min-width: 960px) {
       flex-direction: row;
     }
   }
@@ -201,7 +201,7 @@ export default {
       padding: 1em;
       width: 80%;
 
-      @media screen and (min-width: 980px) {
+      @media screen and (min-width: 960px) {
         width: 90%;
       }
     }
@@ -218,7 +218,7 @@ export default {
       display: flex;
     }
 
-    @media screen and (min-width: 980px) {
+    @media screen and (min-width: 960px) {
       display: initial;
     }
   }
@@ -259,7 +259,7 @@ export default {
       flex-basis: 45%;
     }
 
-    @media screen and(min-width: 980px) {
+    @media screen and(min-width: 960px) {
       flex-basis: 23%;
     }
   }

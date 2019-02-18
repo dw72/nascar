@@ -8,7 +8,7 @@
   padding: 0.5em 0.75em;
   text-decoration: none;
   text-transform: uppercase;
-  transition-property: border-color, background-color;
+  transition-property: border-color, background-color, opacity;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   white-space: nowrap;
@@ -54,6 +54,11 @@
 
 .button--danger {
   @include button-color-variant(#d50000, $color-text-light);
+}
+
+.button:disabled {
+  cursor: default;
+  opacity: 0.3;
 }
 
 .button--small {

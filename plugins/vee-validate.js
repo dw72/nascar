@@ -13,7 +13,7 @@ const dict = {
     },
     street: {
       regex: (fieldName, params, data) => {
-        return `Pole ${fieldName} może zawierać litery, cyfry, spacje oraz znak '/'.`
+        return `Pole ${fieldName} może zawierać litery, cyfry, spacje oraz znaki '/,;'.`
       }
     },
     zip: {
