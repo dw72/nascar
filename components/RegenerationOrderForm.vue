@@ -328,7 +328,7 @@ input {
     font-size: 0.9em;
     position: absolute;
     top: 0;
-    left: 4px;
+    left: 3px;
   }
 }
 
