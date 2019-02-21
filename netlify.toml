@@ -2,3 +2,15 @@
   command = "npm run deploy"
   functions = "lambda" #  netlify-lambda reads this
   publish = "dist"
+
+[[redirects]]
+  from = "http://dpf.nascar.com.pl/*"
+  to = "https://nascar.com.pl/regeneracja-dpf/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://dpf.nascar.com.pl/*"
+  to = "https://nascar.com.pl/regeneracja-dpf/:splat"
+  status = 301
+  force = true
