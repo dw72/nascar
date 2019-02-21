@@ -1,6 +1,5 @@
 <template>
   <footer class="page__footer">
-
     <div class="footer__content">
       <div class="footer__header hidden">
         <h2>Kontakt</h2>
@@ -12,52 +11,51 @@
             <h3>PPHU Nascar</h3>
           </div>
           <div class="contact__address">
-            <span class="mdi mdi-map-marker" />
+            <span class="mdi mdi-map-marker"/>
             <span>ul. Ostrowska 157,</span>
             <span>63-700 Krotoszyn</span>
           </div>
           <div class="contact__email">
-            <span class="mdi mdi-email" />
+            <span class="mdi mdi-email"/>
             <span>biuro@nascar.com.pl</span>
           </div>
         </div>
         <div class="departments">
-
           <div v-for="department in departments" :key="department.name" class="department">
             <h4 class="department__name">{{ department.name }}</h4>
             <div class="department__content">
               <div class="department__phone">
-                <span class="mdi mdi-phone" />
+                <span class="mdi mdi-phone"/>
                 <span>{{ department.phone }}</span>
               </div>
               <div class="department__open">
-                <span class="mdi mdi-clock" />
+                <span class="mdi mdi-clock"/>
                 <div>
                   <p v-for="item in department.opening" :key="item.day">
-                    <span>{{ item.day }} </span>
+                    <span>{{ item.day }}</span>
                     <span>{{ item.hour }}</span>
                   </p>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
 
       <div class="footer-block footer-block--map">
-        <footer-map />
+        <footer-map/>
       </div>
-
     </div>
 
     <div class="footer__copyright">
       <div>
-        <span>© 2017 Nascar. </span>
-        <span>Projekt i wykonanie <a href="//wlodarczyk.pro">Dariusz Włodarczyk</a>.</span>
+        <span>©2019 PPHU Nascar.</span>
+        <span>
+          Projekt i wykonanie
+          <a href="//wlodarczyk.pro">Dariusz Włodarczyk</a>.
+        </span>
       </div>
     </div>
-
   </footer>
 </template>
 
@@ -82,12 +80,18 @@ export default {
         {
           name: 'Serwis',
           phone: '+48 668 124 983',
-          opening: [{ day: 'pn - pt', hour: '8:00 - 18:00' }, { day: 'sb', hour: '9:00 - 14:00' }]
+          opening: [
+            { day: 'pn - pt', hour: '8:00 - 18:00' },
+            { day: 'sb', hour: '9:00 - 14:00' }
+          ]
         },
         {
           name: 'Stacja kontroli',
           phone: '+48 602 259 682',
-          opening: [{ day: 'pn - pt', hour: '8:00 - 20:00' }, { day: 'sb', hour: '9:00 - 14:00' }]
+          opening: [
+            { day: 'pn - pt', hour: '8:00 - 20:00' },
+            { day: 'sb', hour: '9:00 - 14:00' }
+          ]
         }
       ]
     }
@@ -187,7 +191,7 @@ export default {
 .department__name::after {
   background-color: $color-secondary;
   bottom: -0.5em;
-  content: "";
+  content: '';
   height: 2px;
   left: 50%;
   position: absolute;
