@@ -36,7 +36,9 @@ export default {
   margin: 1.25em 0;
 
   .branding__nascar {
-    width: 200px;
+    svg {
+      width: 200px;
+    }
   }
 
   .branding__premio {
