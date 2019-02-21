@@ -27,24 +27,30 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .branding {
   align-items: flex-end;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin: 1.25em 0;
+
+  .branding__nascar {
+    width: 200px;
+  }
+
+  .branding__premio {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .branding {
     justify-content: space-between;
-  }
-
-  .branding__premio,
-  .slider {
-    display: block;
+    .branding__premio,
+    .slider {
+      display: block;
+    }
   }
 }
 </style>
