@@ -45,7 +45,8 @@ module.exports = {
   plugins: [
     { src: '@/plugins/vue-googlemaps', ssr: false },
     '@/plugins/vee-validate',
-    '@/plugins/vue-visible'
+    '@/plugins/vue-visible',
+    '@/plugins/vue-lazyload'
   ],
 
   /*

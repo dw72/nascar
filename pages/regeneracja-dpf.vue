@@ -42,7 +42,7 @@
     >
       <div class="method-cons__content">
         <div class="method-cons__image">
-          <img src="/images/dpf.png" alt>
+          <img v-lazy="'/images/dpf.png'" alt>
         </div>
         <ul class="method-cons__list">
           <li>

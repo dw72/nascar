@@ -7,7 +7,7 @@
   >
     <div class="strengths__wrapper">
       <div class="strengths__image">
-        <img src="/images/mechanic.png" alt>
+        <img v-lazy="'/images/mechanic.png'" alt>
       </div>
       <div class="strengths__items">
         <strength

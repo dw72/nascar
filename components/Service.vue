@@ -2,7 +2,7 @@
   <div class="service">
     <div class="service__header">
       <h3 class="service__title">{{ name }}</h3>
-      <img :src="image" alt class="service__image">
+      <img v-lazy="image" alt class="service__image">
     </div>
     <div class="service__content">
       <p>{{ description }}</p>
