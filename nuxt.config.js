@@ -57,8 +57,8 @@ module.exports = {
     '@nuxtjs/dotenv',
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
-    'nuxt-webfontloader',
-    'nuxt-svg-loader'
+    '@nuxtjs/svg-sprite',
+    'nuxt-webfontloader'
   ],
   axios: {
     // See https://github.com/nuxt-community/axios-module#options

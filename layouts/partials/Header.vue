@@ -4,11 +4,11 @@
     <div class="branding">
       <div class="branding__nascar">
         <h1 class="hidden">PPHU Nascar</h1>
-        <nascar-logo/>
+        <svg-icon name="logo/nascar" width="12em" height="5em"/>
       </div>
       <div class="branding__premio">
         <h2 class="hidden">Przedstawiciel Premio - Opony i Autoserwis</h2>
-        <premio-logo/>
+        <svg-icon name="logo/premio" width="19em" height="3em"/>
       </div>
     </div>
 
@@ -17,13 +17,10 @@
 </template>
 
 <script>
-import NascarLogo from '@/assets/images/logo/nascar.svg'
-import PremioLogo from '@/assets/images/logo/premio.svg'
-
 import Navigation from './Navigation.vue'
 
 export default {
-  components: { NascarLogo, PremioLogo, Navigation }
+  components: { Navigation }
 }
 </script>
 
@@ -35,12 +32,6 @@ export default {
   justify-content: center;
   margin: 1.25em 0;
 
-  .branding__nascar {
-    svg {
-      width: 200px;
-    }
-  }
-
   .branding__premio {
     display: none;
   }
@@ -49,8 +40,7 @@ export default {
 @media screen and (min-width: 768px) {
   .branding {
     justify-content: space-between;
-    .branding__premio,
-    .slider {
+    .branding__premio {
       display: block;
     }
   }

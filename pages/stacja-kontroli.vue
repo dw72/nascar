@@ -15,7 +15,7 @@
           <p>Wstępne przeglądy pozwalające na wykrycie i usunięcie usterek, które mogą wpłynąć na wynik obowiązkowego badania okresowego.</p>
         </div>
         <div>
-          <icon name="map-outline" bordered size="md"/>
+          <icon name="map" bordered size="md"/>
           <p>Sprawdzenie pojazdu przed kupnem, okresem letnim bądź zimowym oraz przed dłuższą podróżą.</p>
         </div>
       </div>
