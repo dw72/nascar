@@ -72,7 +72,7 @@ export default {
 }
 
 .swiper-slide {
-  height: 225px;
+  height: auto;
 }
 
 .swiper-lazy {
