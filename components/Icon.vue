@@ -3,9 +3,6 @@
     class="icon"
     :class="{'icon--bordered': bordered, 'icon--small': size === 'sm', 'icon--medium': size === 'md', 'icon--large': size === 'lg'}"
   >
-    <!-- <svg viewBox="0 0 24 24" width="1em" fill="currentColor" aria-hidden="true">
-      <path :d="svgPath"/>
-    </svg>-->
     <svg-icon :name="name" fill="currentColor" height="1em" width="1em"/>
   </div>
 </template>
@@ -16,29 +13,12 @@ export default {
     name: { type: String, default: 'check', validator: value => !!value },
     size: {
       type: String,
-      default: 'medium',
+      default: 'xs',
       validator: value =>
         value ? ['xs', 'sm', 'md', 'lg'].includes(value) : true
     },
     bordered: { type: Boolean, default: false }
   }
-  // data() {
-  //   return {
-  //     svgPath: ''
-  //   }
-  // },
-  // async mounted() {
-  //   const name = this.name
-  //     .split('-')
-  //     .map(
-  //       item => `${item.charAt(0).toUpperCase()}${item.slice(1).toLowerCase()}`
-  //     )
-  //     .join('')
-
-  //   const module = await import('@mdi/js')
-  //   const path = module[`mdi${name}`]
-  //   this.svgPath = path
-  // }
 }
 </script>
 

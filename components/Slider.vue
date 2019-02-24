@@ -1,18 +1,12 @@
 <template>
-  <page-section
-    v-if="slides.length > 0"
-    class="slider"
-    header="removed"
-    title="Promocje"
-    full-width
-    no-padding
-  >
-    <swiper :options="options">
+  <page-section class="slider" header="removed" title="Promocje" full-width no-padding>
+    <swiper v-if="slides.length" :options="options">
       <swiper-slide v-for="(slide, idx) in slides" :key="idx">
         <a v-if="slide.url" :href="slide.url" target="_blank" rel="nofollow" tabindex="-1">
-          <img :src="slide.img" :alt="slide.alt">
+          <img :data-src="slide.img" :alt="slide.alt" class="swiper-lazy">
         </a>
-        <img v-else :src="slide.img" :alt="slide.alt">
+        <img v-else :data-src="slide.img" :alt="slide.alt" class="swiper-lazy">
+        <div class="swiper-lazy-preloader"/>
       </swiper-slide>
       <div slot="pagination" class="swiper-pagination"/>
       <div slot="button-prev" class="swiper-button swiper-button-prev"/>
@@ -34,8 +28,14 @@ export default {
         // http://idangero.us/swiper/api/
         autoplay: { delay: 5000 },
         keyboard: { enabled: true },
-        loop: true,
-        lazy: true,
+        loop: {
+          loopedSlides: 3
+        },
+        preloadImages: false,
+        lazy: {
+          loadPrevNext: true,
+          loadOnTransitionStart: true
+        },
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev'
@@ -46,7 +46,8 @@ export default {
           renderBullet: (idx, className) =>
             `<a href="#" class="${className}">${idx + 1}</a>`
         },
-        slidesPerView: 'auto'
+        slidesPerView: 1,
+        watchSlidesVisibility: true
       }
     }
   },
@@ -62,10 +63,23 @@ export default {
 <style lang="scss">
 .slider .section__content {
   display: none;
+  height: 225px;
   overflow: hidden;
 
   @media screen and (min-width: 768px) {
     display: initial;
+  }
+}
+
+.swiper-slide {
+  height: 225px;
+}
+
+.swiper-lazy {
+  display: none;
+
+  &.swiper-lazy-loaded {
+    display: block;
   }
 }
 
