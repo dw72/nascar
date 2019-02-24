@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <icon v-if="!!icon" bordered :name="icon"/>
+    <icon v-if="!!icon" bordered :name="icon" size="md"/>
     <h2>{{ title }}</h2>
     <div class="price">
       <div class="regular" :class="!!promoPrice ? 'striked' : null">{{ price }} zł</div>

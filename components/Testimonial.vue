@@ -1,7 +1,7 @@
 <template>
   <div class="testimonial">
     <div class="testimonial__header">
-      <span class="mdi mdi-account-circle" />
+      <icon name="account-circle" size="lg"/>
       <h3>
         {{ client }}
         <small>- {{ city }}</small>
@@ -11,11 +11,13 @@
       <p>{{ opinion }}</p>
     </div>
   </div>
-
 </template>
 
 <script>
+import Icon from '@/components/Icon'
+
 export default {
+  components: { Icon },
   props: {
     client: { type: String, required: true },
     city: { type: String, required: true },
@@ -34,12 +36,14 @@ export default {
 .testimonial__header {
   align-items: center;
   display: flex;
+  margin: 0.5em 0;
 }
 
-.testimonial__header .mdi {
+.testimonial__header .icon {
   color: rgba(52, 112, 175, 0.25);
-  font-size: 4em;
-  margin-right: 0.25em;
+  width: 1.25em;
+  height: 1.25em;
+  justify-content: flex-start;
 }
 
 .testimonial__header h3 {

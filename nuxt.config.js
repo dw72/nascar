@@ -18,14 +18,7 @@ module.exports = {
       { 'http-equiv': 'X-UA-Compatible', content: 'ie=edge' },
       { hid: 'description', name: 'description', content: 'Nascar website' }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://cdn.materialdesignicons.com/3.4.93/css/materialdesignicons.min.css'
-      }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   /*

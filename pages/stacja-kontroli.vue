@@ -7,15 +7,15 @@
     >
       <div class="services-list">
         <div>
-          <icon name="shield-check-outline" bordered/>
+          <icon name="shield-check-outline" bordered size="md"/>
           <p>Obowiązkowe przeglądy rejestracyjne i badania okresowe samochodów osobowych, motocykli i ciągników rolniczych.</p>
         </div>
         <div>
-          <icon name="alarm-plus" bordered/>
+          <icon name="alarm-plus" bordered size="md"/>
           <p>Wstępne przeglądy pozwalające na wykrycie i usunięcie usterek, które mogą wpłynąć na wynik obowiązkowego badania okresowego.</p>
         </div>
         <div>
-          <icon name="map-outline" bordered/>
+          <icon name="map-outline" bordered size="md"/>
           <p>Sprawdzenie pojazdu przed kupnem, okresem letnim bądź zimowym oraz przed dłuższą podróżą.</p>
         </div>
       </div>

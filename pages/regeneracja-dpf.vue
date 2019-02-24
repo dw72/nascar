@@ -14,19 +14,19 @@
     <page-section class="regeneration-const" header="removed">
       <ul>
         <li>
-          <icon name="leaf" bordered/>
+          <icon name="leaf" bordered size="md"/>
           <h4>Innowacyjna, ekologiczna metoda regeneracji.</h4>
         </li>
         <li>
-          <icon name="car-multiple" bordered/>
+          <icon name="car-multiple" bordered size="md"/>
           <h4>Obsługujemy wszystkie modele samochodów.</h4>
         </li>
         <li>
-          <icon name="calendar" bordered/>
+          <icon name="calendar" bordered size="md"/>
           <h4>Regeneracja i wysyłka tego samego dnia.</h4>
         </li>
         <li>
-          <icon name="file-chart" bordered/>
+          <icon name="file-chart" bordered size="md"/>
           <h4>Pełny raport dotyczący procesu regeneracji.</h4>
         </li>
       </ul>
@@ -46,27 +46,27 @@
         </div>
         <ul class="method-cons__list">
           <li>
-            <icon name="check" size="small"/>
+            <icon name="check" size="sm"/>
             <p>Brak ingerencji mechanicznej w strukturę filtra.</p>
           </li>
           <li>
-            <icon name="check" size="small"/>
+            <icon name="check" size="sm"/>
             <p>Na filtr nie oddziałuje wysoka temperatura.</p>
           </li>
           <li>
-            <icon name="check" size="small"/>
+            <icon name="check" size="sm"/>
             <p>Brak uszkodzeń powłoki katalitycznej filtra.</p>
           </li>
           <li>
-            <icon name="check" size="small"/>
+            <icon name="check" size="sm"/>
             <p>Usuwa wszystkie rodzaje cząstek stałych.</p>
           </li>
           <li>
-            <icon name="check" size="small"/>
+            <icon name="check" size="sm"/>
             <p>Nie narusza wkładu ceramicznego filtra.</p>
           </li>
           <li>
-            <icon name="check" size="small"/>
+            <icon name="check" size="sm"/>
             <p>Brak obciążeń silnika i układu wydechowego.</p>
           </li>
         </ul>
@@ -228,14 +228,15 @@ export default {
     display: flex;
     justify-content: flex-start;
     flex-basis: 45%;
+    margin-bottom: 0.5em;
 
     .icon {
       flex-shrink: 0;
-      margin-right: 0.25em;
+      margin-right: 0.5em;
     }
 
     p {
-      margin-top: 0.5em;
+      margin-top: 0em;
       text-align: left;
     }
   }

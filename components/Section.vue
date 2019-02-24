@@ -3,7 +3,8 @@
     <header v-show="header === 'visible'" v-if="header !== 'removed'" class="section__header">
       <slot name="header">
         <h2 v-if="title">{{ title }}</h2>
-        <hr v-if="(title || description) && !noDivider">
+        <!-- <hr v-if="(title || description) && !noDivider"> -->
+        <divider v-if="(title || description) && !noDivider"/>
         <p v-if="description">{{ description }}</p>
       </slot>
     </header>
@@ -14,7 +15,10 @@
 </template>
 
 <script>
+import Divider from '@/components/Divider'
+
 export default {
+  components: { Divider },
   props: {
     title: { type: String, default: '' },
     description: { type: String, default: '' },
@@ -86,26 +90,6 @@ export default {
   background: inherit;
   text-align: center;
   margin: 1em 0;
-}
-
-.section__header hr {
-  background: inherit;
-  border: 0;
-  width: 8em;
-  border-bottom: 2px solid rgba($color-primary, 0.25);
-  position: relative;
-  overflow: visible;
-
-  &::after {
-    background: inherit;
-    color: rgba($color-secondary, 0.45);
-    content: '\f10b';
-    font-family: 'Material Design Icons';
-    font-size: 1.5em;
-    padding: 0 0.5em;
-    position: absolute;
-    transform: translate(-50%, -50%);
-  }
 }
 
 .section__header p {

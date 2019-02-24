@@ -11,12 +11,12 @@
             <h3>PPHU Nascar</h3>
           </div>
           <div class="contact__address">
-            <span class="mdi mdi-map-marker"/>
+            <icon name="map-marker" size="sm"/>
             <span>ul. Ostrowska 157,</span>
             <span>63-700 Krotoszyn</span>
           </div>
           <div class="contact__email">
-            <span class="mdi mdi-email"/>
+            <icon name="email" size="sm"/>
             <span>biuro@nascar.com.pl</span>
           </div>
         </div>
@@ -25,11 +25,11 @@
             <h4 class="department__name">{{ department.name }}</h4>
             <div class="department__content">
               <div class="department__phone">
-                <span class="mdi mdi-phone"/>
+                <icon name="phone" size="sm"/>
                 <span>{{ department.phone }}</span>
               </div>
               <div class="department__open">
-                <span class="mdi mdi-clock"/>
+                <icon name="clock" size="sm"/>
                 <div>
                   <p v-for="item in department.opening" :key="item.day">
                     <span>{{ item.day }}</span>
@@ -60,10 +60,11 @@
 </template>
 
 <script>
+import Icon from '@/components/Icon'
 import FooterMap from './FooterMap.vue'
 
 export default {
-  components: { FooterMap },
+  components: { Icon, FooterMap },
   data() {
     return {
       departments: [
@@ -106,7 +107,7 @@ export default {
   font-size: 0.8em;
 }
 
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .page__footer {
     font-size: 0.9em;
   }
@@ -118,7 +119,7 @@ export default {
   }
 }
 
-.page__footer .mdi {
+.page__footer .icon {
   color: $color-icon-footer;
 }
 
@@ -154,6 +155,12 @@ export default {
   }
 }
 
+.contact {
+  .icon {
+    margin-right: 0.5em;
+  }
+}
+
 .contact__data {
   text-align: center;
 }
@@ -161,12 +168,6 @@ export default {
 .contact__name {
   font-size: 1.25em;
   line-height: 1;
-}
-
-.contact__address,
-.contact__email {
-  display: flex;
-  justify-content: center;
 }
 
 .departments {
@@ -199,12 +200,6 @@ export default {
   transform: translateX(-50%);
 }
 
-.department__open,
-.department__phone {
-  display: flex;
-  justify-content: center;
-}
-
 .department__open p {
   margin: 0;
   text-align: center;
@@ -212,6 +207,16 @@ export default {
 
 .department__phone span:nth-child(even) {
   font-size: 1.2em;
+}
+
+.contact__address,
+.contact__email,
+.department__open,
+.department__phone {
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5em;
 }
 
 .map__wrapper {

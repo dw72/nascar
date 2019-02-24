@@ -28,7 +28,7 @@
     >
       <li class="menu__item">
         <nuxt-link class="menu__link menu__link--main-page" to="/">
-          <span class="mdi mdi-home navbar__icon"/>
+          <icon name="home" size="sm"/>
           <span>Strona główna</span>
         </nuxt-link>
       </li>
@@ -39,7 +39,7 @@
     <ul class="navbar__actions menu">
       <li class="menu__item">
         <a class="menu__link" href="https://nascar.premio.pl/reservation">
-          <span class="mdi mdi-calendar-check navbar__icon"/>
+          <icon name="calendar-check" size="sm" class="navbar__icon"/>
           <span>Zarezerwuj termin</span>
         </a>
       </li>
@@ -48,7 +48,10 @@
 </template>
 
 <script>
+import Icon from '@/components/Icon'
+
 export default {
+  components: { Icon },
   data() {
     return {
       routes: [
@@ -159,6 +162,10 @@ export default {
   width: 100%;
   white-space: nowrap;
   transition: background-color 0.2s ease-in-out;
+
+  .icon {
+    color: inherit;
+  }
 }
 
 .menu__link {
@@ -183,6 +190,10 @@ export default {
 
 .navbar__actions .menu__link {
   background-color: $color-secondary;
+
+  .icon {
+    margin-right: 0.25em;
+  }
 }
 
 .navbar__actions .menu__link:focus,
@@ -196,11 +207,6 @@ export default {
 
 .menu__link--main-page span:last-child {
   display: initial;
-}
-
-.navbar__icon {
-  font-size: 1.25em;
-  margin: -0.25em 0.5em -0.25em 0;
 }
 
 @media (min-width: 960px) {

@@ -6,7 +6,7 @@
         href="https://nascar.premio.pl/reservation"
         class="button button--big button--secondary button--rounded"
       >
-        <span class="mdi mdi-calendar-check button__icon"/>
+        <icon name="calendar-check" size="sm"/>
         <span>Zarezerwuj termin</span>
       </a>
     </slot>
@@ -14,10 +14,11 @@
 </template>
 
 <script>
-import PageSection from '@/components/Section.vue'
+import Icon from '@/components/Icon'
+import PageSection from '@/components/Section'
 
 export default {
-  components: { PageSection }
+  components: { Icon, PageSection }
 }
 </script>
 
@@ -39,6 +40,11 @@ export default {
     @media screen and (min-width: 960px) {
       flex-direction: row;
     }
+  }
+
+  .icon {
+    color: inherit;
+    margin-right: 0.5em;
   }
 
   .not-android & {

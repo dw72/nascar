@@ -16,6 +16,7 @@
     "deploy": "npm run generate; npm run build:lambda"
   },
   "dependencies": {
+    "@mdi/js": "^3.4.93",
     "@nuxtjs/axios": "^5.0.0",
     "@nuxtjs/dotenv": "^1.3.0",
     "@nuxtjs/proxy": "^1.3.1",
@@ -26,7 +27,6 @@
     "fast-html-parser": "^1.0.1",
     "idb": "^3.0.2",
     "nuxt": "^2.4.3",
-    "nuxt-validate": "^0.1.2",
     "vee-validate": "^2.1.7",
     "vue-awesome-swiper": "^3.1.3",
     "vue-googlemaps": "^0.1.2",
