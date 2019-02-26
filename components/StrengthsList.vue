@@ -7,7 +7,12 @@
   >
     <div class="strengths__wrapper">
       <div class="strengths__image">
-        <img v-lazy="'/images/mechanic.png'" alt>
+        <img
+          v-lazy="require('@/assets/images/mechanic.png')"
+          :data-srcset="require('@/assets/images/mechanic.png').srcSet"
+          sizes="380px"
+          alt
+        >
       </div>
       <div class="strengths__items">
         <strength

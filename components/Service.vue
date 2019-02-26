@@ -2,7 +2,14 @@
   <div class="service">
     <div class="service__header">
       <h3 class="service__title">{{ name }}</h3>
-      <img v-lazy="image" alt class="service__image">
+      <img
+        v-if="image"
+        v-lazy="require('@/assets/images/services/' + image)"
+        :data-srcset="require('@/assets/images/services/' + image).srcSet"
+        sizes="(min-width: 576px) 48vw, 96vw"
+        alt
+        class="service__image"
+      >
     </div>
     <div class="service__content">
       <p>{{ description }}</p>

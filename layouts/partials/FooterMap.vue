@@ -9,12 +9,7 @@
         class="map"
         @tilesloaded="disableTabstops"
       >
-        <googlemaps-marker
-          :position="nascar"
-          :icon="icon"
-          :clickable="false"
-          title="PPHU Nascar"
-        />
+        <googlemaps-marker :position="nascar" :icon="icon" :clickable="false" title="PPHU Nascar"/>
       </googlemaps-map>
     </no-ssr>
   </div>
@@ -26,7 +21,7 @@ export default {
     return {
       center: { lat: 51.695021, lng: 17.445434 },
       nascar: { lat: 51.690021, lng: 17.463134 },
-      zoom: 12,
+      zoom: 14,
       icon: '/images/map-marker.svg',
       options: {
         gestureHandling: 'cooperative',
@@ -45,7 +40,13 @@ export default {
           {
             featureType: 'all',
             elementType: 'labels.text.stroke',
-            stylers: [{ saturation: -31 }, { lightness: -33 }, { weight: 2 }, { gamma: 0.8 }, { color: '#09253d' }]
+            stylers: [
+              { saturation: -31 },
+              { lightness: -33 },
+              { weight: 2 },
+              { gamma: 0.8 },
+              { color: '#09253d' }
+            ]
           },
           {
             featureType: 'all',
@@ -55,7 +56,11 @@ export default {
           {
             featureType: 'landscape',
             elementType: 'geometry',
-            stylers: [{ lightness: 30 }, { saturation: 30 }, { color: '#00325B' }]
+            stylers: [
+              { lightness: 30 },
+              { saturation: 30 },
+              { color: '#00325B' }
+            ]
           },
           {
             featureType: 'landscape.man_made',
@@ -65,12 +70,20 @@ export default {
           {
             featureType: 'road',
             elementType: 'geometry',
-            stylers: [{ lightness: 10 }, { saturation: '-30' }, { color: '#3470af' }]
+            stylers: [
+              { lightness: 10 },
+              { saturation: '-30' },
+              { color: '#3470af' }
+            ]
           },
           {
             featureType: 'road',
             elementType: 'geometry.stroke',
-            stylers: [{ saturation: 25 }, { lightness: 25 }, { color: '#0f3053' }]
+            stylers: [
+              { saturation: 25 },
+              { lightness: 25 },
+              { color: '#0f3053' }
+            ]
           }
         ]
       }

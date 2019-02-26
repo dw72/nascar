@@ -36,7 +36,7 @@ html {
         rgba(darken($color-primary, 15%), 0.75),
         rgba($color-primary, 0.98)
       ),
-      url('/images/engine.jpg');
+      url('~assets/images/engine.jpg');
     background-attachment: fixed;
     background-position-x: center;
     background-repeat: no-repeat;

@@ -42,7 +42,12 @@
     >
       <div class="method-cons__content">
         <div class="method-cons__image">
-          <img v-lazy="'/images/dpf.png'" alt>
+          <img
+            v-lazy="require('@/assets/images/dpf.png')"
+            :data-srcset="require('@/assets/images/dpf.png').srcSet"
+            sizes="(min-width: 960px) 450px, (min-width: 576px) 70vw, 80vw"
+            alt
+          >
         </div>
         <ul class="method-cons__list">
           <li>
@@ -195,13 +200,23 @@ export default {
     align-items: center;
     display: flex;
     justify-content: center;
-    flex-basis: 48%;
+    width: 100%;
 
     img {
       padding: 1em;
       width: 80%;
+    }
 
-      @media screen and (min-width: 960px) {
+    @media screen and (min-width: 580px) {
+      img {
+        width: 60%;
+      }
+    }
+
+    @media screen and (min-width: 960px) {
+      width: 48%;
+
+      img {
         width: 90%;
       }
     }

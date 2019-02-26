@@ -123,6 +123,19 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    loaders: {
+      imgUrl: {
+        limit: 8192,
+        fallback: 'responsive-loader',
+        min: 250,
+        max: 1140,
+        steps: 8,
+        quality: 80,
+        name: '[name]-[hash].[ext]',
+        adapter: require('responsive-loader/sharp')
+      }
+    },
+
     /*
     ** You can extend webpack config here
     */
