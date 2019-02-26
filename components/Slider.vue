@@ -2,7 +2,13 @@
   <page-section class="slider" header="removed" title="Promocje" full-width no-padding>
     <swiper v-if="slides.length" :options="options">
       <swiper-slide v-for="(slide, idx) in slides" :key="idx">
-        <a v-if="slide.url" :href="slide.url" target="_blank" rel="nofollow" tabindex="-1">
+        <a
+          v-if="slide.url"
+          :href="slide.url"
+          target="_blank"
+          rel="nofollow noreferrer noopener"
+          tabindex="-1"
+        >
           <img :data-src="slide.img" :alt="slide.alt" class="swiper-lazy">
         </a>
         <img v-else :data-src="slide.img" :alt="slide.alt" class="swiper-lazy">

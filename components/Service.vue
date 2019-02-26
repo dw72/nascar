@@ -4,11 +4,11 @@
       <h3 class="service__title">{{ name }}</h3>
       <img
         v-if="image"
-        v-lazy="require('@/assets/images/services/' + image)"
+        :data-src="require('@/assets/images/services/' + image)"
         :data-srcset="require('@/assets/images/services/' + image).srcSet"
-        sizes="(min-width: 576px) 48vw, 96vw"
+        data-sizes="auto"
         alt
-        class="service__image"
+        class="service__image lazyload"
       >
     </div>
     <div class="service__content">

@@ -44,9 +44,9 @@ module.exports = {
   */
   plugins: [
     { src: '@/plugins/vue-googlemaps', ssr: false },
-    '@/plugins/vee-validate',
+    { src: '@/plugins/vee-validate', ssr: false },
     '@/plugins/vue-visible',
-    '@/plugins/vue-lazyload'
+    '@/plugins/lazysizes'
   ],
 
   /*
@@ -129,7 +129,7 @@ module.exports = {
         fallback: 'responsive-loader',
         min: 250,
         max: 1140,
-        steps: 8,
+        steps: 10,
         quality: 80,
         name: '[name]-[hash].[ext]',
         adapter: require('responsive-loader/sharp')

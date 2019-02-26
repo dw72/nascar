@@ -43,10 +43,11 @@
       <div class="method-cons__content">
         <div class="method-cons__image">
           <img
-            v-lazy="require('@/assets/images/dpf.png')"
+            :data-src="require('@/assets/images/dpf.png')"
             :data-srcset="require('@/assets/images/dpf.png').srcSet"
-            sizes="(min-width: 960px) 450px, (min-width: 576px) 70vw, 80vw"
+            data-sizes="auto"
             alt
+            class="lazyload"
           >
         </div>
         <ul class="method-cons__list">

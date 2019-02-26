@@ -8,10 +8,11 @@
     <div class="strengths__wrapper">
       <div class="strengths__image">
         <img
-          v-lazy="require('@/assets/images/mechanic.png')"
+          :data-src="require('@/assets/images/mechanic.png')"
           :data-srcset="require('@/assets/images/mechanic.png').srcSet"
-          sizes="380px"
+          data-sizes="auto"
           alt
+          class="lazyload"
         >
       </div>
       <div class="strengths__items">
