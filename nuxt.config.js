@@ -129,9 +129,8 @@ module.exports = {
         fallback: 'responsive-loader',
         min: 250,
         max: 1140,
-        steps: 10,
-        quality: 80,
-        name: '[name]-[hash].[ext]',
+        steps: 9,
+        quality: 75,
         adapter: require('responsive-loader/sharp')
       }
     },

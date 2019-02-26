@@ -4,8 +4,8 @@
       <h3 class="service__title">{{ name }}</h3>
       <img
         v-if="image"
-        :data-src="require('@/assets/images/services/' + image)"
-        :data-srcset="require('@/assets/images/services/' + image).srcSet"
+        :data-src="require(`@/assets/images/services/${image}`)"
+        :data-srcset="require(`@/assets/images/services/${image}`).srcSet"
         data-sizes="auto"
         alt
         class="service__image lazyload"
