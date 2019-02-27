@@ -201,11 +201,11 @@ export default {
   background-color: darken($color-secondary, 5%);
 }
 
-.menu__link--main-page .icon:first-child {
+.menu__link--main-page .icon {
   display: none;
 }
 
-.menu__link--main-page .icon:last-child {
+.menu__link--main-page span {
   display: initial;
 }
 
@@ -236,12 +236,12 @@ export default {
     border-top-color: transparent;
   }
 
-  .menu__link--main-page .icon:first-child {
+  .menu__link--main-page .icon {
     display: initial;
     margin-right: 0;
   }
 
-  .menu__link--main-page .icon:last-child {
+  .menu__link--main-page span {
     display: none;
   }
 }
