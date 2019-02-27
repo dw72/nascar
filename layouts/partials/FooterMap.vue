@@ -21,7 +21,7 @@ export default {
     return {
       center: { lat: 51.695021, lng: 17.445434 },
       nascar: { lat: 51.690021, lng: 17.463134 },
-      zoom: 14,
+      zoom: 13,
       icon: '/images/map-marker.svg',
       options: {
         gestureHandling: 'cooperative',
