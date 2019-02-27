@@ -203,6 +203,7 @@ export default {
 
 .menu__link--main-page .icon {
   display: none;
+  line-height: 0;
 }
 
 .menu__link--main-page span {
