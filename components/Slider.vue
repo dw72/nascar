@@ -69,12 +69,23 @@ export default {
 <style lang="scss">
 .slider .section__content {
   display: none;
-  height: 225px;
   overflow: hidden;
+
+  height: 0;
+  padding-top: 19.75%;
+  position: relative;
 
   @media screen and (min-width: 768px) {
     display: initial;
   }
+}
+
+.swiper-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
 }
 
 .swiper-slide {
