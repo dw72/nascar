@@ -17,7 +17,6 @@
 </template>
 
 <script>
-import testimonials from '@/assets/data/testimonials.json'
 import PageSection from '@/components/Section.vue'
 import Testimonial from './Testimonial.vue'
 
@@ -25,7 +24,26 @@ export default {
   components: { PageSection, Testimonial },
   data() {
     return {
-      testimonials
+      testimonials: [
+        {
+          client: 'Tomasz',
+          city: 'Krotoszyn',
+          opinion:
+            'Z czystym sumieniem polecam korzystanie z usług tego serwisu. Miła, pomocna i profesjonalna ekipa. Z moim autem mieli sporo pracy, a mimo to uporali się w ciągu jednego dnia. Co ważne nie zdarli ze mnie ostatniej złotówki.'
+        },
+        {
+          client: 'Agnieszka',
+          city: 'Krotoszyn',
+          opinion:
+            'Gorące podziękowania za przywrócenie do życia mojego silnika. Auto jeździ jak dawniej. Co mnie bardzo mile zaskoczyło to bardzo krótki czas naprawy i przystępna cena.'
+        },
+        {
+          client: 'Grzegorz',
+          city: 'Koźmin Wlkp.',
+          opinion:
+            'Silnik mojego auta stracił moc. Gdzie indziej proponowano mi naprawe za prawie 3 tyś zł. Tutaj uporali sie z usterką za połowę tej kwoty. Szczerze i gorąco mogę ich polecić. Wiedzą co robią i nie przeginają z cenami.'
+        }
+      ]
     }
   }
 }

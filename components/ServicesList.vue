@@ -16,7 +16,6 @@
 </template>
 
 <script>
-import services from '@/assets/data/services.json'
 import PageSection from '@/components/Section.vue'
 import Service from './Service.vue'
 
@@ -24,7 +23,44 @@ export default {
   components: { PageSection, Service },
   data() {
     return {
-      services
+      services: [
+        {
+          name: 'Serwis samochodu',
+          description:
+            'Dysponujemy wykwalifikowanym personelem oraz nowoczesnym sprzętem niezbędnym do naprawy Twojego samochodu.',
+          image: 'serwis_samochodu.jpg'
+        },
+        {
+          name: 'Stacja kontroli',
+          description:
+            'Nasi diagności rzetelnie sprawdzą elementy Twojego auta które mają wpływ na Twoje bezpieczeństwo oraz sprawność samochodu.',
+          image: 'stacja_kontroli.jpg'
+        },
+        {
+          name: 'Serwis ogumienia',
+          description:
+            'Pomożemy w wyborze najlepszego dla Twojego samochodu ogumienia, a także fachowo zajmiemy się jego wymianą oraz naprawą.',
+          image: 'serwis_ogumienia.jpg'
+        },
+        {
+          name: 'Myjnia',
+          description:
+            'Zapewniamy bezdotykowe mycie pojazdu, które jest skuteczną, bezpieczną, a także oszczędną metodą mycia samochodów.',
+          image: 'myjnia.jpg'
+        },
+        {
+          name: 'Kredyty i leasing',
+          description:
+            'Zaproponujemy ofertę kilku banków, z minimum formalności oraz możliwością uzyskania kredytu jeśli jesteś już właścicielem pojazdu.',
+          image: 'kredyty_i_leasing.jpg'
+        },
+        {
+          name: 'Ubezpieczenia',
+          description:
+            'Fachowo doradzimy Państwu najlepsze i najtańsze ubezpieczenie spośród bogatej oferty wielu towarzystw ubezpieczeniowych.',
+          image: 'ubezpieczenia.jpg'
+        }
+      ]
     }
   }
 }

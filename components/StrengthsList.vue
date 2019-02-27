@@ -29,7 +29,6 @@
 </template>
 
 <script>
-import strengths from '@/assets/data/strengths.json'
 import PageSection from '@/components/Section.vue'
 import Strength from './Strength.vue'
 
@@ -37,7 +36,32 @@ export default {
   components: { PageSection, Strength },
   data() {
     return {
-      strengths
+      strengths: [
+        {
+          name: 'Świetna reputacja',
+          description:
+            'Jesteśmy małym, niezależnym warsztatem, z tego powodu niska jakość wykonania usług nie wchodzi w grę.',
+          icon: 'thumb-up'
+        },
+        {
+          name: 'Doświadczenie',
+          description:
+            'Nasi pracownicy są dobrze wyszkoleni oraz doświadczeni, wiedzą co robią, dlatego można im zaufać.',
+          icon: 'fire'
+        },
+        {
+          name: 'Krótkie terminy',
+          description:
+            'Wiemy jak ciężko Ci funkcjonować bez pojazdu, więc naszą pracę wykonujemy bez zbędnych opóźnień.',
+          icon: 'rocket'
+        },
+        {
+          name: 'Konkurencyjne ceny',
+          description:
+            'Klienci do nas wracają, ponieważ są traktowani uczciwie i nie przepłacają za wykonane usługi.',
+          icon: 'flag-variant'
+        }
+      ]
     }
   }
 }
