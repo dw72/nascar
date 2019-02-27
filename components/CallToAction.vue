@@ -55,7 +55,7 @@ export default {
           rgba(darken($color-primary, 10%), 0.9),
           rgba(darken($color-primary, 5%), 0.95)
         ),
-        url('/images/engine.jpg');
+        url('~assets/images/engine.jpg');
       background-attachment: fixed;
       background-position-x: center;
       background-repeat: no-repeat;

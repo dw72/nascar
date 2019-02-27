@@ -36,7 +36,10 @@ export default {
 }
 
 .service__header {
+  height: 0;
   position: relative;
+  padding-bottom: 56.25%;
+  padding-bottom: 66%;
 }
 
 .service__header h3 {
@@ -48,6 +51,7 @@ export default {
   padding: 0.25em 1em;
   position: absolute;
   right: -0.5em;
+  z-index: 1;
 }
 
 .service__header h3::after {
@@ -76,6 +80,10 @@ export default {
   height: 100%;
   object-fit: cover;
   width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 @media screen and (min-width: 576px) {
@@ -100,6 +108,8 @@ export default {
 
   .service__header {
     flex: 1 1 50%;
+    padding: 0;
+    height: auto;
   }
 
   .service__content {
