@@ -101,7 +101,7 @@ module.exports = {
   },
   webfontloader: {
     google: {
-      families: ['Montserrat', 'Exo+2']
+      families: ['Montserrat:400', 'Exo+2:400,700']
     }
   },
 
@@ -117,7 +117,7 @@ module.exports = {
   /*
   ** Nuxt generate config
   */
-  generate: { fallback: true, subFolders: false },
+  generate: { fallback: false, subFolders: false },
 
   /*
   ** Render options
