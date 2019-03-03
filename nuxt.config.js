@@ -1,7 +1,5 @@
 require('dotenv').config()
 
-const shrinkRay = require('shrink-ray-current')
-
 module.exports = {
   mode: 'spa',
 
@@ -120,18 +118,6 @@ module.exports = {
   ** Nuxt generate config
   */
   generate: { fallback: true, subFolders: false },
-
-  /*
-  ** Render options
-  */
-  render: {
-    compressor: shrinkRay(),
-    resourceHints: true,
-    http2: {
-      push: true,
-      pushAssets: null
-    }
-  },
 
   /*
   ** Build configuration
