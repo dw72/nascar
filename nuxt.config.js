@@ -1,5 +1,7 @@
 require('dotenv').config()
 
+const shrinkRay = require('shrink-ray-current')
+
 module.exports = {
   mode: 'spa',
 
@@ -80,8 +82,8 @@ module.exports = {
           cacheName: 'premio-slider-images',
           cacheableResponse: { statuses: [0, 200] },
           cacheExpiration: {
-            maxEntries: 10,
-            maxAgeSeconds: 120
+            maxEntries: 15,
+            maxAgeSeconds: 3600
           }
         }
       }
@@ -117,13 +119,13 @@ module.exports = {
   /*
   ** Nuxt generate config
   */
-  generate: { fallback: false, subFolders: false },
+  generate: { fallback: true, subFolders: false },
 
   /*
   ** Render options
   */
   render: {
-    compressor: { threshold: 9 },
+    compressor: shrinkRay(),
     resourceHints: true,
     http2: {
       push: true,
