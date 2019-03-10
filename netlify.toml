@@ -5,12 +5,12 @@
 
 [[redirects]]
   from = "http://dpf.nascar.com.pl/*"
-  to = "https://nascar.com.pl/regeneracja-dpf/:splat"
+  to = "https://nascar.com.pl/filtry/:splat"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://dpf.nascar.com.pl/*"
-  to = "https://nascar.com.pl/regeneracja-dpf/:splat"
+  to = "https://nascar.com.pl/filtry/:splat"
   status = 301
   force = true

@@ -55,8 +55,8 @@ export default {
   data() {
     return {
       routes: [
-        { path: '/regeneracja-dpf', title: 'Regenracja DPF/FAP' },
-        { path: '/stacja-kontroli', title: 'Stacja kontroli' },
+        { path: '/filtry', title: 'Regenracja DPF/FAP' },
+        { path: '/diagnostyka', title: 'Stacja kontroli' },
         { path: '/serwis', title: 'Serwis' },
         { path: '/myjnia', title: 'Myjnia' },
         { path: '/uslugi-finansowe', title: 'Usługi finansowe' }
