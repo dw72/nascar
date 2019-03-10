@@ -7,17 +7,17 @@
     >
       <div class="services-list">
         <div>
-          <icon name="shield-check-outline" bordered size="md"/>
+          <icon name="car-sports" bordered size="md"/>
           <h3>Kredyty samochodowe</h3>
           <p>Oferta obejmuje każdy pojazd do 13 roku eksploatacji. Stosujemy procedurę uproszczoną, bez zaświadczeń o dochodach. Auto może pochodzić z salonu, komisu a także od osoby fizycznej.</p>
         </div>
         <div>
-          <icon name="alarm-plus" bordered size="md"/>
+          <icon name="cash" bordered size="md"/>
           <h3>Kredyty gotówkowe</h3>
           <p>Kredyty tego typu udzielane są w wysokości do 90 tysięcy złotych, bez zabezpieczeń czy poręczycieli. Spłata rozkładana jest na dogodny okres kredytowania, który może wynosić nawet do 8 lat.</p>
         </div>
         <div>
-          <icon name="map" bordered size="md"/>
+          <icon name="cash-multiple" bordered size="md"/>
           <h3>Kredyty konsolidacyjne</h3>
           <p>Za ich pomocą możemy spłacić nie tylko kredyty gotówkowe, debet na koncie czy kredyt samochodowy lub mieszkaniowy, ale także pozostałą jego część przeznaczyć na dowolny cel.</p>
         </div>
