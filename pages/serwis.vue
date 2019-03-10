@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import PageSection from '@/components/Section'
+import PageSection from '@/components/PageSection'
 export default {
   components: { PageSection },
   head() {

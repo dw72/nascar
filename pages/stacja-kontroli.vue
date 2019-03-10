@@ -43,7 +43,7 @@
 <script>
 import { mapState } from 'vuex'
 
-import PageSection from '@/components/Section.vue'
+import PageSection from '@/components/PageSection.vue'
 import Icon from '@/components/Icon'
 
 export default {

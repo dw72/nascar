@@ -24,7 +24,7 @@
 <script>
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import { mapState } from 'vuex'
-import PageSection from '@/components/Section.vue'
+import PageSection from '@/components/PageSection.vue'
 
 export default {
   components: { PageSection, swiper, swiperSlide },

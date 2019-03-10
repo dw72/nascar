@@ -3,7 +3,6 @@
     <header v-show="header === 'visible'" v-if="header !== 'removed'" class="section__header">
       <slot name="header">
         <h2 v-if="title">{{ title }}</h2>
-        <!-- <hr v-if="(title || description) && !noDivider"> -->
         <divider v-if="(title || description) && !noDivider"/>
         <p v-if="description">{{ description }}</p>
       </slot>

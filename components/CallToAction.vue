@@ -15,7 +15,7 @@
 
 <script>
 import Icon from '@/components/Icon'
-import PageSection from '@/components/Section'
+import PageSection from '@/components/PageSection'
 
 export default {
   components: { Icon, PageSection }

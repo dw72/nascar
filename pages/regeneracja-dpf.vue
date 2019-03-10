@@ -126,7 +126,7 @@
 <script>
 import { mapState } from 'vuex'
 
-import PageSection from '@/components/Section'
+import PageSection from '@/components/PageSection'
 import Icon from '@/components/Icon'
 import CallToAction from '@/components/CallToAction'
 import PriceCard from '@/components/PriceCard'

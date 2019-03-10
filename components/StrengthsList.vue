@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import PageSection from '@/components/Section.vue'
+import PageSection from '@/components/PageSection.vue'
 import Strength from './Strength.vue'
 
 export default {

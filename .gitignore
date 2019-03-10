@@ -42,7 +42,7 @@ jspm_packages/
 typings/
 
 # Lambda functions build output
-lambda/
+lambda
 
 # Optional npm cache directory
 .npm

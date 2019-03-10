@@ -6,7 +6,7 @@
     title="Opinie naszych klientów"
     description="Opinie klientów są dla nas bardzo ważne, ponieważ pozwalają nam ciągle doskonalić naszą ofertę i jakość wykonywaych usług tak by wychodziły na przeciw ich oczekiwaniom."
   >
-    <testimonial
+    <testimonial-card
       v-for="testimonial in testimonials"
       :key="testimonial.client"
       :client="testimonial.client"
@@ -17,11 +17,11 @@
 </template>
 
 <script>
-import PageSection from '@/components/Section.vue'
-import Testimonial from './Testimonial.vue'
+import PageSection from '@/components/PageSection.vue'
+import TestimonialCard from './TestimonialCard.vue'
 
 export default {
-  components: { PageSection, Testimonial },
+  components: { PageSection, TestimonialCard },
   data() {
     return {
       testimonials: [

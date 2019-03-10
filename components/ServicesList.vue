@@ -5,7 +5,7 @@
     title="Wszystko czego potrzebuje Twój samochód"
     description="Już od 1997 roku dbamy o samochody mieszkańców Krotoszyna i okolic. Fachowo i rzetelnie wykonujemy najtrudniejsze zadania za uczciwe i konkurencyjne stawki."
   >
-    <service
+    <service-card
       v-for="service in services"
       :key="service.name"
       :name="service.name"
@@ -16,11 +16,11 @@
 </template>
 
 <script>
-import PageSection from '@/components/Section.vue'
-import Service from './Service.vue'
+import PageSection from '@/components/PageSection.vue'
+import ServiceCard from './ServiceCard.vue'
 
 export default {
-  components: { PageSection, Service },
+  components: { PageSection, ServiceCard },
   data() {
     return {
       services: [
