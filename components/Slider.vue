@@ -67,79 +67,81 @@ export default {
 </script>
 
 <style lang="scss">
-.slider .section__content {
-  display: none;
-  overflow: hidden;
+.slider {
+  .section__content {
+    display: none;
+    overflow: hidden;
 
-  height: 0;
-  padding-top: 19.75%;
-  position: relative;
+    height: 0;
+    padding-top: 19.75%;
+    position: relative;
 
-  @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) {
+      display: initial;
+    }
+  }
+
+  .swiper-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  .swiper-lazy {
+    display: none;
+
+    &.swiper-lazy-loaded {
+      display: block;
+    }
+  }
+
+  .swiper-button {
+    display: none;
+  }
+
+  .swiper-container:hover .swiper-button,
+  .swiper-button:focus {
     display: initial;
   }
-}
 
-.swiper-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-}
+  .swiper-pagination {
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.55em;
+    padding-right: 2em;
 
-.swiper-slide {
-  height: auto;
-}
-
-.swiper-lazy {
-  display: none;
-
-  &.swiper-lazy-loaded {
-    display: block;
+    @media screen and (min-width: 960px) {
+      font-size: 0.75em;
+    }
   }
-}
 
-.swiper-button {
-  display: none;
-}
-
-.swiper-container:hover .swiper-button,
-.swiper-button:focus {
-  display: initial;
-}
-
-.swiper-pagination {
-  display: flex;
-  justify-content: flex-end;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.55em;
-  padding-right: 2em;
-
-  @media screen and (min-width: 960px) {
-    font-size: 0.75em;
+  .swiper-pagination-bullet {
+    align-items: center;
+    background: rgba($color-background, 0.75);
+    color: $color-text;
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    padding: 1em;
+    text-decoration: none;
   }
-}
 
-.swiper-pagination-bullet {
-  align-items: center;
-  background: rgba($color-background, 0.75);
-  color: $color-text;
-  display: flex;
-  justify-content: center;
-  opacity: 1;
-  padding: 1em;
-  text-decoration: none;
-}
+  .swiper-pagination-bullet:focus,
+  .swiper-pagination-bullet:hover {
+    background: rgba($color-secondary, 0.75);
+    color: $color-text-light;
+  }
 
-.swiper-pagination-bullet:focus,
-.swiper-pagination-bullet:hover {
-  background: rgba($color-secondary, 0.75);
-  color: $color-text-light;
-}
-
-.swiper-pagination-bullet-active {
-  background: $color-primary;
-  color: $color-text-light;
+  .swiper-pagination-bullet-active {
+    background: $color-primary;
+    color: $color-text-light;
+  }
 }
 </style>
