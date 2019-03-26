@@ -2,7 +2,7 @@
   <div class="page">
     <div class="number">{{ error.statusCode }}</div>
     <h2 class="message">Ops... coś poszło nie tak!</h2>
-    <p>{{ error.message }}</p>
+    <p>{{ message() }}</p>
     <button class="button button--primary button--rounded" @click="$router.go(-1)">⬅&nbsp;&nbsp;Wróć</button>
   </div>
 </template>
@@ -11,6 +11,26 @@
 export default {
   props: {
     error: { type: Object, required: true }
+  },
+  methods: {
+    message() {
+      switch (this.error.statusCode) {
+        case 401:
+          return 'Nieautoryzowany dostęp.'
+          break
+        case 403:
+          return 'Dostęp zabroniony.'
+          break
+        case 404:
+          return 'Nie znaleziono żądanej strony.'
+          break
+        case 500:
+          return 'Wystąpił wewnętrzny błąd serwera.'
+          break
+        default:
+          return this.error.message
+      }
+    }
   }
 }
 </script>
@@ -39,7 +59,7 @@ h2 {
 
 p {
   font-weight: bold;
-  margin: 0 0 2em;
+  margin: 0.25em 0 2em;
   opacity: 0.5;
 }
 
