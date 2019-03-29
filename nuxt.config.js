@@ -18,7 +18,13 @@ module.exports = {
       { 'http-equiv': 'X-UA-Compatible', content: 'ie=edge' },
       { hid: 'description', name: 'description', content: 'Nascar website' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    noscript: [
+      {
+        innerHTML:
+          'Strona do poprawnego działania wymaga właczonego Javascipt...'
+      }
+    ]
   },
 
   /*
