@@ -57,6 +57,7 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/dotenv',
     '@nuxtjs/pwa',
+    ['@nuxtjs/google-tag-manager', { id: process.env.GTM_KEY }],
     '@nuxtjs/style-resources',
     '@nuxtjs/svg-sprite',
     'nuxt-webfontloader'
