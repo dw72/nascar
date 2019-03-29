@@ -35,7 +35,7 @@ export default {
         autoplay: { delay: 5000 },
         keyboard: { enabled: true },
         loop: {
-          loopedSlides: 3
+          loopedSlides: 1
         },
         preloadImages: false,
         lazy: {
