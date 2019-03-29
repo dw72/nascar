@@ -60,8 +60,8 @@ export default {
   computed: {
     ...mapState('slider', ['slides'])
   },
-  async mounted() {
-    await this.$store.dispatch('slider/FETCH_SLIDES_REQUEST')
+  mounted() {
+    this.$store.dispatch('slider/FETCH_SLIDES_REQUEST')
   }
 }
 </script>
