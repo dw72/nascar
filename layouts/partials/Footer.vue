@@ -26,7 +26,7 @@
             <div class="department__content">
               <div class="department__phone">
                 <icon name="phone" size="sm"/>
-                <span>{{ department.phone }}</span>
+                <a :href="`tel:${department.phone.replace(/[ -]/gi,'')}`">{{ department.phone }}</a>
               </div>
               <div class="department__open">
                 <icon name="clock" size="sm"/>
@@ -205,8 +205,16 @@ export default {
   text-align: center;
 }
 
-.department__phone span:nth-child(even) {
+.department__phone a {
+  border-bottom: 2px dotted transparent;
+  color: $color-text-light;
   font-size: 1.2em;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    border-bottom-color: $color-icon-footer;
+  }
 }
 
 .contact__address,
