@@ -4,8 +4,8 @@ module.exports = {
   mode: 'spa',
 
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
     htmlAttrs: {
       lang: 'pl'
@@ -28,26 +28,26 @@ module.exports = {
   },
 
   /*
-  ** Customize the progress-bar color
-  */
+   ** Customize the progress-bar color
+   */
   loading: { color: '#3B8070' },
 
   /*
-  ** Router configuration
-  */
+   ** Router configuration
+   */
   router: {
     linkActiveClass: 'menu__link--active',
     linkExactActiveClass: 'menu__link--exact'
   },
 
   /*
-  ** Global CSS
-  */
+   ** Global CSS
+   */
   css: ['swiper/dist/css/swiper.css', '@/assets/scss/theme.scss'],
 
   /*
-  ** Plugins to load before mounting the App
-  */
+   ** Plugins to load before mounting the App
+   */
   plugins: [
     { src: '@/plugins/vue-googlemaps', ssr: false },
     '@/plugins/vue-visible',
@@ -56,8 +56,8 @@ module.exports = {
   ],
 
   /*
-  ** Nuxt.js modules
-  */
+   ** Nuxt.js modules
+   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
@@ -82,14 +82,9 @@ module.exports = {
     runtimeCaching: [
       {
         urlPattern: '^https://www.premio.pl/assets/resized_images/.*',
-        handler: 'cacheFirst',
+        handler: 'StaleWhileRevalidate',
         strategyOptions: {
-          cacheName: 'premio-slider-images',
-          cacheableResponse: { statuses: [0, 200] },
-          cacheExpiration: {
-            maxEntries: 15,
-            maxAgeSeconds: 3600
-          }
+          cacheName: 'premio-slider-images'
         }
       }
     ]
@@ -113,8 +108,8 @@ module.exports = {
   },
 
   /*
-  ** Environment variables
-  */
+   ** Environment variables
+   */
   env: {
     AIRTABLE_API_KEY: process.env.AIRTABLE_API_KEY,
     AIRTABLE_BASE_ID: process.env.AIRTABLE_BASE_ID,
@@ -122,13 +117,13 @@ module.exports = {
   },
 
   /*
-  ** Nuxt generate config
-  */
+   ** Nuxt generate config
+   */
   generate: { fallback: true, subFolders: false },
 
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     loaders: {
       imgUrl: {
@@ -143,8 +138,8 @@ module.exports = {
     },
 
     /*
-    ** You can extend webpack config here
-    */
+     ** You can extend webpack config here
+     */
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
