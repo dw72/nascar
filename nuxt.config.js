@@ -50,9 +50,9 @@ module.exports = {
   */
   plugins: [
     { src: '@/plugins/vue-googlemaps', ssr: false },
-    { src: '@/plugins/vee-validate', ssr: false },
     '@/plugins/vue-visible',
-    '@/plugins/lazysizes'
+    '@/plugins/lazysizes',
+    '@/plugins/vuelidate'
   ],
 
   /*

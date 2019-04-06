@@ -9,15 +9,21 @@
           </label>
           <input
             id="firstname"
-            v-model="order.firstname"
-            v-validate="'required|alpha|min:3'"
+            v-model.trim="order.firstname"
             name="firstname"
-            data-vv-as="'Imię'"
             type="text"
-            :class="{'has-error': errors.has('firstname')}"
+            :class="{'has-error': $v.order.firstname.$error}"
             placeholder="Jan"
+            @input="$v.order.firstname.$touch()"
           >
-          <span v-visible="errors.has('firstname')" class="message">{{ errors.first('firstname') }}</span>
+          <div v-visible="$v.order.firstname.$error">
+            <span v-if="!$v.order.firstname.required" class="message">{{ messages['required'] }}</span>
+            <span
+              v-else-if="!$v.order.firstname.minLength"
+              class="message"
+            >{{ messages['minLength3'] }}</span>
+            <span v-else-if="!$v.order.firstname.alpha" class="message">{{ messages['alpha'] }}</span>
+          </div>
         </div>
         <div class="field">
           <label for="lastname">
@@ -26,15 +32,21 @@
           </label>
           <input
             id="lastname"
-            v-model="order.lastname"
-            v-validate="{ required: true, min: 3, regex: /^[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ-]*$/ }"
+            v-model.trim="order.lastname"
             name="lastname"
-            data-vv-as="'Nazwisko'"
             type="text"
-            :class="{'has-error': errors.has('lastname')}"
+            :class="{'has-error': $v.order.lastname.$error}"
             placeholder="Kowalski"
+            @input="$v.order.lastname.$touch()"
           >
-          <span v-visible="errors.has('lastname')" class="message">{{ errors.first('lastname') }}</span>
+          <div v-visible="$v.order.lastname.$error">
+            <span v-if="!$v.order.lastname.required" class="message">{{ messages['required'] }}</span>
+            <span
+              v-else-if="!$v.order.lastname.minLength"
+              class="message"
+            >{{ messages['minLength3'] }}</span>
+            <span v-else-if="!$v.order.lastname.lastname" class="message">{{ messages['lastname'] }}</span>
+          </div>
         </div>
         <div class="field field--street">
           <label for="street">
@@ -43,15 +55,21 @@
           </label>
           <input
             id="street"
-            v-model="order.street"
-            v-validate="{ required: true, min: 3, regex: /^[0-9A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ/,; ]*$/ }"
+            v-model.trim="order.street"
             name="street"
-            data-vv-as="'Ulica'"
             type="text"
-            :class="{'has-error': errors.has('street')}"
+            :class="{'has-error': $v.order.street.$error}"
             placeholder="Jesionowa 25/4"
+            @input="$v.order.street.$touch()"
           >
-          <span v-visible="errors.has('street')" class="message">{{ errors.first('street') }}</span>
+          <div v-visible="$v.order.street.$error">
+            <span v-if="!$v.order.street.required" class="message">{{ messages['required'] }}</span>
+            <span
+              v-else-if="!$v.order.street.minLength"
+              class="message"
+            >{{ messages['minLength3'] }}</span>
+            <span v-else-if="!$v.order.street.street" class="message">{{ messages['street'] }}</span>
+          </div>
         </div>
         <div class="field field--zip">
           <label for="zip">
@@ -60,15 +78,18 @@
           </label>
           <input
             id="zip"
-            v-model="order.zip"
-            v-validate="{ required: true, regex: /^\d{2}-\d{3}$/ }"
+            v-model.trim="order.zip"
             name="zip"
-            data-vv-as="'Kod pocztowy'"
             type="text"
-            :class="{'has-error': errors.has('zip')}"
+            :class="{'has-error': $v.order.zip.$error}"
             placeholder="63-700"
+            @input="$v.order.zip.$touch()"
           >
-          <span v-visible="errors.has('zip')" class="message">{{ errors.first('zip') }}</span>
+          <div v-visible="$v.order.zip.$error">
+            <span v-if="!$v.order.zip.required" class="message">{{ messages['required'] }}</span>
+            <span v-else-if="!$v.order.zip.minLength" class="message">{{ messages['minLength3'] }}</span>
+            <span v-else-if="!$v.order.zip.zip" class="message">{{ messages['zip'] }}</span>
+          </div>
         </div>
         <div class="field field--city">
           <label for="city">
@@ -77,15 +98,18 @@
           </label>
           <input
             id="city"
-            v-model="order.city"
-            v-validate="'required|alpha_spaces|min:3'"
+            v-model.trim="order.city"
             name="city"
-            data-vv-as="'Miejscowość'"
             type="text"
-            :class="{'has-error': errors.has('city')}"
+            :class="{'has-error': $v.order.city.$error}"
             placeholder="Krotoszyn"
+            @input="$v.order.city.$touch()"
           >
-          <span v-visible="errors.has('city')" class="message">{{ errors.first('city') }}</span>
+          <div v-visible="$v.order.city.$error">
+            <span v-if="!$v.order.city.required" class="message">{{ messages['required'] }}</span>
+            <span v-else-if="!$v.order.city.minLength" class="message">{{ messages['minLength3'] }}</span>
+            <span v-else-if="!$v.order.city.city" class="message">{{ messages['city'] }}</span>
+          </div>
         </div>
         <div class="field">
           <label for="phone">
@@ -94,15 +118,18 @@
           </label>
           <input
             id="phone"
-            v-model="order.phone"
-            v-validate="{ required: true, regex: /^\+48(?:[-\s])?(\d{9}|\d{3}((?:[-\s])?\d{3}){2}|(\d{2}|\(\d{2}\))(?:[-\s])?\d{3}((?:[-\s])?\d{2}){2})$/ }"
+            v-model.trim="order.phone"
             name="phone"
-            data-vv-as="'Telefon'"
             type="text"
-            :class="{'has-error': errors.has('phone')}"
+            :class="{'has-error': $v.order.phone.$error}"
             placeholder="+48600123123"
+            @input="$v.order.phone.$touch()"
           >
-          <span v-visible="errors.has('phone')" class="message">{{ errors.first('phone') }}</span>
+          <div v-visible="$v.order.phone.$error">
+            <span v-if="!$v.order.phone.required" class="message">{{ messages['required'] }}</span>
+            <span v-else-if="!$v.order.phone.minLength" class="message">{{ messages['minLength3'] }}</span>
+            <span v-else-if="!$v.order.phone.phone" class="message">{{ messages['phone'] }}</span>
+          </div>
         </div>
         <div class="field">
           <label for="email">
@@ -111,25 +138,28 @@
           </label>
           <input
             id="email"
-            v-model="order.email"
-            v-validate="'required|email'"
+            v-model.trim="order.email"
             name="email"
-            data-vv-as="'Email'"
-            type="text"
-            :class="{'has-error': errors.has('email')}"
+            type="email"
+            :class="{'has-error': $v.order.email.$error}"
             placeholder="jan@kowalski.pl"
+            @input="$v.order.email.$touch()"
           >
-          <span v-visible="errors.has('email')" class="message">{{ errors.first('email') }}</span>
+          <div v-visible="$v.order.email.$error">
+            <span v-if="!$v.order.email.required" class="message">{{ messages['required'] }}</span>
+            <span v-else-if="!$v.order.email.minLength" class="message">{{ messages['minLength3'] }}</span>
+            <span v-else-if="!$v.order.email.email" class="message">{{ messages['email'] }}</span>
+          </div>
         </div>
         <input ref="trap" v-model="order.trap" class="trap" type="text">
         <div class="field field--rodo">
           <label>Wyrażam zgodę na przetwarzanie moich danych osobowych przez firmę PPHU Nascar w celu wykonania usługi.</label>
-          <input id="rodo" v-model="rodoChecked" type="checkbox" name="rodo">
+          <input id="rodo" v-model="rodo" type="checkbox" name="rodo">
         </div>
         <button
           class="button button--primary button--rounded"
           type="submit"
-          :disabled="!rodoChecked"
+          :disabled="!rodo"
         >Wyślij zamówienie</button>
       </form>
       <div v-else class="ordered" :style="{'min-height': formHeight + 'px'}">
@@ -144,17 +174,76 @@
 
 <script>
 import { mapState, mapMutations } from 'vuex'
+import {
+  helpers,
+  required,
+  minLength,
+  alpha,
+  email
+} from 'vuelidate/lib/validators'
+
+const validations = {
+  order: {
+    firstname: {
+      required,
+      minLength: minLength(3),
+      alpha
+    },
+    lastname: {
+      required,
+      minLength: minLength(3),
+      lastname: helpers.regex('lastname', /^[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ-]*$/)
+    },
+    street: {
+      required,
+      minLength: minLength(3),
+      street: helpers.regex('street', /^[0-9A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ ,/;]*$/)
+    },
+    zip: {
+      required,
+      zip: helpers.regex('zip', /^\d{2}-\d{3}$/)
+    },
+    city: {
+      required,
+      minLength: minLength(3),
+      city: helpers.regex('city', /^[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ -]*$/)
+    },
+    phone: {
+      required,
+      phone: helpers.regex(
+        'phone',
+        /^\+48(?:[-\s])?(\d{9}|\d{3}((?:[-\s])?\d{3}){2}|(\d{2}|\(\d{2}\))(?:[-\s])?\d{3}((?:[-\s])?\d{2}){2})$/
+      )
+    },
+    email: {
+      required,
+      email
+    }
+  }
+}
 
 export default {
   data() {
     return {
       order: {},
-      rodoChecked: false
+      messages: {
+        required: 'Pole jest wymagane.',
+        minLength3: 'Wpisz co najmniej 3 znaki.',
+        alpha: 'Pole może zawierać tylko litery.',
+        lastname: 'Pole może zawierać tylko litery i myślnik.',
+        street: 'Pole może zawierać litery, cyfry, spację i znaki ",/;".',
+        zip: 'Podaj poprawny kod pocztowy.',
+        city: 'Pole może zawierać tylko litery, spację i myślnik.',
+        phone: 'Podaj numer zgodny z formatem +481234567.',
+        email: 'Podaj poprawny adres email.'
+      },
+      rodo: false
     }
   },
   computed: {
     ...mapState('regeneration', ['orderId', 'formHeight'])
   },
+  validations,
   mounted() {
     this.$refs.trap.tabIndex = -1
   },
@@ -163,15 +252,13 @@ export default {
       setFormHeight: 'REGENERATION_SET_FORM_HEIGHT'
     }),
     placeOrder() {
-      this.$validator.validateAll().then(result => {
-        if (result && !this.order.trap) {
-          this.$store.dispatch(
-            'regeneration/REGENERATION_PLACE_ORDER',
-            this.order
-          )
-          return
-        }
-      })
+      this.$v.order.$touch()
+      if (!this.$v.order.$invalid && !this.order.trap) {
+        this.$store.dispatch(
+          'regeneration/REGENERATION_PLACE_ORDER',
+          this.order
+        )
+      }
     },
     beforeLeave(el) {
       this.setFormHeight(el.clientHeight)
@@ -267,6 +354,10 @@ label {
   span {
     color: $color-secondary;
   }
+}
+
+input ~ div {
+  height: 1em;
 }
 
 .message {
