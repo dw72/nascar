@@ -1,4 +1,4 @@
-import { openDb } from 'idb'
+import { openDB } from 'idb'
 
 const IDB_NAME = 'pphu-nascar'
 const IDB_VERSION = 2
@@ -8,17 +8,19 @@ let db
 const getDB = () => {
   if (!db) {
     try {
-      db = openDb(IDB_NAME, IDB_VERSION, upgradeDb => {
-        switch (upgradeDb.oldVersion) {
-          case 0:
-            upgradeDb.createObjectStore('slider', { keyPath: 'id' })
-          case 1:
-            upgradeDb.createObjectStore('diagnostics-pricelist', {
-              keyPath: 'id'
-            })
-            upgradeDb.createObjectStore('regeneration-pricelist', {
-              keyPath: 'id'
-            })
+      db = openDB(IDB_NAME, IDB_VERSION, {
+        upgrade(idb, oldVersion) {
+          switch (oldVersion) {
+            case 0:
+              idb.createObjectStore('slider', { keyPath: 'id' })
+            case 1:
+              idb.createObjectStore('diagnostics-pricelist', {
+                keyPath: 'id'
+              })
+              idb.createObjectStore('regeneration-pricelist', {
+                keyPath: 'id'
+              })
+          }
         }
       })
     } catch (err) {
