@@ -46,7 +46,7 @@
               Sprawdź czy posiadasz odpowiednią ilość monet o nominałach:
               <span
                 style="white-space: nowrap;"
-              >1 zł / 2 zł / 5 zł.</span>
+              >1 zł / 2 zł / 5 zł / żeton 2 / żeton 5.</span>
             </p>
           </li>
           <li>
@@ -70,7 +70,70 @@
       description="To Ty decydujesz o wyborze programu mycia. Możesz go zmienić w każdej chwili. Pamiętaj jednak aby w przypadku awarii urządzenia niezwłocznie wciśnąć przycisk STOP (nie wstrzymuje biegu licznika) aby uniknąć większych uszkodzeń."
       no-divider
     >
-      <p>Pracujemy nad opisem, zajrzyj tutaj wkrótce...</p>
+      <div class="programs-list">
+        <div class="program">
+          <icon name="numeric-0-box" size="lg"/>
+          <div class="program__description">
+            <h3>Oprysk felg</h3>
+            <p>
+              Naciśnij spust pistoletu i spryskaj felgi. Odległość lancy od samochodu nie powinna wynosić więcej niż 30 cm.
+              W czasie tego programu wraz ze zmiękczoną i zdemineralizowaną wodą, naniesiony zostaje środek chemiczny pomagający usuwać nagar i naloty z klocków hamulcowych.
+            </p>
+          </div>
+        </div>
+        <div class="program">
+          <icon name="numeric-1-box" size="lg"/>
+          <div class="program__description">
+            <h3>Turbo oprysk</h3>
+            <p>
+              Naciśnij spust pistoletu i wstępnie umyj cały pojazd. Odległość lancy od samochodu nie powinna wynosić więcej niż 30 cm.
+              W czasie tego programu następuje naniesienie środka chemicznego przy użyciu zmiękczonej i zdemineralizowanej wody, które jest przygotowaniem do mycia bezdotykowego (zmiękczenie silnych zanieczyszczeń).
+            </p>
+          </div>
+        </div>
+        <div class="program">
+          <icon name="numeric-2-box" size="lg"/>
+          <div class="program__description">
+            <h3>Mycie zasadnicze</h3>
+            <p>
+              Naciśnij spust pistoletu i dokładnie umyj cały pojazd. Odległość lancy od samochodu nie powinna wynosić więcej niż 30 cm.
+              W czasie tego programu gorąca, zmiękczona woda, za pomocą precyzyjnego systemu dozowania, zostaje zmieszana w tzw. mikroproszkiem. Wysoka temperatura wspomaga rozpuszczanie tłustych nalotów.
+            </p>
+          </div>
+        </div>
+        <div class="program">
+          <icon name="numeric-3-box" size="lg"/>
+          <div class="program__description">
+            <h3>Spłukiwanie</h3>
+            <p>
+              Starannie spłucz powierzchnię samochodu. Zalecana odległość lancy od pojazdu to 30-50 cm. Podczas tego programu, czysta,
+              zimna woda pod wysokim ciśnieniem słukuje detergent i zanieczyszczenia pozostałe po programie nr 1 oraz 2. Dokładne spłukanie (z góry do dołu) zapobiega powstawaniu smug na karoserii samochodu.
+            </p>
+          </div>
+        </div>
+        <div class="program">
+          <icon name="numeric-4-box" size="lg"/>
+          <div class="program__description">
+            <h3>Konserwacja</h3>
+            <p>
+              Pokryj całą powierzchnię pojazdu polimerem, najlepiej dwukrotnie, pamiętając, aby odległość lancy od pojazdu wynosiła ok. 50 cm.
+              W programie 4 na powierzchnię pojazdu nanoszony jest gorący roztwór zmiękczonej wody z woskiem-polimerem. Powstała powłoka chroni Twój samochód przed niszczącym działaniem promieni UV,
+              tworzeniem się mikrozarysowań oraz utrudnia ponowne brudzenie. Stosuj tylko na idealnie umyty lakier!
+            </p>
+          </div>
+        </div>
+        <div class="program">
+          <icon name="numeric-5-box" size="lg"/>
+          <div class="program__description">
+            <h3>Nabłyszczanie</h3>
+            <p>
+              Po umyciu, spłukaniu i nawoskowaniu wciśnij przycisk 4. Dokładnie spłucz całą powierzchnię samochodu. Odległość lancy od pojazdu powinna wynosić 30-50 cm.
+              W tym programie do wody zmiękczonej i zdemineralizowanej dodany zostaje środek osuszająco-nabłyszczający, który umożliwia osiągnięcie efekt bez plam i zacieków.
+              Nie Wycieraj! Program jest wykończeniem poprzednich programów, pozwala wyeliminować konieczność wycierania czy suszenia pojazdu.
+            </p>
+          </div>
+        </div>
+      </div>
     </page-section>
     <page-section
       class="service-wash"
@@ -213,8 +276,32 @@ export default {
     font-size: 1.1em;
   }
 
-  p {
-    text-align: center;
+  .section__content {
+    margin-bottom: 0;
+  }
+}
+
+.programs-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.program {
+  align-items: flex-start;
+  display: flex;
+  padding: 0 1em;
+
+  @media screen and (min-width: 960px) {
+    flex-basis: 50%;
+  }
+}
+
+.program__description {
+  margin-left: 2em;
+
+  h3 {
+    font-size: 1em;
+    margin-bottom: 1em;
   }
 }
 
