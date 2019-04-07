@@ -11,7 +11,7 @@
         <strong>Zregeneruj go u Nas!</strong>
       </p>
     </page-section>
-    <page-section class="regeneration-const" header="removed">
+    <page-section class="regeneration-cons" header="removed">
       <ul>
         <li>
           <icon-card title="Innowacyjna, ekologiczna metoda regeneracji." icon="leaf"/>
@@ -160,8 +160,8 @@ export default {
   }
 }
 
-.regeneration-const {
-  margin: -1em 0 -2em;
+.regeneration-cons {
+  margin: -1em 0 -4em;
 
   ul {
     display: flex;
