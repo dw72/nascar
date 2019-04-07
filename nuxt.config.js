@@ -82,7 +82,7 @@ module.exports = {
     runtimeCaching: [
       {
         urlPattern: '^https://www.premio.pl/assets/resized_images/.*',
-        handler: 'StaleWhileRevalidate',
+        handler: 'staleWhileRevalidate',
         strategyOptions: {
           cacheName: 'premio-slider-images'
         }
