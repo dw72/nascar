@@ -30,7 +30,7 @@ export const actions = {
             data.forEach(item => {
               prices.push({
                 name: item.get('Usługa').trim(),
-                price: item.get('Cena')
+                price: `${item.get('Cena')} zł`
               })
             })
 

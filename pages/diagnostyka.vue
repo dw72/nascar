@@ -27,7 +27,7 @@
       </p>
     </page-section>
     <page-section title="Cennik badań technicznych">
-      <price-list :prices="pricelist"/>
+      <price-list :columns="columns" :data="pricelist"/>
     </page-section>
   </main>
 </template>
@@ -47,6 +47,14 @@ export default {
       title: 'Stacja kontroli'
     }
   },
+  data() {
+    return {
+      columns: [
+        { name: 'name', title: 'Usługa' },
+        { name: 'price', title: 'Cena' }
+      ]
+    }
+  },
   computed: {
     ...mapState('diagnostic', ['pricelist'])
   },
@@ -58,6 +66,8 @@ export default {
 
 <style lang="scss" scoped>
 .diagnostic-services {
+  margin-bottom: -1em;
+
   p {
     text-align: center;
   }
