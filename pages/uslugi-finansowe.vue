@@ -5,23 +5,20 @@
       title="Kredyty"
       description="Kredyty to bardzo popularny rodzaj finansowania swoich potrzeb i realizowania marzeń. W naszej ofercie posiadamy:"
     >
-      <div class="services-list">
-        <div>
-          <icon name="car-sports" bordered size="md"/>
-          <h3>Kredyty samochodowe</h3>
-          <p>Oferta obejmuje każdy pojazd do 13 roku eksploatacji. Stosujemy procedurę uproszczoną, bez zaświadczeń o dochodach. Auto może pochodzić z salonu, komisu a także od osoby fizycznej.</p>
-        </div>
-        <div>
-          <icon name="cash" bordered size="md"/>
-          <h3>Kredyty gotówkowe</h3>
-          <p>Kredyty tego typu udzielane są w wysokości do 90 tysięcy złotych, bez zabezpieczeń czy poręczycieli. Spłata rozkładana jest na dogodny okres kredytowania, który może wynosić nawet do 8 lat.</p>
-        </div>
-        <div>
-          <icon name="cash-multiple" bordered size="md"/>
-          <h3>Kredyty konsolidacyjne</h3>
-          <p>Za ich pomocą możemy spłacić nie tylko kredyty gotówkowe, debet na koncie czy kredyt samochodowy lub mieszkaniowy, ale także pozostałą jego część przeznaczyć na dowolny cel.</p>
-        </div>
-      </div>
+      <icon-card-list>
+        <icon-card
+          title="Kredyty samochodowe"
+          icon="car-sports"
+        >Oferta obejmuje każdy pojazd do 13 roku eksploatacji. Stosujemy procedurę uproszczoną, bez zaświadczeń o dochodach. Auto może pochodzić z salonu, komisu a także od osoby fizycznej.</icon-card>
+        <icon-card
+          title="Kredyty gotówkowe"
+          icon="cash"
+        >Kredyty tego typu udzielane są w wysokości do 90 tysięcy złotych, bez zabezpieczeń czy poręczycieli. Spłata rozkładana jest na dogodny okres kredytowania, który może wynosić nawet do 8 lat.</icon-card>
+        <icon-card
+          title="Kredyty konsolidacyjne"
+          icon="cash-multiple"
+        >Za ich pomocą możemy spłacić nie tylko kredyty gotówkowe, debet na koncie czy kredyt samochodowy lub mieszkaniowy, ale także pozostałą jego część przeznaczyć na dowolny cel.</icon-card>
+      </icon-card-list>
     </page-section>
     <page-section
       class="leasing"
@@ -51,11 +48,12 @@
 
 <script>
 import PageSection from '@/components/PageSection'
-import Icon from '@/components/Icon'
+import IconCardList from '@/components/IconCardList'
+import IconCard from '@/components/IconCard'
 import InsuranceCarousel from '@/components/InsuranceCarousel'
 
 export default {
-  components: { PageSection, Icon, InsuranceCarousel },
+  components: { PageSection, IconCardList, IconCard, InsuranceCarousel },
   head() {
     return {
       title: 'Usługi finansowe'
@@ -65,38 +63,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.loans {
-  h3 {
-    font-size: 1.1em;
-    margin-bottom: 0;
-    text-align: center;
-  }
-
-  .services-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 1em 1em 0;
-    width: 100%;
-
-    @media screen and (min-width: 768px) {
-      flex-direction: row;
-    }
-
-    > div {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 1em;
-      flex-basis: 30%;
-    }
-  }
-
-  p {
-    text-align: center;
-  }
-}
-
 p {
   text-align: center;
 }
@@ -106,6 +72,7 @@ p {
 
   p {
     margin-top: 0;
+    margin-bottom: 2em;
   }
 }
 </style>

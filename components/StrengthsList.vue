@@ -16,24 +16,24 @@
         >
       </div>
       <div class="strengths__items">
-        <strength
-          v-for="strength in strengths"
-          :key="strength.name"
-          :name="strength.name"
-          :description="strength.description"
+        <icon-card
+          v-for="(strength,idx) in strengths"
+          :key="idx"
+          class="strength"
+          :title="strength.name"
           :icon="strength.icon"
-        />
+        >{{ strength.description }}</icon-card>
       </div>
     </div>
   </page-section>
 </template>
 
 <script>
-import PageSection from '@/components/PageSection.vue'
-import Strength from './Strength.vue'
+import PageSection from '@/components/PageSection'
+import IconCard from '@/components/IconCard'
 
 export default {
-  components: { PageSection, Strength },
+  components: { PageSection, IconCard },
   data() {
     return {
       strengths: [
@@ -82,7 +82,7 @@ export default {
   }
 
   .strength {
-    flex-basis: 45%;
+    flex-basis: 50%;
   }
 }
 

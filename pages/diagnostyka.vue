@@ -5,20 +5,17 @@
       title="Stacja kontroli pojazdów"
       description="Posiadamy wieloletnie doświadczenie co przekłada się na wysoką jakość świadczonych przez nas usług. Wykonujemy:"
     >
-      <div class="services-list">
-        <div>
-          <icon name="shield-check-outline" bordered size="md"/>
-          <p>Obowiązkowe przeglądy rejestracyjne i badania okresowe samochodów osobowych, motocykli i ciągników rolniczych.</p>
-        </div>
-        <div>
-          <icon name="alarm-plus" bordered size="md"/>
-          <p>Wstępne przeglądy pozwalające na wykrycie i usunięcie usterek, które mogą wpłynąć na wynik obowiązkowego badania okresowego.</p>
-        </div>
-        <div>
-          <icon name="map" bordered size="md"/>
-          <p>Sprawdzenie pojazdu przed kupnem, okresem letnim bądź zimowym oraz przed dłuższą podróżą.</p>
-        </div>
-      </div>
+      <icon-card-list>
+        <icon-card
+          icon="shield-check-outline"
+        >Obowiązkowe przeglądy rejestracyjne i badania okresowe samochodów osobowych, motocykli i ciągników rolniczych.</icon-card>
+        <icon-card
+          icon="alarm-plus"
+        >Wstępne przeglądy pozwalające na wykrycie i usunięcie usterek, które mogą wpłynąć na wynik obowiązkowego badania okresowego.</icon-card>
+        <icon-card
+          icon="map"
+        >Sprawdzenie pojazdu przed kupnem, okresem letnim bądź zimowym oraz przed dłuższą podróżą.</icon-card>
+      </icon-card-list>
       <p>Obsługujemy także pojazdy sprowadzone z zagranicy, powypadkowe i zasilane gazem.</p>
       <p>
         Do wykonywania badań wykorzystujemy nowoczesną linię diagnostyczną
@@ -44,10 +41,11 @@
 import { mapState } from 'vuex'
 
 import PageSection from '@/components/PageSection.vue'
-import Icon from '@/components/Icon'
+import IconCardList from '@/components/IconCardList'
+import IconCard from '@/components/IconCard'
 
 export default {
-  components: { PageSection, Icon },
+  components: { PageSection, IconCardList, IconCard },
   head() {
     return {
       title: 'Stacja kontroli'
@@ -62,33 +60,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .diagnostic-services {
-  h3 {
-    margin-top: 0;
-    text-align: center;
-  }
-
-  .services-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 1em 1em 0;
-    width: 100%;
-
-    @media screen and (min-width: 768px) {
-      flex-direction: row;
-    }
-
-    > div {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 1em;
-      flex-basis: 30%;
-    }
-  }
-
   p {
     text-align: center;
   }

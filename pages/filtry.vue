@@ -14,20 +14,16 @@
     <page-section class="regeneration-const" header="removed">
       <ul>
         <li>
-          <icon name="leaf" bordered size="md"/>
-          <h4>Innowacyjna, ekologiczna metoda regeneracji.</h4>
+          <icon-card title="Innowacyjna, ekologiczna metoda regeneracji." icon="leaf"/>
         </li>
         <li>
-          <icon name="car-multiple" bordered size="md"/>
-          <h4>Obsługujemy wszystkie modele samochodów.</h4>
+          <icon-card title="Obsługujemy wszystkie modele samochodów." icon="car-multiple"/>
         </li>
         <li>
-          <icon name="calendar" bordered size="md"/>
-          <h4>Regeneracja i wysyłka tego samego dnia.</h4>
+          <icon-card title="Regeneracja i wysyłka tego samego dnia." icon="calendar"/>
         </li>
         <li>
-          <icon name="file-chart" bordered size="md"/>
-          <h4>Pełny raport dotyczący procesu regeneracji.</h4>
+          <icon-card title="Pełny raport dotyczący procesu regeneracji." icon="file-chart"/>
         </li>
       </ul>
     </page-section>
@@ -127,13 +123,21 @@
 import { mapState } from 'vuex'
 
 import PageSection from '@/components/PageSection'
+import IconCard from '@/components/IconCard'
 import Icon from '@/components/Icon'
 import CallToAction from '@/components/CallToAction'
 import PriceCard from '@/components/PriceCard'
 import OrderForm from '@/components/RegenerationOrderForm'
 
 export default {
-  components: { PageSection, Icon, CallToAction, PriceCard, OrderForm },
+  components: {
+    PageSection,
+    IconCard,
+    Icon,
+    CallToAction,
+    PriceCard,
+    OrderForm
+  },
   head() {
     return {
       title: 'Regeneracja filtrów DPF / FAP'
@@ -170,13 +174,13 @@ export default {
   li {
     align-items: center;
     display: flex;
-    flex-basis: 40%;
+    flex-basis: 50%;
     flex-direction: column;
+    font-size: 0.95em;
     text-align: center;
-    margin: 0 1em;
 
     @media screen and (min-width: 768px) {
-      flex-basis: 20%;
+      flex-basis: 25%;
     }
   }
 }
