@@ -87,7 +87,7 @@
             <h3>Turbo oprysk</h3>
             <p>
               Naciśnij spust pistoletu i wstępnie umyj cały pojazd. Odległość lancy od samochodu nie powinna wynosić więcej niż 30 cm.
-              W czasie tego programu następuje naniesienie środka chemicznego przy użyciu zmiękczonej i zdemineralizowanej wody, które jest przygotowaniem do mycia bezdotykowego (zmiękczenie silnych zanieczyszczeń).
+              W czasie tego programu następuje zmiękczenie silnych zanieczyszczeń poprzez naniesienie pod ciśnieniem środka chemicznego przy użyciu zmiękczonej i zdemineralizowanej wody.
             </p>
           </div>
         </div>
@@ -129,7 +129,7 @@
             <p>
               Po umyciu, spłukaniu i nawoskowaniu wciśnij przycisk 4. Dokładnie spłucz całą powierzchnię samochodu. Odległość lancy od pojazdu powinna wynosić 30-50 cm.
               W tym programie do wody zmiękczonej i zdemineralizowanej dodany zostaje środek osuszająco-nabłyszczający, który umożliwia osiągnięcie efekt bez plam i zacieków.
-              Nie Wycieraj! Program jest wykończeniem poprzednich programów, pozwala wyeliminować konieczność wycierania czy suszenia pojazdu.
+              <strong>Nie Wycieraj!</strong> Ten programeliminuje konieczność wycierania czy suszenia pojazdu.
             </p>
           </div>
         </div>
