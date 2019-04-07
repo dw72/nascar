@@ -7,7 +7,7 @@
     >
       <icon-card-list>
         <icon-card
-          icon="shield-check-outline"
+          icon="card-text-outline"
         >Obowiązkowe przeglądy rejestracyjne i badania okresowe samochodów osobowych, motocykli i ciągników rolniczych.</icon-card>
         <icon-card
           icon="alarm-plus"
@@ -27,12 +27,7 @@
       </p>
     </page-section>
     <page-section title="Cennik badań technicznych">
-      <table>
-        <tr v-for="(price, idx) in pricelist" :key="idx">
-          <td>{{ price.name }}</td>
-          <td>{{ price.price }} zł</td>
-        </tr>
-      </table>
+      <price-list :prices="pricelist"/>
     </page-section>
   </main>
 </template>
@@ -43,9 +38,10 @@ import { mapState } from 'vuex'
 import PageSection from '@/components/PageSection.vue'
 import IconCardList from '@/components/IconCardList'
 import IconCard from '@/components/IconCard'
+import PriceList from '@/components/PriceList'
 
 export default {
-  components: { PageSection, IconCardList, IconCard },
+  components: { PageSection, IconCardList, IconCard, PriceList },
   head() {
     return {
       title: 'Stacja kontroli'
@@ -65,26 +61,5 @@ export default {
   p {
     text-align: center;
   }
-}
-
-table {
-  border-spacing: 0;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td {
-  margin: 0;
-  padding: 1em;
-}
-
-td:nth-child(2) {
-  text-align: right;
-  font-weight: bold;
-  white-space: nowrap;
-}
-
-tr:nth-child(2n + 1) td {
-  background-color: rgba($color-primary, 0.1);
 }
 </style>
