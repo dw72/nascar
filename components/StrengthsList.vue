@@ -59,7 +59,7 @@ export default {
           name: 'Konkurencyjne ceny',
           description:
             'Klienci do nas wracają, ponieważ są traktowani uczciwie i nie przepłacają za wykonane usługi.',
-          icon: 'flag-variant'
+          icon: 'cash'
         }
       ]
     }

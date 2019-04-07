@@ -32,17 +32,18 @@ export default {
 table {
   border-spacing: 0;
   border-collapse: collapse;
+  margin-bottom: 2em;
   width: 100%;
 }
 
 th,
 td {
   margin: 0;
-  padding: 1em;
+  padding: 0.75em;
 }
 
 th {
-  border-bottom: 2px solid rgba($color-primary, 0.25);
+  border-bottom: 2px solid rgba($color-primary, 0.2);
 }
 
 th:first-child {
