@@ -72,7 +72,7 @@
     >
       <div class="programs-list">
         <div class="program">
-          <icon name="numeric-0-box" size="lg"/>
+          <icon name="numeric-0-circle" size="lg"/>
           <div class="program__description">
             <h3>Oprysk felg</h3>
             <p>
@@ -82,7 +82,7 @@
           </div>
         </div>
         <div class="program">
-          <icon name="numeric-1-box" size="lg"/>
+          <icon name="numeric-1-circle" size="lg"/>
           <div class="program__description">
             <h3>Turbo oprysk</h3>
             <p>
@@ -92,7 +92,7 @@
           </div>
         </div>
         <div class="program">
-          <icon name="numeric-2-box" size="lg"/>
+          <icon name="numeric-2-circle" size="lg"/>
           <div class="program__description">
             <h3>Mycie zasadnicze</h3>
             <p>
@@ -102,7 +102,7 @@
           </div>
         </div>
         <div class="program">
-          <icon name="numeric-3-box" size="lg"/>
+          <icon name="numeric-3-circle" size="lg"/>
           <div class="program__description">
             <h3>Spłukiwanie</h3>
             <p>
@@ -112,7 +112,7 @@
           </div>
         </div>
         <div class="program">
-          <icon name="numeric-4-box" size="lg"/>
+          <icon name="numeric-4-circle" size="lg"/>
           <div class="program__description">
             <h3>Konserwacja</h3>
             <p>
@@ -123,7 +123,7 @@
           </div>
         </div>
         <div class="program">
-          <icon name="numeric-5-box" size="lg"/>
+          <icon name="numeric-5-circle" size="lg"/>
           <div class="program__description">
             <h3>Nabłyszczanie</h3>
             <p>
@@ -287,9 +287,15 @@ export default {
 }
 
 .program {
-  align-items: flex-start;
+  align-items: center;
   display: flex;
+  flex-direction: column;
   padding: 0 1em;
+
+  @media screen and (min-width: 580px) {
+    align-items: flex-start;
+    flex-direction: row;
+  }
 
   @media screen and (min-width: 960px) {
     flex-basis: 50%;
@@ -297,11 +303,16 @@ export default {
 }
 
 .program__description {
-  margin-left: 2em;
+  text-align: center;
 
   h3 {
     font-size: 1em;
     margin-bottom: 1em;
+  }
+
+  @media screen and (min-width: 580px) {
+    margin-left: 2em;
+    text-align: left;
   }
 }
 
