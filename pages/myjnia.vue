@@ -43,10 +43,11 @@
           <li>
             <icon name="check" size="sm"/>
             <p>
-              Sprawdź czy posiadasz odpowiednią ilość monet o nominałach:
+              Sprawdź czy posiadasz odpowiednią ilość monet:
               <span
                 style="white-space: nowrap;"
               >1 zł / 2 zł / 5 zł / żeton 2 / żeton 5.</span>
+              Możesz zapłacić też kartą i telefonem.
             </p>
           </li>
           <li>
