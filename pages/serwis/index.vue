@@ -12,7 +12,7 @@
         <icon-card :title="service.name" :icon="service.icon" icon-size="lg" :bordered="false">
           <div class="repair__description">
             <p>{{ service.description }}</p>
-            <nuxt-link to="/serwis/zapraszamy">Czytaj więcej</nuxt-link>
+            <nuxt-link to="/serwis/pracujemy">Czytaj więcej</nuxt-link>
           </div>
         </icon-card>
       </div>
