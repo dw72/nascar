@@ -1,14 +1,16 @@
 <template>
-  <div class="iconcard-item">
+  <div :class="{'iconcard-item': true, 'iconcard-item--horizontal': horizontal}">
     <icon
       class="iconcard-item__icon"
       :name="icon || 'check'"
       :bordered="bordered"
       :size="iconSize"
     />
-    <h3 v-if="title" class="iconcard-item__title">{{ title }}</h3>
-    <div v-if="!!$slots.default" class="iconcard-item__content">
-      <slot/>
+    <div>
+      <h3 v-if="title" class="iconcard-item__title">{{ title }}</h3>
+      <div v-if="!!$slots.default" class="iconcard-item__content">
+        <slot/>
+      </div>
     </div>
   </div>
 </template>
@@ -36,6 +38,10 @@ export default {
     bordered: {
       type: Boolean,
       default: true
+    },
+    horizontal: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -47,26 +53,36 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 1em;
-}
-
-.iconcard-item__icon {
-  margin-bottom: 0.5em;
-}
-
-.iconcard-item__title {
-  font-size: 1em;
-  margin-top: 0;
-  margin-bottom: 1em;
   text-align: center;
 
-  @media screen and (min-width: 768px) {
-    font-size: 1.1em;
+  .icon {
+    margin-bottom: 0.5em;
+  }
+
+  h3 {
+    font-size: 1em;
+    margin-top: 0.25em;
+    margin-bottom: 1em;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.1em;
+    }
   }
 }
 
 .iconcard-item__content {
   flex: 1;
   margin-bottom: 1em;
-  text-align: center;
+}
+
+.iconcard-item--horizontal {
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+
+  .icon {
+    margin-right: 0.5em;
+  }
 }
 </style>

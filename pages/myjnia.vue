@@ -3,7 +3,8 @@
     <page-section
       class="touchless-wash"
       title="Myjnia bezdotykowa"
-      description="Mycie bezdotykowe to obecnie ciesząca się największym uznaniem metoda mycia samochodów. Kierowcy dostrzegają wiele zalet mycia bezdotykowego. Jednak trzy z nich uważane są przez wszystkich za najważniejsze."
+      description="Mycie bezdotykowe to obecnie ciesząca się największym uznaniem metoda mycia samochodów. Kierowcy dostrzegają wiele zalet mycia bezdotykowego.
+        Jednak trzy z nich uważane są przez wszystkich za najważniejsze."
     >
       <flex-list>
         <icon-card
@@ -38,7 +39,6 @@
         </div>
       </div>
       <div class="howto__conditions">
-        <h3>Zanim zaczniesz</h3>
         <ul class="before-begin__list">
           <li>
             <icon name="check" size="sm"/>
@@ -68,80 +68,26 @@
     <page-section
       class="programs"
       title="Opis programów"
-      description="To Ty decydujesz o wyborze programu mycia. Możesz go zmienić w każdej chwili. Pamiętaj jednak aby w przypadku awarii urządzenia niezwłocznie wciśnąć przycisk STOP (nie wstrzymuje biegu licznika) aby uniknąć większych uszkodzeń."
-      no-divider
+      description="To Ty decydujesz o wyborze programu mycia. Możesz go zmienić w każdej chwili. Pamiętaj jednak aby w przypadku awarii urządzenia niezwłocznie wciśnąć
+        przycisk STOP (nie wstrzymuje biegu licznika) aby uniknąć większych uszkodzeń."
     >
-      <div class="programs-list">
-        <div class="program">
-          <icon name="numeric-0-circle" size="md"/>
-          <div class="program__description">
-            <h3>Oprysk felg</h3>
-            <p>
-              Naciśnij spust pistoletu i spryskaj felgi. Odległość lancy od samochodu nie powinna wynosić więcej niż 30 cm.
-              W czasie tego programu wraz ze zmiękczoną i zdemineralizowaną wodą, naniesiony zostaje środek chemiczny pomagający usuwać nagar i naloty z klocków hamulcowych.
-            </p>
-          </div>
-        </div>
-        <div class="program">
-          <icon name="numeric-1-circle" size="md"/>
-          <div class="program__description">
-            <h3>Turbo oprysk</h3>
-            <p>
-              Naciśnij spust pistoletu i wstępnie umyj cały pojazd. Odległość lancy od samochodu nie powinna wynosić więcej niż 30 cm.
-              W czasie tego programu następuje zmiękczenie silnych zanieczyszczeń poprzez naniesienie pod ciśnieniem środka chemicznego przy użyciu zmiękczonej i zdemineralizowanej wody.
-            </p>
-          </div>
-        </div>
-        <div class="program">
-          <icon name="numeric-2-circle" size="md"/>
-          <div class="program__description">
-            <h3>Mycie zasadnicze</h3>
-            <p>
-              Naciśnij spust pistoletu i dokładnie umyj cały pojazd. Odległość lancy od samochodu nie powinna wynosić więcej niż 30 cm.
-              W czasie tego programu gorąca, zmiękczona woda, za pomocą precyzyjnego systemu dozowania, zostaje zmieszana w tzw. mikroproszkiem. Wysoka temperatura wspomaga rozpuszczanie tłustych nalotów.
-            </p>
-          </div>
-        </div>
-        <div class="program">
-          <icon name="numeric-3-circle" size="md"/>
-          <div class="program__description">
-            <h3>Spłukiwanie</h3>
-            <p>
-              Starannie spłucz powierzchnię samochodu. Zalecana odległość lancy od pojazdu to 30-50 cm. Podczas tego programu, czysta,
-              zimna woda pod wysokim ciśnieniem słukuje detergent i zanieczyszczenia pozostałe po programie nr 1 oraz 2. Dokładne spłukanie (z góry do dołu) zapobiega powstawaniu smug na karoserii samochodu.
-            </p>
-          </div>
-        </div>
-        <div class="program">
-          <icon name="numeric-4-circle" size="md"/>
-          <div class="program__description">
-            <h3>Konserwacja</h3>
-            <p>
-              Pokryj całą powierzchnię pojazdu polimerem, najlepiej dwukrotnie, pamiętając, aby odległość lancy od pojazdu wynosiła ok. 50 cm.
-              W programie 4 na powierzchnię pojazdu nanoszony jest gorący roztwór zmiękczonej wody z woskiem-polimerem. Powstała powłoka chroni Twój samochód przed niszczącym działaniem promieni UV,
-              tworzeniem się mikrozarysowań oraz utrudnia ponowne brudzenie. Stosuj tylko na idealnie umyty lakier!
-            </p>
-          </div>
-        </div>
-        <div class="program">
-          <icon name="numeric-5-circle" size="md"/>
-          <div class="program__description">
-            <h3>Nabłyszczanie</h3>
-            <p>
-              Po umyciu, spłukaniu i nawoskowaniu wciśnij przycisk 4. Dokładnie spłucz całą powierzchnię samochodu. Odległość lancy od pojazdu powinna wynosić 30-50 cm.
-              W tym programie do wody zmiękczonej i zdemineralizowanej dodany zostaje środek osuszająco-nabłyszczający, który umożliwia osiągnięcie efekt bez plam i zacieków.
-              <strong>Nie Wycieraj!</strong> Ten programeliminuje konieczność wycierania czy suszenia pojazdu.
-            </p>
-          </div>
-        </div>
-      </div>
+      <flex-list class="programs-list">
+        <icon-card
+          v-for="(program, idx) in programs"
+          :key="idx"
+          class="program"
+          :title="program.title"
+          :icon="program.icon"
+          :bordered="false"
+          horizontal
+        >{{ program.description }}</icon-card>
+      </flex-list>
     </page-section>
     <page-section
       class="service-wash"
       title="Myjnia obsługowa"
-      description="
-        Z myślą o klientach, którzy cenią kompleksową obsługę uruchomiliśmy obsługową myjnię samochodową. Nasz pracownik zadba o Twój pojazd, m.in. umyje karoserię, wyczyści tapicerkę oraz nabłyszczy lakier.
-        Myjnia obsługowa obejmuje wszystkie programy myjni bezdotykowej.
+      description="Z myślą o klientach, którzy cenią kompleksową obsługę uruchomiliśmy obsługową myjnię samochodową.
+        Nasz pracownik zadba o Twój pojazd, m.in. umyje karoserię, wyczyści tapicerkę oraz nabłyszczy lakier. Myjnia obsługowa obejmuje wszystkie programy myjni bezdotykowej.
       "
     >
       <price-list :columns="columns" :data="pricelist"/>
@@ -173,6 +119,44 @@ export default {
         { name: 'price_1', title: 'Małe' },
         { name: 'price_2', title: 'Średnie' },
         { name: 'price_3', title: 'Duże' }
+      ],
+      programs: [
+        {
+          title: 'Oprysk felg',
+          icon: 'numeric-0-circle',
+          description:
+            'Naciśnij spust pistoletu i spryskaj felgi. Odległość lancy od samochodu nie powinna wynosić więcej niż 30 cm. W czasie tego programu wraz ze zmiękczoną i zdemineralizowaną wodą, naniesiony zostaje środek chemiczny pomagający usuwać nagar i naloty z klocków hamulcowych.'
+        },
+        {
+          title: 'Turbo oprysk',
+          icon: 'numeric-1-circle',
+          description:
+            'Naciśnij spust pistoletu i wstępnie umyj cały pojazd. Odległość lancy od samochodu nie powinna wynosić więcej niż 30 cm. W czasie tego programu następuje zmiękczenie silnych zanieczyszczeń poprzez naniesienie pod ciśnieniem środka chemicznego przy użyciu zmiękczonej i zdemineralizowanej wody.'
+        },
+        {
+          title: 'Mycie zasadnicze',
+          icon: 'numeric-2-circle',
+          description:
+            'Naciśnij spust pistoletu i dokładnie umyj cały pojazd. Odległość lancy od samochodu nie powinna wynosić więcej niż 30 cm. W czasie tego programu gorąca, zmiękczona woda, za pomocą precyzyjnego systemu dozowania, zostaje zmieszana w tzw. mikroproszkiem. Wysoka temperatura wspomaga rozpuszczanie tłustych nalotów.'
+        },
+        {
+          title: 'Spłukiwanie',
+          icon: 'numeric-3-circle',
+          description:
+            'Starannie spłucz powierzchnię samochodu. Zalecana odległość lancy od pojazdu to 30-50 cm. Podczas tego programu, czysta, zimna woda pod wysokim ciśnieniem słukuje detergent i zanieczyszczenia pozostałe po programie nr 1 oraz 2. Dokładne spłukanie (z góry do dołu) zapobiega powstawaniu smug na karoserii samochodu.'
+        },
+        {
+          title: 'Konserwacja',
+          icon: 'numeric-4-circle',
+          description:
+            'Pokryj całą powierzchnię pojazdu polimerem, najlepiej dwukrotnie, pamiętając, aby odległość lancy od pojazdu wynosiła ok. 50 cm. W programie 4 na powierzchnię pojazdu nanoszony jest gorący roztwór zmiękczonej wody z woskiem-polimerem. Powstała powłoka chroni Twój samochód przed niszczącym działaniem promieni UV, tworzeniem się mikrozarysowań oraz utrudnia ponowne brudzenie. Stosuj tylko na idealnie umyty lakier!'
+        },
+        {
+          title: 'Nabłyszczanie',
+          icon: 'numeric-5-circle',
+          description:
+            'Po umyciu, spłukaniu i nawoskowaniu wciśnij przycisk 4. Dokładnie spłucz całą powierzchnię samochodu. Odległość lancy od pojazdu powinna wynosić 30-50 cm. W tym programie do wody zmiękczonej i zdemineralizowanej dodany zostaje środek osuszająco-nabłyszczający, który umożliwia osiągnięcie efekt bez plam i zacieków. <strong>Nie Wycieraj!</strong> Ten programeliminuje konieczność wycierania czy suszenia pojazdu.'
+        }
       ]
     }
   },
@@ -185,28 +169,21 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .touchless-wash {
   margin-bottom: -2em;
-}
-
-.howto__conditions {
-  h3 {
-    text-align: center;
-  }
 }
 
 .howto {
   ul {
     padding: 0;
-    margin-bottom: 0;
   }
 
   li {
     align-items: flex-start;
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 0.75em;
+    margin-bottom: 0.5em;
 
     &:last-child {
       margin-bottom: 0;
@@ -219,7 +196,6 @@ export default {
 
     p {
       margin: 0em;
-      text-align: left;
     }
   }
 
@@ -232,25 +208,14 @@ export default {
   }
 
   @media screen and (min-width: 960px) {
-    h3 {
-      font-size: 1.1em;
-      margin-bottom: 0;
-      margin-top: 0;
-      line-height: 1;
-    }
-
-    .section__content {
-      display: flex;
-    }
-
     .howto__video {
-      flex: 1;
+      flex: 1 1 48%;
       padding-left: 1em;
     }
 
     .howto__conditions {
       display: flex;
-      flex: 1;
+      flex: 1 1 52%;
       flex-direction: column;
       justify-content: center;
     }
@@ -260,7 +225,7 @@ export default {
 .video-wrapper {
   position: relative;
   width: 100%;
-  height: 0px;
+  height: 0;
   padding-bottom: 56.25%;
 
   iframe {
@@ -273,49 +238,15 @@ export default {
 }
 
 .programs {
-  h2 {
-    font-size: 1.1em;
-  }
-
-  .section__content {
-    margin-bottom: 0;
-  }
+  margin-bottom: -2em;
 }
 
 .programs-list {
-  display: flex;
   flex-wrap: wrap;
 }
 
 .program {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  padding: 0 1em;
-
-  @media screen and (min-width: 580px) {
-    align-items: flex-start;
-    flex-direction: row;
-  }
-
-  @media screen and (min-width: 960px) {
-    flex-basis: 50%;
-  }
-}
-
-.program__description {
-  text-align: center;
-
-  h3 {
-    font-size: 1em;
-    margin-bottom: 1em;
-    margin-top: 0.5em;
-  }
-
-  @media screen and (min-width: 580px) {
-    margin-left: 2em;
-    text-align: left;
-  }
+  flex: 1 1 45%;
 }
 
 .service-wash {
@@ -323,6 +254,15 @@ export default {
     font-size: 0.9em;
     margin-left: 1em;
     color: $color-secondary;
+  }
+}
+</style>
+
+<style lang="scss">
+.howto .section__content {
+  @media screen and (min-width: 960px) {
+    align-items: center;
+    display: flex;
   }
 }
 </style>

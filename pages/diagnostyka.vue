@@ -41,12 +41,12 @@
       <flex-list class="questions">
         <icon-card
           class="question"
-          title="Jak często należy wykonywać badania techniczne?"
+          title="Jak często należy wykonywać przeglądy?"
           icon="calendar"
-          icon-size="lg"
           :bordered="false"
+          horizontal
         >
-          Większość właścicieli samochodów prywatnych zobowiązana jest odbywać przegląd techniczny co roku. Wyjątkiem są nowe auta, które muszą przejść pierwszy przegląd
+          Większość właścicieli pojazdów prywatnych zobowiązana jest odbywać przegląd techniczny co roku. Wyjątkiem są nowe auta, które muszą przejść pierwszy przegląd
           nie później niż po upływie trzech lat od zakupu, zaś następny po kolejnych dwóch latach. Jeśli jednak pojazd ma zainstalowaną instalację gazową,
           musi przechodzić badanie co roku, niezależnie od jego wieku.
         </icon-card>
@@ -54,8 +54,8 @@
           class="question"
           title="Co grozi za brak ważnego przeglądu?"
           icon="alert-outline"
-          icon-size="lg"
           :bordered="false"
+          horizontal
         >
           Bez ważnego przeglądu auto nie może poruszać się po drogach. Jeśli zatrzyma nas Policja zabierze dowód rejestracyjny i wystawi skierowanie
           na obowiązkowe badanie techniczne. Może również wystawić mandat od 20 do 500 zł lub odholować samochód na parking policyjny.
@@ -65,8 +65,8 @@
           class="question"
           title="Co należy zabrać na przegląd?"
           icon="check-all"
-          icon-size="lg"
           :bordered="false"
+          horizontal
         >
           Oczywiście pojazd a także jego dowód rejestracyjny. Przed przeglądem warto także sprawdzić czy działają wszystkie żarówki, jest gaśnica i trójkąt ostrzegawczy.
           Nie musisz być właścicielem pojazdu żeby skorzystać z przeglądu technicznego.
@@ -75,8 +75,8 @@
           class="question"
           title="Ile czasu trwa badanie techniczne?"
           icon="clock"
-          icon-size="lg"
           :bordered="false"
+          horizontal
         >
           Kompleksowe wykonanie badania oraz dopełnienie wszelkich formalności (pieczątka do dowodu rejestracyjnego, wpisanie samochodu do bazy danych stacji,
           omówienie stanu technicznego i ew. listy usterek, płatność) powinno zająć około 30-45 min.
