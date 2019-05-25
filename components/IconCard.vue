@@ -1,8 +1,13 @@
 <template>
   <div class="iconcard-item">
-    <icon class="iconcard-item__icon" :name="icon" bordered size="md"/>
+    <icon
+      class="iconcard-item__icon"
+      :name="icon || 'check'"
+      :bordered="bordered"
+      :size="iconSize"
+    />
     <h3 v-if="title" class="iconcard-item__title">{{ title }}</h3>
-    <div class="iconcard-item__content">
+    <div v-if="!!$slots.default" class="iconcard-item__content">
       <slot/>
     </div>
   </div>
@@ -20,7 +25,17 @@ export default {
     },
     icon: {
       type: String,
-      default: ''
+      default: 'check'
+    },
+    iconSize: {
+      type: String,
+      default: 'md',
+      validator: value =>
+        value ? ['xs', 'sm', 'md', 'lg'].includes(value) : true
+    },
+    bordered: {
+      type: Boolean,
+      default: true
     }
   }
 }
@@ -31,8 +46,7 @@ export default {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-bottom: 1em;
-  padding: 0 1em;
+  padding: 1em;
 }
 
 .iconcard-item__icon {
@@ -47,7 +61,8 @@ export default {
 }
 
 .iconcard-item__content {
-  text-align: center;
+  flex: 1;
   margin-bottom: 1em;
+  text-align: center;
 }
 </style>

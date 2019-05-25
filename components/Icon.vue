@@ -44,10 +44,10 @@ export default {
 }
 
 .icon--medium {
-  font-size: 2.75em;
+  font-size: 2.5em;
 }
 
 .icon--large {
-  font-size: 4em;
+  font-size: 3.25em;
 }
 </style>

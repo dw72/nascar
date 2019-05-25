@@ -1,31 +1,18 @@
 <template>
   <main>
     <page-section
-      class="description"
+      class="regeneration"
       title="Regeneracja filtrów DPF / FAP"
       description="Filtr cząstek stałych sprawia kłopoty? Jeżeli na skutek długotrwałej eksploatacji samochodu w warunkach miejskich lub awarii układu sterowania,
         filtr cząstek stałych DPF w twoim samochodzie został całkowicie zablokowany cząstkami sadzy nie musisz go już usuwać!
       "
     >
-      <p>
-        <strong>Zregeneruj go u Nas!</strong>
-      </p>
-    </page-section>
-    <page-section class="regeneration-cons" header="removed">
-      <ul>
-        <li>
-          <icon-card title="Innowacyjna, ekologiczna metoda regeneracji." icon="leaf"/>
-        </li>
-        <li>
-          <icon-card title="Obsługujemy wszystkie modele samochodów." icon="car-multiple"/>
-        </li>
-        <li>
-          <icon-card title="Regeneracja i wysyłka tego samego dnia." icon="calendar"/>
-        </li>
-        <li>
-          <icon-card title="Pełny raport dotyczący procesu regeneracji." icon="file-chart"/>
-        </li>
-      </ul>
+      <div class="regeneration__content">
+        <icon-card title="Innowacyjna, ekologiczna metoda regeneracji." icon="leaf"/>
+        <icon-card title="Obsługujemy wszystkie modele samochodów." icon="car-multiple"/>
+        <icon-card title="Regeneracja i wysyłka tego samego dnia." icon="calendar"/>
+        <icon-card title="Pełny raport dotyczący procesu regeneracji." icon="file-chart"/>
+      </div>
     </page-section>
     <page-section
       class="method-cons"
@@ -153,34 +140,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.description {
-  p {
-    margin-top: -1em;
-    text-align: center;
-  }
-}
+.regeneration__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: -2em;
 
-.regeneration-cons {
-  margin: -1em 0 -4em;
-
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    list-style-type: none;
-    padding: 0;
-  }
-
-  li {
-    align-items: center;
-    display: flex;
+  .iconcard-item {
     flex-basis: 50%;
-    flex-direction: column;
-    font-size: 0.95em;
-    text-align: center;
+    font-size: 0.9em;
 
     @media screen and (min-width: 768px) {
       flex-basis: 25%;
+      font-size: 1em;
     }
   }
 }

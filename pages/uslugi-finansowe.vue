@@ -5,7 +5,7 @@
       title="Kredyty"
       description="Kredyty to bardzo popularny rodzaj finansowania swoich potrzeb i realizowania marzeń. W naszej ofercie posiadamy:"
     >
-      <icon-card-list>
+      <flex-list>
         <icon-card
           title="Kredyty samochodowe"
           icon="car-sports"
@@ -18,7 +18,7 @@
           title="Kredyty konsolidacyjne"
           icon="cash-multiple"
         >Za ich pomocą możemy spłacić nie tylko kredyty gotówkowe, debet na koncie czy kredyt samochodowy lub mieszkaniowy, ale także pozostałą jego część przeznaczyć na dowolny cel.</icon-card>
-      </icon-card-list>
+      </flex-list>
     </page-section>
     <page-section
       class="leasing"
@@ -48,12 +48,12 @@
 
 <script>
 import PageSection from '@/components/PageSection'
-import IconCardList from '@/components/IconCardList'
+import FlexList from '@/components/FlexList'
 import IconCard from '@/components/IconCard'
 import InsuranceCarousel from '@/components/InsuranceCarousel'
 
 export default {
-  components: { PageSection, IconCardList, IconCard, InsuranceCarousel },
+  components: { PageSection, FlexList, IconCard, InsuranceCarousel },
   head() {
     return {
       title: 'Usługi finansowe'

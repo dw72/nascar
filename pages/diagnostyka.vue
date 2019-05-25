@@ -5,7 +5,7 @@
       title="Stacja kontroli pojazdów"
       description="Posiadamy wieloletnie doświadczenie co przekłada się na wysoką jakość świadczonych przez nas usług. Wykonujemy:"
     >
-      <icon-card-list>
+      <flex-list>
         <icon-card
           icon="card-text-outline"
         >Obowiązkowe przeglądy rejestracyjne i badania okresowe samochodów osobowych, motocykli i ciągników rolniczych.</icon-card>
@@ -15,7 +15,7 @@
         <icon-card
           icon="map"
         >Sprawdzenie pojazdu przed kupnem, okresem letnim bądź zimowym oraz przed dłuższą podróżą.</icon-card>
-      </icon-card-list>
+      </flex-list>
       <p>Obsługujemy także pojazdy sprowadzone z zagranicy, powypadkowe i zasilane gazem.</p>
       <p>
         Do wykonywania badań wykorzystujemy nowoczesną linię diagnostyczną
@@ -36,12 +36,12 @@
 import { mapState } from 'vuex'
 
 import PageSection from '@/components/PageSection.vue'
-import IconCardList from '@/components/IconCardList'
+import FlexList from '@/components/FlexList'
 import IconCard from '@/components/IconCard'
 import PriceList from '@/components/PriceList'
 
 export default {
-  components: { PageSection, IconCardList, IconCard, PriceList },
+  components: { PageSection, FlexList, IconCard, PriceList },
   head() {
     return {
       title: 'Stacja kontroli'

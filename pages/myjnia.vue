@@ -3,9 +3,9 @@
     <page-section
       class="touchless-wash"
       title="Myjnia bezdotykowa"
-      description="Mycie bezdotykowe to obecnie ciesząca się największym uznaniem metoda mycia samochodów. Kierowcy dostrzegają wiele zalet mycia bezdotykowego. Trzy najważniejsze z nich to:"
+      description="Mycie bezdotykowe to obecnie ciesząca się największym uznaniem metoda mycia samochodów. Kierowcy dostrzegają wiele zalet mycia bezdotykowego. Jednak trzy z nich uważane są przez wszystkich za najważniejsze."
     >
-      <icon-card-list>
+      <flex-list>
         <icon-card
           title="Bezpieczeństwo"
           icon="shield-check-outline"
@@ -18,7 +18,7 @@
           Koszty ponoszone na myjni bezdotykowej są zdecydowanie niższe niż na myjniach samochodowych innego typu. Dzięki samoobsłudze użytkownik sam decyduje w jakim czasie i za jaką cenę umyje swój pojazd.
           <strong>Minuta mycia = 1 zł</strong>.
         </icon-card>
-      </icon-card-list>
+      </flex-list>
     </page-section>
     <page-section
       class="howto"
@@ -154,13 +154,13 @@
 import { mapState } from 'vuex'
 
 import PageSection from '@/components/PageSection'
-import IconCardList from '@/components/IconCardList'
+import FlexList from '@/components/FlexList'
 import IconCard from '@/components/IconCard'
 import Icon from '@/components/Icon'
 import PriceList from '@/components/PriceList'
 
 export default {
-  components: { PageSection, IconCardList, IconCard, Icon, PriceList },
+  components: { PageSection, FlexList, IconCard, Icon, PriceList },
   head() {
     return {
       title: 'Myjnia samochodowa'

@@ -7,7 +7,7 @@
         <p v-if="description">{{ description }}</p>
       </slot>
     </header>
-    <div class="section__content">
+    <div v-if="!!$slots.default" class="section__content">
       <slot/>
     </div>
   </section>
