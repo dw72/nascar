@@ -39,8 +39,8 @@
     >
       <insurance-carousel/>
       <p>
-        Nasi specjaliści fachowo i profesjonalnie udzielą informacji tak aby składka ubezpieczenia OC była jak najmniejsza, a polisa AC posiadała szeroki zakres ochrony.
-        Ubezpieczenia NNW to niedrogi a trafny dodatek do polisy gwarantujący ochronę kierowcy i pasażerom w razie nieszczęśliwego wypadku.
+        Nasi specjaliści fachowo i profesjonalnie udzielą informacji oraz dobiorą ofertę tak aby składka ubezpieczenia OC była jak najmniejsza, a polisa AC posiadała szeroki zakres ochrony.
+        Zaproponują też ubezpieczenie NNW, które jest niedrogim a trafnym dodatkiem do polisy gwarantującym ochronę kierowcy i pasażerów w razie nieszczęśliwego wypadku.
       </p>
     </page-section>
   </main>
