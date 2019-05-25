@@ -148,11 +148,9 @@ export default {
 
   .iconcard-item {
     flex-basis: 50%;
-    font-size: 0.9em;
 
     @media screen and (min-width: 768px) {
       flex-basis: 25%;
-      font-size: 1em;
     }
   }
 }

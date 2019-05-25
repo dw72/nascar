@@ -54,10 +54,14 @@ export default {
 }
 
 .iconcard-item__title {
-  font-size: 1.1em;
+  font-size: 1em;
   margin-top: 0;
   margin-bottom: 1em;
   text-align: center;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.1em;
+  }
 }
 
 .iconcard-item__content {
