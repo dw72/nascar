@@ -12,7 +12,7 @@
         <icon-card :title="service.name" :icon="service.icon" icon-size="lg" :bordered="false">
           <div class="repair__description">
             <p>{{ service.description }}</p>
-            <nuxt-link to="/serwis/pracujemy">Czytaj więcej</nuxt-link>
+            <nuxt-link :to="`/serwis/${service.url}`">Czytaj więcej</nuxt-link>
           </div>
         </icon-card>
       </div>
@@ -40,55 +40,64 @@ export default {
           name: 'Ogumienie',
           description:
             'Ogumienie jest jednym z najważniejszych elementów każdego pojazdu i ma bezpośredni wpływ na bezpieczeństwo na drodze.',
-          icon: 'tire'
+          icon: 'tire',
+          url: 'opony'
         },
         {
           name: 'Zawieszenie',
           description:
             'Zadbaj o bezpieczeństwo w czasie jazdy i odwiedź nasz punkt, aby sprawdzić stan układu jezdnego swojego samochodu.',
-          icon: 'suspension'
+          icon: 'suspension',
+          url: 'pracujemy'
         },
         {
           name: 'Geometria',
           description:
             'Nieprawidłowo ustawione koła powodują zdecydowanie szybsze zużycie opon oraz zmniejszoną kontrolę kierowcy nad pojazdem.',
-          icon: 'car-engine'
+          icon: 'car-engine',
+          url: 'pracujemy'
         },
         {
           name: 'Układ hamulcowy',
           description:
             'Sprawny układ hamulcowy ma bezpośredni wpływ na bezpieczeństwo w ruchu drogowym. Od niego może zależeć Twoje "być" albo "nie być".',
-          icon: 'brake-disc'
+          icon: 'brake-disc',
+          url: 'pracujemy'
         },
         {
           name: 'Układ wydechowy',
           description:
             'Zmniejsza ilość szkodliwych gazów występujących w spalinach, reguluje poziomu hałasu oraz zapewnia optymalną pracę silnika.',
-          icon: 'exhaust-pipe'
+          icon: 'exhaust-pipe',
+          url: 'pracujemy'
         },
         {
           name: 'Układ kierowniczy',
           description:
             'Układ kierowniczy jest kluczowym elementem każdego pojazdu, ponieważ to właśnie on pozwala użytkownikowi sprawnie nawigować pojazdem.',
-          icon: 'steering-wheel'
+          icon: 'steering-wheel',
+          url: 'pracujemy'
         },
         {
           name: 'Klimatyzacja',
           description:
             'Sprawna klimatyzacja to nie tylko większy komfort jazdy, ale także neutralizacja alergenów, które niekorzystnie wpływają na nasze zdrowie.',
-          icon: 'fan'
+          icon: 'fan',
+          url: 'pracujemy'
         },
         {
           name: 'Oleje',
           description:
             'Wymiana oleju, filtrów i płynów eksploatacyjnych jest istotna, by ochronić silnik oraz zapewnić bezawaryjną i długotrwałą eksploatację.',
-          icon: 'oil'
+          icon: 'oil',
+          url: 'pracujemy'
         },
         {
           name: 'Akumulatory',
           description:
             'Wymiana akumulatora może być konieczna w momencie, kiedy auto ma problemy z uruchomieniem zimnego silnika a kontrolki przygasają.',
-          icon: 'battery'
+          icon: 'battery',
+          url: 'pracujemy'
         }
       ]
     }
@@ -122,7 +131,6 @@ export default {
     padding: 0.1em;
     position: relative;
     text-decoration: none;
-    text-transform: uppercase;
     transition: all 0.2s ease-in-out;
 
     &::after {
