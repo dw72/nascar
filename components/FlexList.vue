@@ -46,23 +46,23 @@ export default {
   @media screen and (min-width: 580px) {
     flex-direction: row;
     &.item-width--1\/4 > * {
-      flex-basis: 47%;
+      flex-basis: 50%;
     }
   }
 
   @media screen and (min-width: 768px) {
     &.item-width--1\/2 > * {
-      flex-basis: 47%;
+      flex-basis: 50%;
     }
 
     &.item-width--1\/3 > * {
-      flex-basis: 31%;
+      flex-basis: 33.33%;
     }
   }
 
   @media screen and (min-width: 960px) {
     &.item-width--1\/4 > * {
-      flex-basis: 23%;
+      flex-basis: 25%;
     }
   }
 }

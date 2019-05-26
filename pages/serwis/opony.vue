@@ -6,9 +6,8 @@
       description="Ogumienie jest jednym z najważniejszych elementów każdego pojazdu i ma bezpośredni wpływ na bezpieczeństwo na drodze.
         Dlatego każdy kierowca powinien pamiętać, że właściwy dobór opon (letnich, zimowych), ich sezonowa wymiana i eksploatacja zgodna z przeznaczeniem
         to podstawa bezpiecznego ruchu na drodze i komfortowego podróżowania."
-      flex
     >
-      <flex-list>
+      <flex-list item-width="1/2">
         <icon-card
           class="tires-service"
           title="Montaż i wymiana opon"
@@ -66,9 +65,3 @@ export default {
   components: { PageSection, FlexList, IconCard }
 }
 </script>
-
-<style lang="scss" scoped>
-.tires-service {
-  flex: 1 1 50%;
-}
-</style>

@@ -8,7 +8,7 @@
       "
     >
       <flex-list item-width="1/4">
-        <icon-card title="Innowacyjna, ekologiczna metoda." icon="leaf"/>
+        <icon-card title="Innowacyjna, ekologiczna metoda regeneracji." icon="leaf"/>
         <icon-card title="Obsługujemy wszystkie modele samochodów." icon="car-multiple"/>
         <icon-card title="Regeneracja i wysyłka tego samego dnia." icon="calendar"/>
         <icon-card title="Pełny raport dotyczący procesu regeneracji." icon="file-chart"/>

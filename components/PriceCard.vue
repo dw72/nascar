@@ -1,13 +1,15 @@
 <template>
-  <div class="card">
-    <icon v-if="!!icon" bordered :name="icon" size="md"/>
-    <h2>{{ title }}</h2>
-    <div class="price">
-      <div class="regular" :class="!!promoPrice ? 'striked' : null">{{ price }} zł</div>
-      <div v-if="!!promoPrice" class="promo">{{ promoPrice }} zł</div>
-    </div>
-    <div class="content">
-      <slot/>
+  <div class="card-wraper">
+    <div class="card">
+      <icon v-if="!!icon" bordered :name="icon" size="md"/>
+      <h2>{{ title }}</h2>
+      <div class="price">
+        <div class="regular" :class="!!promoPrice ? 'striked' : null">{{ price }} zł</div>
+        <div v-if="!!promoPrice" class="promo">{{ promoPrice }} zł</div>
+      </div>
+      <div class="content">
+        <slot/>
+      </div>
     </div>
   </div>
 </template>
@@ -27,6 +29,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.card-wraper {
+  padding: 0.75em;
+}
+
 .card {
   align-items: center;
   border: 2px dashed rgba($color-primary, 0.25);

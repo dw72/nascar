@@ -82,6 +82,7 @@ export default {
   text-align: left;
 
   .icon {
+    margin-left: 0;
     margin-right: 0.5em;
   }
 }
