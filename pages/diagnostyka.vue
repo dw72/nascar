@@ -141,10 +141,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.diagnostic-services {
-  // margin-bottom: -2em;
-}
-
 .registration-review {
   background: darken($color-background, 5%);
 }

@@ -7,14 +7,12 @@
         filtr cząstek stałych DPF w twoim samochodzie został całkowicie zablokowany cząstkami sadzy nie musisz go już usuwać!
       "
     >
-      <!-- <div class="regeneration__content"> -->
       <flex-list item-width="1/4">
-        <icon-card title="Innowacyjna, ekologiczna metoda regeneracji." icon="leaf"/>
+        <icon-card title="Innowacyjna, ekologiczna metoda." icon="leaf"/>
         <icon-card title="Obsługujemy wszystkie modele samochodów." icon="car-multiple"/>
         <icon-card title="Regeneracja i wysyłka tego samego dnia." icon="calendar"/>
         <icon-card title="Pełny raport dotyczący procesu regeneracji." icon="file-chart"/>
       </flex-list>
-      <!-- </div> -->
     </page-section>
     <page-section
       class="method-cons"
@@ -149,21 +147,6 @@ export default {
   margin-bottom: -2em;
 }
 
-.regeneration__content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-bottom: -2em;
-
-  .iconcard-item {
-    flex-basis: 50%;
-
-    @media screen and (min-width: 768px) {
-      flex-basis: 25%;
-    }
-  }
-}
-
 .method-cons {
   p {
     text-align: center;
@@ -240,30 +223,6 @@ export default {
     }
   }
 }
-
-// .pricelist {
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: space-around;
-//   width: 100%;
-
-//   @media screen and (min-width: 580px) {
-//     flex-direction: row;
-//   }
-
-//   .pricelist__card {
-//     margin-bottom: 1em;
-//     flex-basis: 100%;
-
-//     @media screen and(min-width: 580px) {
-//       flex-basis: 45%;
-//     }
-
-//     @media screen and(min-width: 960px) {
-//       flex-basis: 23%;
-//     }
-//   }
-// }
 
 .order-form {
   background: darken($color-background, 5%);
