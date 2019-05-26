@@ -70,6 +70,7 @@
       title="Opis programów"
       description="To Ty decydujesz o wyborze programu mycia. Możesz go zmienić w każdej chwili. Pamiętaj jednak aby w przypadku awarii urządzenia niezwłocznie wciśnąć
         przycisk STOP (nie wstrzymuje biegu licznika) aby uniknąć większych uszkodzeń."
+      full-width
     >
       <flex-list item-width="1/2">
         <icon-card
@@ -170,11 +171,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.touchless-wash {
-  margin-bottom: -2em;
-}
-
 .howto {
+  background: darken($color-background, 5%);
+
   ul {
     padding: 0;
   }
@@ -211,6 +210,7 @@ export default {
     .howto__video {
       flex: 1 1 48%;
       padding-left: 1em;
+      padding-bottom: 1em;
     }
 
     .howto__conditions {
@@ -218,6 +218,7 @@ export default {
       flex: 1 1 52%;
       flex-direction: column;
       justify-content: center;
+      padding-bottom: 1em;
     }
   }
 }
@@ -238,7 +239,7 @@ export default {
 }
 
 .programs {
-  margin-bottom: -2em;
+  background: darken($color-background, 5%);
 }
 
 .service-wash {

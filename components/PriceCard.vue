@@ -33,7 +33,8 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 3em;
+  margin-top: 2em;
+  margin-bottom: 1em;
   min-height: 380px;
   padding: 1em;
   width: 100%;

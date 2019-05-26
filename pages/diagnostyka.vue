@@ -26,11 +26,12 @@
       </p>
     </page-section>
     <page-section
-      class
+      class="registration-review"
       title="Badania techniczne"
       description="
         Właściciel samochodu osobowego ma obowiązek zgłosić pojazd na przegląd okresowy. Celem jest ocena stanu technicznego,
         na której podstawie auto zostaje dopuszczone do użytkowania w ruchu drogowym."
+      full-width
     >
       <flex-list item-width="1/2">
         <icon-card
@@ -141,6 +142,10 @@ export default {
 
 <style lang="scss" scoped>
 .diagnostic-services {
-  margin-bottom: -2em;
+  // margin-bottom: -2em;
+}
+
+.registration-review {
+  background: darken($color-background, 5%);
 }
 </style>

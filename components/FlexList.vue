@@ -36,7 +36,7 @@ export default {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
 
   & > * {
@@ -46,23 +46,23 @@ export default {
   @media screen and (min-width: 580px) {
     flex-direction: row;
     &.item-width--1\/4 > * {
-      flex-basis: 50%;
+      flex-basis: 47%;
     }
   }
 
   @media screen and (min-width: 768px) {
     &.item-width--1\/2 > * {
-      flex-basis: 50%;
+      flex-basis: 47%;
     }
 
     &.item-width--1\/3 > * {
-      flex-basis: 33%;
+      flex-basis: 31%;
     }
   }
 
   @media screen and (min-width: 960px) {
     &.item-width--1\/4 > * {
-      flex-basis: 25%;
+      flex-basis: 23%;
     }
   }
 }

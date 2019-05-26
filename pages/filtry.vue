@@ -71,11 +71,11 @@
       <h2>Gwarantujemy nawet do 99% skuteczności regeneracji !</h2>
     </call-to-action>
     <page-section
-      flex
       title="Cennik regeneracji"
       description="Poniższe ceny sa cenami brutto i nie zawierają kosztu demontażu i montażu filtra."
     >
-      <div class="pricelist">
+      <!-- <div class="pricelist"> -->
+      <flex-list item-width="1/4">
         <price-card
           v-for="(price, idx) in pricelist"
           :key="idx"
@@ -93,7 +93,8 @@
             <li>Odesłanie klientowi</li>
           </ul>
         </price-card>
-      </div>
+      </flex-list>
+      <!-- </div> -->
     </page-section>
     <page-section
       key="form"
@@ -144,6 +145,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.regeneration {
+  margin-bottom: -2em;
+}
+
 .regeneration__content {
   display: flex;
   flex-wrap: wrap;
@@ -236,29 +241,29 @@ export default {
   }
 }
 
-.pricelist {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 100%;
+// .pricelist {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-around;
+//   width: 100%;
 
-  @media screen and (min-width: 580px) {
-    flex-direction: row;
-  }
+//   @media screen and (min-width: 580px) {
+//     flex-direction: row;
+//   }
 
-  .pricelist__card {
-    margin-bottom: 1em;
-    flex-basis: 100%;
+//   .pricelist__card {
+//     margin-bottom: 1em;
+//     flex-basis: 100%;
 
-    @media screen and(min-width: 580px) {
-      flex-basis: 45%;
-    }
+//     @media screen and(min-width: 580px) {
+//       flex-basis: 45%;
+//     }
 
-    @media screen and(min-width: 960px) {
-      flex-basis: 23%;
-    }
-  }
-}
+//     @media screen and(min-width: 960px) {
+//       flex-basis: 23%;
+//     }
+//   }
+// }
 
 .order-form {
   background: darken($color-background, 5%);
