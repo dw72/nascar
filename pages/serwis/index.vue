@@ -16,6 +16,9 @@
         </icon-card>
       </div>
     </page-section>
+    <page-section full-width grey header="removed">
+      <p class="centered bigger">W razie jakichkolwiek pytań zapraszamy do kontaktu.</p>
+    </page-section>
   </main>
 </template>
 
@@ -160,6 +163,10 @@ export default {
   p {
     flex: 1;
   }
+}
+
+.button {
+  margin: 2em;
 }
 
 @keyframes pulse {

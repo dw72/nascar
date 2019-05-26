@@ -55,9 +55,10 @@ export default {
   data() {
     return {
       routes: [
-        { path: '/filtry', title: 'Regenracja DPF/FAP' },
+        { path: '/filtry', title: 'Regenracja DPF' },
         { path: '/diagnostyka', title: 'Stacja kontroli' },
         { path: '/serwis', title: 'Serwis' },
+        { path: '/felgi', title: 'Felgi' },
         { path: '/myjnia', title: 'Myjnia' },
         { path: '/uslugi-finansowe', title: 'Usługi finansowe' }
       ],
@@ -156,7 +157,7 @@ export default {
   display: inline-flex;
   font-family: inherit;
   font-size: 1rem;
-  padding: 0.75em 0.5em;
+  padding: 0.75em 0.45em;
   text-decoration: none;
   text-transform: uppercase;
   width: 100%;

@@ -241,14 +241,6 @@ export default {
 .programs {
   background: darken($color-background, 5%);
 }
-
-.service-wash {
-  p.disclaimer {
-    font-size: 0.9em;
-    margin-left: 1em;
-    color: $color-secondary;
-  }
-}
 </style>
 
 <style lang="scss">

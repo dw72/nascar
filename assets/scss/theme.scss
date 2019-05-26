@@ -56,6 +56,14 @@ img {
 .bigger {
 	font-size: 1.25em;
 }
+
+.disclaimer {
+	font-size: 0.9em;
+	margin-bottom: 0;
+	margin-left: 1em;
+	color: $color-secondary;
+}
+
 // COMPONENTS
 
 @import './components/_button.scss';
