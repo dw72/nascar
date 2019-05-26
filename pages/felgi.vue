@@ -26,7 +26,7 @@
         >Dobierz felgi do auta</a>
       </div>
       <div>
-        <p class="disclaimer">* Okno konfiguratora otworzy się w nowym oknie przeglądarki.</p>
+        <p class="disclaimer">* Konfigurator otworzy się w nowym oknie przeglądarki.</p>
       </div>
     </page-section>
     <page-section full-width grey header="removed">
