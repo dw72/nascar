@@ -210,7 +210,7 @@ export default {
     display: flex;
     justify-content: flex-start;
     flex-basis: 45%;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.25em;
 
     .icon {
       flex-shrink: 0;

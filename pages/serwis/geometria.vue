@@ -8,7 +8,6 @@
     >
       <flex-list item-width="1/2">
         <icon-card
-          class="tires-service"
           title="Montaż i wymiana opon"
           icon="check"
           icon-size="md"
@@ -17,30 +16,23 @@
         >
           <p>
             Od prawidłowo przeprowadzonego procesu wymiany zależy bezpieczeństwo kierowcy, bezawaryjne użytkowanie opony oraz jej żywotność.
-            Podczas wymiany ogumienia sprawdzany jest ich stan ogólny oraz głębokość bieżnika. Nowoczesny sprzęt jakim dysponujemy pozwala na sprawny i precyzyjny
-            przebieg złożonego procesu serwisowania opon, piast i felg.
+            Podczas wymiany ogumienia sprawdzany jest ich stan ogólny oraz głębokość bieżnika. Nowoczesny sprzęt jakim dysponujemy pozwala na
+            sprawny i precyzyjny przebieg złożonego procesu serwisowania opon, piast i felg.
           </p>
           <p>
             Sprawdzamy głębokość bieżnika, ciśnienie powietrza, zużycie i wiek opon oraz ewentualne uszkodzenia ściany bocznej.
             Jeżeli zauważymy nieprawidłowość bądź defekt, niezwłocznie przywrócimy Twoje opony do stanu optymalnego lub sprawnie wymienimy na nowe.
           </p>
         </icon-card>
-        <icon-card
-          class="tires-service"
-          title="Wyważanie kół"
-          icon="check"
-          icon-size="md"
-          :bordered="false"
-          horizontal
-        >
+        <icon-card title="Wyważanie kół" icon="check" icon-size="md" :bordered="false" horizontal>
           <p>
-            Nieprawidłowo wyważone koła powodują wibracje kierownicy, szybsze zużycie elementów zawieszenia, układu kierowniczego i łożysk oraz nierównomierne zużycie opon.
-            Zmniejsza się przyczepność co pogarsza efektywność hamowania. Istotą wyważania kół jest równomierne rozłożenie mas wokół osi jego obrotu,
-            przedłużenie żywotności opony i poprawa komfortu podczas jazdy.
+            Nieprawidłowo wyważone koła powodują wibracje kierownicy, szybsze zużycie elementów zawieszenia, układu kierowniczego i łożysk
+            oraz nierównomierne zużycie opon. Zmniejsza się przyczepność co pogarsza efektywność hamowania. Istotą wyważania kół jest równomierne
+            rozłożenie mas wokół osi jego obrotu, przedłużenie żywotności opony i poprawa komfortu podczas jazdy.
           </p>
           <p>
-            Wyważanie kół jest konieczne podczas każdej sezonowej wymiany opon, po kolizji czy wypadku,
-            natomiast okresową kontrolę należy przeprowadzać po przejechaniu ok. 5 tysięcy kilometrów.
+            Wyważanie kół jest konieczne podczas każdej sezonowej wymiany opon, po kolizji czy wypadku, natomiast okresową kontrolę należy przeprowadzać
+            po przejechaniu ok. 5 tysięcy kilometrów.
           </p>
         </icon-card>
       </flex-list>

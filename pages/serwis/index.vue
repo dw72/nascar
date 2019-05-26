@@ -1,7 +1,6 @@
 <template>
   <main>
     <page-section
-      class="repair"
       title="Serwis pojazdów"
       description="
         Od wielu lat pomagamy naszym klientom w obsłudze eksploatacyjnej oraz naprawie pojazdów w szerokim zakresie.
@@ -69,7 +68,7 @@ export default {
           description:
             'Zmniejsza ilość szkodliwych gazów występujących w spalinach, reguluje poziomu hałasu oraz zapewnia optymalną pracę silnika.',
           icon: 'exhaust-pipe',
-          url: 'pracujemy'
+          url: 'uklad-wydechowy'
         },
         {
           name: 'Układ kierowniczy',
@@ -83,21 +82,21 @@ export default {
           description:
             'Sprawna klimatyzacja to nie tylko większy komfort jazdy, ale także neutralizacja alergenów, które niekorzystnie wpływają na nasze zdrowie.',
           icon: 'fan',
-          url: 'pracujemy'
+          url: 'klimatyzacja'
         },
         {
           name: 'Oleje',
           description:
             'Wymiana oleju, filtrów i płynów eksploatacyjnych jest istotna, by ochronić silnik oraz zapewnić bezawaryjną i długotrwałą eksploatację.',
           icon: 'oil',
-          url: 'pracujemy'
+          url: 'oleje'
         },
         {
           name: 'Akumulatory',
           description:
             'Wymiana akumulatora może być konieczna w momencie, kiedy auto ma problemy z uruchomieniem zimnego silnika a kontrolki przygasają.',
           icon: 'battery',
-          url: 'pracujemy'
+          url: 'akumulatory'
         }
       ]
     }

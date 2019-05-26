@@ -1,8 +1,7 @@
 <template>
   <main>
     <page-section
-      class="suspension"
-      title="Zawieszenie"
+      title="Układ hamulcowy"
       description="Sprawny układ hamulcowy ma bezpośredni wpływ na Twoje bezpieczeństwo w ruchu drogowym, dlatego kontrola układu hamulcowego
         powinna dobywać się przynajmniej raz w roku. Tarcze, klocki, bębny i szczęki to elementy, które w trakcie eksploatacji pojazdu ulegają zużyciu,
         a tempo ich zużycia zależy także od stylu jazdy prowadzącego."
@@ -66,10 +65,9 @@
       </flex-list>
     </page-section>
     <page-section header="removed" full-width grey>
-      <p class="centered bigger">
-        Regularna kontrola związana z oceną sprawności układu hamulcowego
-        <br>to jedna z najważniejszych czynności związanych z eksploatacją auta.
-      </p>
+      <p
+        class="centered bigger"
+      >Regularna kontrola i ocena sprawności układu hamulcowego to jedna z najważniejszych czynności związanych z eksploatacją auta.</p>
     </page-section>
   </main>
 </template>

@@ -1,7 +1,6 @@
 <template>
   <main>
     <page-section
-      class="tires"
       title="Serwis ogumienia"
       description="Ogumienie jest jednym z najważniejszych elementów każdego pojazdu i ma bezpośredni wpływ na bezpieczeństwo na drodze.
         Dlatego każdy kierowca powinien pamiętać, że właściwy dobór opon (letnich, zimowych), ich sezonowa wymiana i eksploatacja zgodna z przeznaczeniem
@@ -9,7 +8,6 @@
     >
       <flex-list item-width="1/2">
         <icon-card
-          class="tires-service"
           title="Montaż i wymiana opon"
           icon="check"
           icon-size="md"
@@ -26,14 +24,7 @@
             Jeżeli zauważymy nieprawidłowość bądź defekt, niezwłocznie przywrócimy Twoje opony do stanu optymalnego lub sprawnie wymienimy na nowe.
           </p>
         </icon-card>
-        <icon-card
-          class="tires-service"
-          title="Wyważanie kół"
-          icon="check"
-          icon-size="md"
-          :bordered="false"
-          horizontal
-        >
+        <icon-card title="Wyważanie kół" icon="check" icon-size="md" :bordered="false" horizontal>
           <p>
             Nieprawidłowo wyważone koła powodują wibracje kierownicy, szybsze zużycie elementów zawieszenia, układu kierowniczego i łożysk oraz nierównomierne zużycie opon.
             Zmniejsza się przyczepność co pogarsza efektywność hamowania. Istotą wyważania kół jest równomierne rozłożenie mas wokół osi jego obrotu,
@@ -49,9 +40,11 @@
         Odwiedzając nasz serwis, możesz liczyć na profesjonalną obsługę i fachową poradę dotyczącą właściwego doboru opon dostosowanych do konkretnego modelu auta,
         a szeroka gama produktów oponiarskich pozwala nam na realizację usług zgodnie z możliwościami finansowymi właścicieli pojazdów.
       </p>
+    </page-section>
+    <page-section header="removed" full-width grey>
       <p
-        class="strong centered"
-      >W naszym serwisie stawiamy na najwyższą jakość, dlatego oferujemy opony takich marek, jak Goodyear, Dunlop, Fulda, Sava czy Dębica.</p>
+        class="centered bigger"
+      >Stawiamy na najwyższą jakość, dlatego oferujemy opony takich marek, jak Goodyear, Dunlop, Fulda, Sava czy Dębica.</p>
     </page-section>
   </main>
 </template>
