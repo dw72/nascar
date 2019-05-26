@@ -1,5 +1,5 @@
 <template>
-  <div :class="{'iconcard-item': true, 'iconcard-item--horizontal': horizontal}">
+  <div :class="classNames">
     <icon
       class="iconcard-item__icon"
       :name="icon || 'check'"
@@ -42,6 +42,19 @@ export default {
     horizontal: {
       type: Boolean,
       default: false
+    },
+    fullWidth: {
+      type: Boolean,
+      default: false
+    }
+  },
+  computed: {
+    classNames() {
+      return {
+        'iconcard-item': true,
+        'iconcard-item--horizontal': this.horizontal,
+        'full-width': this.fullWidth
+      }
     }
   }
 }
@@ -67,6 +80,10 @@ export default {
     @media screen and (min-width: 768px) {
       font-size: 1.1em;
     }
+  }
+
+  &.full-width {
+    flex-basis: 100%;
   }
 }
 
