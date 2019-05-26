@@ -8,7 +8,7 @@
         Dysponujemy szerokim wahlarzem usług w zakresie mechaniki pojazdowej oraz obsługi pojazdów. Dziedziny, w których możemy pomóc to:"
       flex
     >
-      <div v-for="(service, idx) in services" :key="idx" class="service">
+      <div v-for="(service, idx) in services" :key="idx" class="repair-service">
         <icon-card :title="service.name" :icon="service.icon" icon-size="lg" :bordered="false">
           <div class="repair__description">
             <p>{{ service.description }}</p>
@@ -48,14 +48,14 @@ export default {
           description:
             'Zadbaj o bezpieczeństwo w czasie jazdy i odwiedź nasz punkt, aby sprawdzić stan układu jezdnego swojego samochodu.',
           icon: 'suspension',
-          url: 'pracujemy'
+          url: 'zawieszenie'
         },
         {
           name: 'Geometria',
           description:
             'Nieprawidłowo ustawione koła powodują zdecydowanie szybsze zużycie opon oraz zmniejszoną kontrolę kierowcy nad pojazdem.',
-          icon: 'car-engine',
-          url: 'pracujemy'
+          icon: 'chassis',
+          url: 'geometria'
         },
         {
           name: 'Układ hamulcowy',
@@ -106,7 +106,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.service {
+.repair-service {
   flex: 1 1 100%;
   justify-content: center;
   margin: 0;
