@@ -36,6 +36,13 @@ export default {
     return {
       services: [
         {
+          name: 'Diagnostyka',
+          description:
+            'Diagnostyka zajmuje się wyszukiwaniem usterek, przyczyn ich powstania aby można je fachowo i skutecznie wyaliminować.',
+          icon: 'car-engine',
+          url: 'diagnostyka'
+        },
+        {
           name: 'Ogumienie',
           description:
             'Ogumienie jest jednym z najważniejszych elementów każdego pojazdu i ma bezpośredni wpływ na bezpieczeństwo na drodze.',
@@ -69,13 +76,6 @@ export default {
             'Zmniejsza ilość szkodliwych gazów występujących w spalinach, reguluje poziomu hałasu oraz zapewnia optymalną pracę silnika.',
           icon: 'exhaust-pipe',
           url: 'uklad-wydechowy'
-        },
-        {
-          name: 'Układ kierowniczy',
-          description:
-            'Układ kierowniczy jest kluczowym elementem każdego pojazdu, ponieważ to właśnie on pozwala użytkownikowi sprawnie nawigować pojazdem.',
-          icon: 'steering-wheel',
-          url: 'pracujemy'
         },
         {
           name: 'Klimatyzacja',

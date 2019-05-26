@@ -7,7 +7,7 @@
         Zazwyczaj jednak wystarczy jego doładowanie i uzupełnienie wody."
     >
       <flex-list item-width="1/2">
-        <div class="items-list">
+        <div class="list-item">
           <h3>Przyczyny rozładowania akumulatora</h3>
           <ul>
             <li>
@@ -32,20 +32,26 @@
             </li>
           </ul>
         </div>
-        <div class="items-list">
+        <div class="list-item">
           <h3>Typy akumulatorów</h3>
           <ul>
             <li>
               <icon name="check" size="sm"/>
-              <p><strong>kwasowo-ołowiowe</strong> – najczęściej spotykane i stosowane w prawie każdym typie pojazdów, a wśród nich wyróżniamy akumulatory obsługowe, które wymagają kontroli stanu elektrolitu oraz bezobsługowe, które posiadają tzw. „magiczne oczko” informujące kolorem o stopniu naładowania</p>
+              <p>
+                <strong>kwasowo-ołowiowe</strong> – najczęściej spotykane i stosowane w prawie każdym typie pojazdów, a wśród nich wyróżniamy akumulatory obsługowe, które wymagają kontroli stanu elektrolitu oraz bezobsługowe, które posiadają tzw. „magiczne oczko” informujące kolorem o stopniu naładowania
+              </p>
             </li>
             <li>
               <icon name="check" size="sm"/>
-              <p><strong>żelowe</strong> – większa pojemność i odporność na rozładowania</p>
+              <p>
+                <strong>żelowe</strong> – większa pojemność i odporność na rozładowania
+              </p>
             </li>
             <li>
               <icon name="check" size="sm"/>
-              <p><strong>akumulatory AGM</strong> – zbudowane z nasączonej elektrolitem maty włókna szklanego, stosowane zazwyczaj w autach hybrydowych lub pojazdach intensywnie eksploatowanych</p>
+              <p>
+                <strong>akumulatory AGM</strong> – zbudowane z nasączonej elektrolitem maty włókna szklanego, stosowane zazwyczaj w autach hybrydowych lub pojazdach intensywnie eksploatowanych
+              </p>
             </li>
           </ul>
         </div>
@@ -71,7 +77,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.items-list {
+.list-item {
   padding: 1em;
 }
 
