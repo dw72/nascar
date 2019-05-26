@@ -7,9 +7,9 @@
         obniżeniem masy całkowitej pojazdu. Przekłada się to na zmniejszenie zużycia paliwa oraz osiągi, co stanowi niewątpliwą zaletę."
     >
       <p class="centered negative-margin">
-        W naszej ofercie posiadamy felgi do wszystkich typów pojazdów. Producentem sprzedawanych przez nas felg jest
+        W naszej ofercie posiadamy felgi do wszystkich typów pojazdów z całej gamy felg, których producentem jest
         <strong>grupa ALCAR</strong>,
-        dystrybuuje swoje produkty pod czterema markami felg aluminiowych
+        dystrybuująca swoje produkty pod czterema markami felg aluminiowych
         <strong>AEZ, DEZENT, DOTZ, ENZOM</strong> oraz jedną marką felg stalowych
         <strong>KFZ Stahlrad</strong>.
       </p>
