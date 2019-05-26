@@ -26,6 +26,7 @@ export default {
     noPadding: { type: Boolean, default: false },
     horizontal: { type: Boolean, default: false },
     flex: { type: Boolean, default: false },
+    grey: { type: Boolean, default: false },
     header: {
       type: String,
       default: 'visible',
@@ -41,7 +42,8 @@ export default {
         'section--full-width': this.fullWidth,
         'section--no-padding': this.noPadding,
         'section--horizontal': this.horizontal,
-        'section--flex': this.flex
+        'section--flex': this.flex,
+        'section--grey': this.grey
       }
     }
   }
@@ -75,6 +77,10 @@ export default {
   .section__content {
     margin: 0;
   }
+}
+
+.section--grey {
+  background: darken($color-background, 5%);
 }
 
 @media screen and (min-width: 960px) {

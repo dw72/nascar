@@ -62,7 +62,7 @@ export default {
           description:
             'Sprawny układ hamulcowy ma bezpośredni wpływ na bezpieczeństwo w ruchu drogowym. Od niego może zależeć Twoje "być" albo "nie być".',
           icon: 'brake-disc',
-          url: 'pracujemy'
+          url: 'uklad-hamulcowy'
         },
         {
           name: 'Układ wydechowy',
