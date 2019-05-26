@@ -40,47 +40,14 @@
     >
       <flex-list class="questions">
         <icon-card
+          v-for="(question, idx) in questions"
+          :key="idx"
           class="question"
-          title="Jak często należy wykonywać przeglądy?"
-          icon="calendar"
+          :title="question.title"
+          :icon="question.icon"
           :bordered="false"
           horizontal
-        >
-          Większość właścicieli pojazdów prywatnych zobowiązana jest odbywać przegląd techniczny co roku. Wyjątkiem są nowe auta, które muszą przejść pierwszy przegląd
-          nie później niż po upływie trzech lat od zakupu, zaś następny po kolejnych dwóch latach. Jeśli jednak pojazd ma zainstalowaną instalację gazową,
-          musi przechodzić badanie co roku, niezależnie od jego wieku.
-        </icon-card>
-        <icon-card
-          class="question"
-          title="Co grozi za brak ważnego przeglądu?"
-          icon="alert-outline"
-          :bordered="false"
-          horizontal
-        >
-          Bez ważnego przeglądu auto nie może poruszać się po drogach. Jeśli zatrzyma nas Policja zabierze dowód rejestracyjny i wystawi skierowanie
-          na obowiązkowe badanie techniczne. Może również wystawić mandat od 20 do 500 zł lub odholować samochód na parking policyjny.
-          Ubezpieczenie pojazdu traci ważność a w przypadku kolizji ubezpieczyciel nie wypłaci odszkodowania.
-        </icon-card>
-        <icon-card
-          class="question"
-          title="Co należy zabrać na przegląd?"
-          icon="check-all"
-          :bordered="false"
-          horizontal
-        >
-          Oczywiście pojazd a także jego dowód rejestracyjny. Przed przeglądem warto także sprawdzić czy działają wszystkie żarówki, jest gaśnica i trójkąt ostrzegawczy.
-          Nie musisz być właścicielem pojazdu żeby skorzystać z przeglądu technicznego.
-        </icon-card>
-        <icon-card
-          class="question"
-          title="Ile czasu trwa badanie techniczne?"
-          icon="clock"
-          :bordered="false"
-          horizontal
-        >
-          Kompleksowe wykonanie badania oraz dopełnienie wszelkich formalności (pieczątka do dowodu rejestracyjnego, wpisanie samochodu do bazy danych stacji,
-          omówienie stanu technicznego i ew. listy usterek, płatność) powinno zająć około 30-45 min.
-        </icon-card>
+        >{{ question.answer }}</icon-card>
       </flex-list>
     </page-section>
     <call-to-action>
@@ -113,6 +80,39 @@ export default {
       columns: [
         { name: 'name', title: 'Usługa' },
         { name: 'price', title: 'Cena' }
+      ],
+      questions: [
+        {
+          title: 'Jak często należy wykonywać przeglądy?',
+          icon: 'calendar',
+          answer:
+            'Większość właścicieli pojazdów prywatnych zobowiązana jest odbywać przegląd techniczny co roku. \
+            Wyjątkiem są nowe auta, które muszą przejść pierwszy przegląd nie później niż po upływie trzech lat od zakupu, zaś następny po kolejnych dwóch latach. \
+            Jeśli jednak pojazd ma zainstalowaną instalację gazową, musi przechodzić badanie co roku, niezależnie od jego wieku.'
+        },
+        {
+          title: 'Co grozi za brak ważnego przeglądu?',
+          icon: 'alert-outline',
+          answer:
+            'Bez ważnego przeglądu auto nie może poruszać się po drogach. \
+            Jeśli zatrzyma nas Policja zabierze dowód rejestracyjny i wystawi skierowanie na obowiązkowe badanie techniczne. \
+            Może również wystawić mandat od 20 do 500 zł lub odholować samochód na parking policyjny. \
+            Ubezpieczenie pojazdu traci ważność a w przypadku kolizji ubezpieczyciel nie wypłaci odszkodowania.'
+        },
+        {
+          title: 'Co należy zabrać na przegląd?',
+          icon: 'check-all',
+          answer:
+            'Oczywiście pojazd a także jego dowód rejestracyjny. Przed przeglądem warto także sprawdzić czy działają wszystkie żarówki, jest gaśnica i trójkąt ostrzegawczy. \
+            Nie musisz być właścicielem pojazdu żeby skorzystać z przeglądu technicznego.'
+        },
+        {
+          title: 'Ile czasu trwa badanie techniczne?',
+          icon: 'clock',
+          answer:
+            'Kompleksowe wykonanie badania oraz dopełnienie wszelkich formalności (pieczątka do dowodu rejestracyjnego, wpisanie samochodu do bazy danych stacji, \
+            omówienie stanu technicznego i ew. listy usterek, płatność) powinno zająć około 30-45 min.'
+        }
       ]
     }
   },
