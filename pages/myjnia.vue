@@ -71,7 +71,7 @@
       description="To Ty decydujesz o wyborze programu mycia. Możesz go zmienić w każdej chwili. Pamiętaj jednak aby w przypadku awarii urządzenia niezwłocznie wciśnąć
         przycisk STOP (nie wstrzymuje biegu licznika) aby uniknąć większych uszkodzeń."
     >
-      <flex-list class="programs-list">
+      <flex-list item-width="1/2">
         <icon-card
           v-for="(program, idx) in programs"
           :key="idx"
@@ -239,14 +239,6 @@ export default {
 
 .programs {
   margin-bottom: -2em;
-}
-
-.programs-list {
-  flex-wrap: wrap;
-}
-
-.program {
-  flex: 1 1 45%;
 }
 
 .service-wash {

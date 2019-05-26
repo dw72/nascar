@@ -7,12 +7,14 @@
         filtr cząstek stałych DPF w twoim samochodzie został całkowicie zablokowany cząstkami sadzy nie musisz go już usuwać!
       "
     >
-      <div class="regeneration__content">
+      <!-- <div class="regeneration__content"> -->
+      <flex-list item-width="1/4">
         <icon-card title="Innowacyjna, ekologiczna metoda regeneracji." icon="leaf"/>
         <icon-card title="Obsługujemy wszystkie modele samochodów." icon="car-multiple"/>
         <icon-card title="Regeneracja i wysyłka tego samego dnia." icon="calendar"/>
         <icon-card title="Pełny raport dotyczący procesu regeneracji." icon="file-chart"/>
-      </div>
+      </flex-list>
+      <!-- </div> -->
     </page-section>
     <page-section
       class="method-cons"
@@ -110,6 +112,7 @@
 import { mapState } from 'vuex'
 
 import PageSection from '@/components/PageSection'
+import FlexList from '@/components/FlexList'
 import IconCard from '@/components/IconCard'
 import Icon from '@/components/Icon'
 import CallToAction from '@/components/CallToAction'
@@ -119,6 +122,7 @@ import OrderForm from '@/components/RegenerationOrderForm'
 export default {
   components: {
     PageSection,
+    FlexList,
     IconCard,
     Icon,
     CallToAction,
