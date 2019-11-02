@@ -90,7 +90,7 @@ export default {
           name: 'Stacja kontroli',
           phone: '+48 602 259 682',
           opening: [
-            { day: 'pn - pt', hour: '8:00 - 20:00' },
+            { day: 'pn - pt', hour: '7:00 - 21:00' },
             { day: 'sb', hour: '9:00 - 14:00' }
           ]
         }
