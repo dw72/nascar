@@ -1,6 +1,6 @@
 <template>
   <div class="map__wrapper">
-    <no-ssr>
+    <client-only>
       <googlemaps-map
         ref="gmap"
         :center="center"
@@ -9,9 +9,9 @@
         class="map"
         @tilesloaded="disableTabstops"
       >
-        <googlemaps-marker :position="nascar" :icon="icon" :clickable="false" title="PPHU Nascar"/>
+        <googlemaps-marker :position="nascar" :icon="icon" :clickable="false" title="PPHU Nascar" />
       </googlemaps-map>
-    </no-ssr>
+    </client-only>
   </div>
 </template>
 
