@@ -11,12 +11,12 @@
             <h3>PPHU Nascar</h3>
           </div>
           <div class="contact__address">
-            <icon name="map-marker" size="sm"/>
+            <icon name="map-marker" size="sm" />
             <span>ul. Ostrowska 157,</span>
             <span>63-700 Krotoszyn</span>
           </div>
           <div class="contact__email">
-            <icon name="email" size="sm"/>
+            <icon name="email" size="sm" />
             <span>biuro@nascar.com.pl</span>
           </div>
         </div>
@@ -25,11 +25,11 @@
             <h4 class="department__name">{{ department.name }}</h4>
             <div class="department__content">
               <div class="department__phone">
-                <icon name="phone" size="sm"/>
+                <icon name="phone" size="sm" />
                 <a :href="`tel:${department.phone.replace(/[ -]/gi,'')}`">{{ department.phone }}</a>
               </div>
               <div class="department__open">
-                <icon name="clock" size="sm"/>
+                <icon name="clock" size="sm" />
                 <div>
                   <p v-for="item in department.opening" :key="item.day">
                     <span>{{ item.day }}</span>
@@ -43,7 +43,7 @@
       </div>
 
       <div class="footer-block footer-block--map">
-        <footer-map/>
+        <footer-map />
       </div>
     </div>
 
@@ -76,7 +76,7 @@ export default {
         {
           name: 'Myjnia',
           phone: '+48 668 675 342',
-          opening: [{ day: 'pn - sb', hour: '9:00 - 19:00' }]
+          opening: [{ day: 'pn - sb', hour: '8:00 - 18:00' }]
         },
         {
           name: 'Serwis',
@@ -91,7 +91,7 @@ export default {
           phone: '+48 602 259 682',
           opening: [
             { day: 'pn - pt', hour: '7:00 - 21:00' },
-            { day: 'sb', hour: '9:00 - 14:00' }
+            { day: 'sb', hour: '8:00 - 14:00' }
           ]
         }
       ]
