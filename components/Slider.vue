@@ -9,15 +9,16 @@
           rel="nofollow noreferrer noopener"
           tabindex="-1"
         >
-          <img :data-src="slide.img" :alt="slide.alt" class="swiper-lazy">
+          <img :data-src="slide.img" :alt="slide.alt" class="swiper-lazy" />
         </a>
-        <img v-else :data-src="slide.img" :alt="slide.alt" class="swiper-lazy">
-        <div class="swiper-lazy-preloader"/>
+        <img v-else :data-src="slide.img" :alt="slide.alt" class="swiper-lazy" />
+        <div class="swiper-lazy-preloader" />
       </swiper-slide>
-      <div slot="pagination" class="swiper-pagination"/>
-      <div slot="button-prev" class="swiper-button swiper-button-prev"/>
-      <div slot="button-next" class="swiper-button swiper-button-next"/>
+      <div slot="pagination" class="swiper-pagination" />
+      <div slot="button-prev" class="swiper-button swiper-button-prev" />
+      <div slot="button-next" class="swiper-button swiper-button-next" />
     </swiper>
+    <div v-else class="placeholder">Ładowanie danych...</div>
   </page-section>
 </template>
 
@@ -68,6 +69,15 @@ export default {
 
 <style lang="scss">
 .slider {
+  .placeholder {
+    align-items: center;
+    background: darken($color-background, 5%);
+    color: darken($color-background, 10%);
+    display: flex;
+    font-size: 1.2em;
+    justify-content: center;
+  }
+
   .section__content {
     display: none;
     overflow: hidden;
@@ -81,6 +91,7 @@ export default {
     }
   }
 
+  .placeholder,
   .swiper-container {
     position: absolute;
     width: 100%;
