@@ -71,27 +71,27 @@ export default {
         {
           name: 'Biuro',
           phone: '+48 62 7226848',
-          opening: [{ day: 'pn - pt', hour: '8:00 - 18:00' }]
-        },
-        {
-          name: 'Myjnia',
-          phone: '+48 668 675 342',
-          opening: [{ day: 'pn - sb', hour: '8:00 - 18:00' }]
+          opening: [{ day: 'pn - pt', hour: '8:00 - 16:00' }]
         },
         {
           name: 'Serwis',
           phone: '+48 668 124 983',
+          opening: [{ day: 'pn - pt', hour: '8:00 - 16:00' }]
+        },
+        {
+          name: 'Myjnia',
+          phone: '+48 668 675 342',
           opening: [
-            { day: 'pn - pt', hour: '8:00 - 18:00' },
-            { day: 'sb', hour: '9:00 - 14:00' }
+            { day: 'pn - pt', hour: '8:00 - 16:00' },
+            { day: 'so', hour: '8:00 - 14:00' }
           ]
         },
         {
           name: 'Stacja kontroli',
           phone: '+48 602 259 682',
           opening: [
-            { day: 'pn - pt', hour: '7:00 - 21:00' },
-            { day: 'sb', hour: '8:00 - 14:00' }
+            { day: 'pn - pt', hour: '8:00 - 20:00' },
+            { day: 'so', hour: '8:00 - 14:00' }
           ]
         }
       ]
