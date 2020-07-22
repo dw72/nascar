@@ -2,6 +2,8 @@
 
 > Webpage of PPHU Nascar
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/da7ebfe0-0f83-410e-82af-36b318b4ef52/deploy-status)](https://app.netlify.com/sites/nascar/deploys)
+
 ## Build Setup
 
 ``` bash
