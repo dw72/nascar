@@ -30,11 +30,6 @@ import IconCard from '@/components/IconCard'
 
 export default {
   components: { PageSection, IconCard },
-  head() {
-    return {
-      title: 'Serwis pojazdów'
-    }
-  },
   data() {
     return {
       services: [
@@ -102,6 +97,11 @@ export default {
           url: 'akumulatory'
         }
       ]
+    }
+  },
+  head() {
+    return {
+      title: 'Serwis pojazdów'
     }
   }
 }

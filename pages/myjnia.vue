@@ -41,7 +41,7 @@
       <div class="howto__conditions">
         <ul class="before-begin__list">
           <li>
-            <icon name="check" size="sm"/>
+            <icon name="check" size="sm" />
             <p>
               Sprawdź czy posiadasz odpowiednią ilość monet:
               <span
@@ -51,15 +51,15 @@
             </p>
           </li>
           <li>
-            <icon name="check" size="sm"/>
+            <icon name="check" size="sm" />
             <p>Zatrzymaj pojazd możliwie pośrodku stanowiska, abyś mógł swobodnie obejść go dookoła.</p>
           </li>
           <li>
-            <icon name="check" size="sm"/>
+            <icon name="check" size="sm" />
             <p>Na naszej myjni nie ma konieczności demontażu bagażnika, anten czy składania luster.</p>
           </li>
           <li>
-            <icon name="check" size="sm"/>
+            <icon name="check" size="sm" />
             <p>Po wrzuceniu monet wyjmij lancę i wciśnij przycisk wybranego programu. Rozpoczyna się naliczanie czasu.</p>
           </li>
         </ul>
@@ -91,7 +91,7 @@
         Nasz pracownik zadba o Twój pojazd, m.in. umyje karoserię, wyczyści tapicerkę oraz nabłyszczy lakier. Myjnia obsługowa obejmuje wszystkie programy myjni bezdotykowej.
       "
     >
-      <price-list :columns="columns" :data="pricelist"/>
+      <price-list :columns="columns" :data="pricelist" />
       <p class="disclaimer">* Cena usługi zależy od wielkości pojazdu.</p>
     </page-section>
   </main>
@@ -108,11 +108,6 @@ import PriceList from '@/components/PriceList'
 
 export default {
   components: { PageSection, FlexList, IconCard, Icon, PriceList },
-  head() {
-    return {
-      title: 'Myjnia samochodowa'
-    }
-  },
   data() {
     return {
       columns: [
@@ -166,6 +161,11 @@ export default {
   },
   async created() {
     await this.$store.dispatch('wash/WASH_PRICELIST_REQUEST')
+  },
+  head() {
+    return {
+      title: 'Myjnia samochodowa'
+    }
   }
 }
 </script>

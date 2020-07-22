@@ -1,6 +1,6 @@
 <template>
   <page-section class="slider" header="removed" title="Promocje" full-width no-padding>
-    <swiper v-if="slides.length" :options="options">
+    <swiper v-if="slides.length" class="swiper" :options="options">
       <swiper-slide v-for="(slide, idx) in slides" :key="idx">
         <a
           v-if="slide.url"
@@ -26,9 +26,11 @@
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import { mapState } from 'vuex'
 import PageSection from '@/components/PageSection.vue'
+import 'swiper/css/swiper.css'
 
 export default {
-  components: { PageSection, swiper, swiperSlide },
+  name: 'Slider',
+  components: { swiper, swiperSlide, PageSection },
   data() {
     return {
       options: {
@@ -59,7 +61,7 @@ export default {
     }
   },
   computed: {
-    ...mapState('slider', ['slides'])
+    ...mapState('slider', ['slides']),
   },
   mounted() {
     this.$store.dispatch('slider/FETCH_SLIDES_REQUEST')
@@ -153,6 +155,22 @@ export default {
   .swiper-pagination-bullet-active {
     background: $color-primary;
     color: $color-text-light;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    background: #444 !important;
+
+    img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+    }
   }
 }
 </style>

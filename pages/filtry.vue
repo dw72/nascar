@@ -8,10 +8,10 @@
       "
     >
       <flex-list item-width="1/4">
-        <icon-card title="Innowacyjna, ekologiczna metoda regeneracji." icon="leaf"/>
-        <icon-card title="Obsługujemy wszystkie modele samochodów." icon="car-multiple"/>
-        <icon-card title="Regeneracja i wysyłka tego samego dnia." icon="calendar"/>
-        <icon-card title="Pełny raport dotyczący procesu regeneracji." icon="file-chart"/>
+        <icon-card title="Innowacyjna, ekologiczna metoda regeneracji." icon="leaf" />
+        <icon-card title="Obsługujemy wszystkie modele samochodów." icon="car-multiple" />
+        <icon-card title="Regeneracja i wysyłka tego samego dnia." icon="calendar" />
+        <icon-card title="Pełny raport dotyczący procesu regeneracji." icon="file-chart" />
       </flex-list>
     </page-section>
     <page-section
@@ -31,31 +31,31 @@
             data-sizes="auto"
             alt
             class="lazyload"
-          >
+          />
         </div>
         <ul class="method-cons__list">
           <li>
-            <icon name="check" size="sm"/>
+            <icon name="check" size="sm" />
             <p>Brak ingerencji mechanicznej w strukturę filtra.</p>
           </li>
           <li>
-            <icon name="check" size="sm"/>
+            <icon name="check" size="sm" />
             <p>Na filtr nie oddziałuje wysoka temperatura.</p>
           </li>
           <li>
-            <icon name="check" size="sm"/>
+            <icon name="check" size="sm" />
             <p>Brak uszkodzeń powłoki katalitycznej filtra.</p>
           </li>
           <li>
-            <icon name="check" size="sm"/>
+            <icon name="check" size="sm" />
             <p>Usuwa wszystkie rodzaje cząstek stałych.</p>
           </li>
           <li>
-            <icon name="check" size="sm"/>
+            <icon name="check" size="sm" />
             <p>Nie narusza wkładu ceramicznego filtra.</p>
           </li>
           <li>
-            <icon name="check" size="sm"/>
+            <icon name="check" size="sm" />
             <p>Brak obciążeń silnika i układu wydechowego.</p>
           </li>
         </ul>
@@ -102,7 +102,7 @@
           Po wykonaniu usługi i dokonaniu opłaty ten sam kurier dostarczy filtr spowrotem do Ciebie."
       full-width
     >
-      <order-form/>
+      <order-form />
     </page-section>
   </main>
 </template>
@@ -128,16 +128,16 @@ export default {
     PriceCard,
     OrderForm
   },
-  head() {
-    return {
-      title: 'Regeneracja filtrów DPF / FAP'
-    }
-  },
   computed: {
     ...mapState('regeneration', ['pricelist', 'orderId'])
   },
   async created() {
     await this.$store.dispatch('regeneration/REGENERATION_PRICELIST_REQUEST')
+  },
+  head() {
+    return {
+      title: 'Regeneracja filtrów DPF / FAP'
+    }
   }
 }
 </script>

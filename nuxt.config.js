@@ -2,13 +2,14 @@ require('dotenv').config()
 
 module.exports = {
   mode: 'spa',
+  target: 'static',
 
   /*
    ** Headers of the page
    */
   head: {
     htmlAttrs: {
-      lang: 'pl'
+      lang: 'pl',
     },
     title: 'Wszystko czego potrzebuje twój samochód',
     titleTemplate: '%s | PPHU Nascar',
@@ -16,15 +17,15 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { 'http-equiv': 'X-UA-Compatible', content: 'ie=edge' },
-      { hid: 'description', name: 'description', content: 'Nascar website' }
+      { hid: 'description', name: 'description', content: 'Nascar website' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     noscript: [
       {
         innerHTML:
-          'Strona do poprawnego działania wymaga włączonego Javascipt...'
-      }
-    ]
+          'Strona do poprawnego działania wymaga włączonego Javascipt...',
+      },
+    ],
   },
 
   /*
@@ -37,13 +38,13 @@ module.exports = {
    */
   router: {
     linkActiveClass: 'menu__link--active',
-    linkExactActiveClass: 'menu__link--exact'
+    linkExactActiveClass: 'menu__link--exact',
   },
 
   /*
    ** Global CSS
    */
-  css: ['swiper/dist/css/swiper.css', '@/assets/scss/theme.scss'],
+  css: ['@/assets/scss/theme.scss'],
 
   /*
    ** Plugins to load before mounting the App
@@ -52,7 +53,7 @@ module.exports = {
     { src: '@/plugins/vue-googlemaps', ssr: false },
     '@/plugins/vue-visible',
     '@/plugins/lazysizes',
-    '@/plugins/vuelidate'
+    '@/plugins/vuelidate',
   ],
 
   /*
@@ -64,19 +65,18 @@ module.exports = {
     '@nuxtjs/dotenv',
     '@nuxtjs/pwa',
     ['@nuxtjs/google-tag-manager', { id: process.env.GTM_KEY }],
-    '@nuxtjs/style-resources',
-    '@nuxtjs/svg-sprite',
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
   ],
+  buildModules: ['@nuxtjs/style-resources', '@nuxtjs/svg-sprite'],
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
-    proxy: true
+    proxy: true,
   },
   proxy: {
     'http://localhost:3000/.netlify/': {
       target: 'http://localhost:9000',
-      pathRewrite: { '^/.netlify/functions/': '' }
-    }
+      pathRewrite: { '^/.netlify/functions/': '' },
+    },
   },
   workbox: {
     runtimeCaching: [
@@ -84,27 +84,27 @@ module.exports = {
         urlPattern: '^https://www.premio.pl/assets/resized_images/.*',
         handler: 'staleWhileRevalidate',
         strategyOptions: {
-          cacheName: 'premio-slider-images'
-        }
-      }
-    ]
+          cacheName: 'premio-slider-images',
+        },
+      },
+    ],
   },
   manifest: {
     name: 'PPHU Nascar',
     short_name: 'Nascar',
     theme_color: '#00569d',
-    background_color: '#00569d'
+    background_color: '#00569d',
   },
   styleResources: {
-    sass: [
-      '~assets/scss/variables/_*.scss',
-      '~assets/scss/components/**/_*.scss'
-    ]
+    scss: [
+      '~assets/scss/variables/**/_*.scss',
+      '~assets/scss/components/**/_*.scss',
+    ],
   },
   webfontloader: {
     google: {
-      families: ['Montserrat:400', 'Exo+2:400,700']
-    }
+      families: ['Montserrat:400', 'Exo+2:400,700'],
+    },
   },
 
   /*
@@ -113,7 +113,7 @@ module.exports = {
   env: {
     AIRTABLE_API_KEY: process.env.AIRTABLE_API_KEY,
     AIRTABLE_BASE_ID: process.env.AIRTABLE_BASE_ID,
-    GMAPS_API_KEY: process.env.GMAPS_API_KEY
+    GMAPS_API_KEY: process.env.GMAPS_API_KEY,
   },
 
   /*
@@ -133,8 +133,8 @@ module.exports = {
         max: 1140,
         steps: 9,
         quality: 75,
-        adapter: require('responsive-loader/sharp')
-      }
+        adapter: require('responsive-loader/sharp'),
+      },
     },
 
     /*
@@ -147,9 +147,9 @@ module.exports = {
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules)/
+          exclude: /(node_modules)/,
         })
       }
-    }
-  }
+    },
+  },
 }

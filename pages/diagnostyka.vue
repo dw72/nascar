@@ -49,7 +49,7 @@
       <h2>Jeśli chcesz możemy Ci przypomninać o terminie przeglądu.</h2>
     </call-to-action>
     <page-section title="Cennik badań technicznych">
-      <price-list :columns="columns" :data="pricelist"/>
+      <price-list :columns="columns" :data="pricelist" />
     </page-section>
   </main>
 </template>
@@ -65,11 +65,6 @@ import PriceList from '@/components/PriceList'
 
 export default {
   components: { PageSection, FlexList, IconCard, CallToAction, PriceList },
-  head() {
-    return {
-      title: 'Stacja kontroli'
-    }
-  },
   data() {
     return {
       columns: [
@@ -136,6 +131,11 @@ export default {
   },
   async created() {
     await this.$store.dispatch('diagnostic/DIAGNOSTIC_PRICELIST_REQUEST')
+  },
+  head() {
+    return {
+      title: 'Stacja kontroli'
+    }
   }
 }
 </script>
