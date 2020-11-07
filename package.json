@@ -36,6 +36,7 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/svg-sprite": "^0.4.0",
     "babel-eslint": "^10.1.0",
+    "dart-sass": "^1.25.0",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-loader": "^4.0.0",
