@@ -1,7 +1,7 @@
 import { openDB } from 'idb'
 
 const IDB_NAME = 'pphu-nascar'
-const IDB_VERSION = 3
+const IDB_VERSION = 4
 
 let db
 
@@ -18,6 +18,8 @@ const getDB = () => {
 							idb.createObjectStore('regeneration-pricelist', { keyPath: 'id' })
 						case 2:
 							idb.createObjectStore('wash-pricelist', { keyPath: 'id' })
+						case 3:
+							idb.deleteObjectStore('slider')
 					}
 				}
 			})
@@ -32,16 +34,6 @@ const getDB = () => {
 const getStore = async (name, mode = 'readonly') => {
 	const db = await getDB()
 	return db.transaction(name, mode).objectStore(name)
-}
-
-export const getSlider = async () => {
-	const store = await getStore('slider')
-	return store.get(1)
-}
-
-export const putSlider = async slides => {
-	const store = await getStore('slider', 'readwrite')
-	await store.put({ id: 1, date: new Date(), slides })
 }
 
 export const getData = async storeName => {
