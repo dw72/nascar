@@ -23,7 +23,7 @@ module.exports = {
     noscript: [
       {
         innerHTML:
-          'Strona do poprawnego działania wymaga włączonego Javascipt...',
+          'Strona do poprawnego działania wymaga włączonego Javascipt!',
       },
     ],
   },
