@@ -19,7 +19,7 @@
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/google-tag-manager": "^2.3.2",
     "@nuxtjs/proxy": "^2.0.0",
-    "airtable": "^0.8.1",
+    "airtable": "^0.10.1",
     "cross-env": "^7.0.0",
     "date-fns": "^2.15.0",
     "idb": "^5.0.0",
