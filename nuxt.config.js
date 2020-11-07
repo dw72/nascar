@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 module.exports = {
-  mode: 'spa',
+  ssr: false,
   target: 'static',
 
   /*
