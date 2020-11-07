@@ -2,13 +2,11 @@
   <page-section full-width header="removed" class="call-to-action">
     <slot>
       <h2>Twoje auto potrzebuje fachowej pomocy?</h2>
-      <a
-        href="https://nascar.premio.pl/reservation"
-        class="button button--big button--secondary button--rounded"
-      >
-        <icon name="calendar-check" size="sm"/>
+
+      <nuxt-link to="/termin" class="button button--big button--secondary">
+        <icon name="calendar-check" size="sm" />
         <span>Zarezerwuj termin</span>
-      </a>
+      </nuxt-link>
     </slot>
   </page-section>
 </template>
@@ -18,7 +16,7 @@ import Icon from '@/components/Icon'
 import PageSection from '@/components/PageSection'
 
 export default {
-  components: { Icon, PageSection }
+  components: { Icon, PageSection },
 }
 </script>
 

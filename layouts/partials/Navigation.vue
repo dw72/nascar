@@ -5,43 +5,45 @@
       :aria-label="active ? 'Zamknij menu' : 'Otwórz menu'"
       :aria-expanded="active"
       :class="{
-        'navbar__toggle': true,
-        'navbar__toggle--active': active
+        navbar__toggle: true,
+        'navbar__toggle--active': active,
       }"
       aria-controls="main-menu"
       @click="toggle"
     >
       <span class="navbar__burger">
-        <span/>
-        <span/>
-        <span/>
+        <span />
+        <span />
+        <span />
       </span>
       <span aria-hidden="true">Menu</span>
     </button>
     <ul
       id="main-menu"
       :class="{
-        'menu': true,
-        'navbar__menu': true,
-        'navbar__menu--active': active
+        menu: true,
+        navbar__menu: true,
+        'navbar__menu--active': active,
       }"
     >
       <li class="menu__item">
         <nuxt-link class="menu__link menu__link--main-page" to="/">
-          <icon name="home" size="sm"/>
+          <icon name="home" size="sm" />
           <span>Strona główna</span>
         </nuxt-link>
       </li>
       <li v-for="route in routes" :key="route.title" class="menu__item">
-        <nuxt-link :to="route.path" class="menu__link">{{ route.title }}</nuxt-link>
+        <nuxt-link :to="route.path" class="menu__link">{{
+          route.title
+        }}</nuxt-link>
       </li>
     </ul>
     <ul class="navbar__actions menu">
       <li class="menu__item">
-        <a class="menu__link" href="https://nascar.premio.pl/reservation">
-          <icon name="calendar-check" size="sm" class="navbar__icon"/>
+        <nuxt-link to="/termin" class="menu__link">
+          <icon name="calendar-check" size="sm" class="navbar__icon" />
           <span>Zarezerwuj termin</span>
-        </a>
+        </nuxt-link>
       </li>
     </ul>
   </nav>
@@ -60,9 +62,9 @@ export default {
         { path: '/serwis', title: 'Serwis' },
         { path: '/felgi', title: 'Felgi' },
         { path: '/myjnia', title: 'Myjnia' },
-        { path: '/uslugi-finansowe', title: 'Usługi finansowe' }
+        { path: '/uslugi-finansowe', title: 'Usługi finansowe' },
       ],
-      active: false
+      active: false,
     }
   },
   created() {
@@ -75,8 +77,8 @@ export default {
   methods: {
     toggle(event) {
       this.active = !this.active
-    }
-  }
+    },
+  },
 }
 </script>
 
