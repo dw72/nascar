@@ -4,7 +4,7 @@ import { getData, putData } from '@/services/storage'
 export const WASH_PRICELIST_REQUEST = 'WASH_PRICELIST_REQUEST'
 export const WASH_PRICELIST_SUCCESS = 'WASH_PRICELIST_SUCCESS'
 
-const store = 'car-wash-pricelist'
+const store = 'wash-pricelist'
 
 export const state = () => ({
   pricelist: []
