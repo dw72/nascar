@@ -20,7 +20,7 @@ export const mutations = {
 
 export const actions = {
   async [WASH_PRICELIST_REQUEST]({ commit }) {
-    // const dbPromise = getData(store)
+    const dbPromise = getData(store)
     const apiPromise = new Promise((resolve, reject) => {
       let prices = []
       airtable('Cennik - Myjnia')
@@ -42,7 +42,7 @@ export const actions = {
             if (err) {
               reject(err)
             } else {
-              // putData(store, prices)
+              putData(store, prices)
               resolve(prices)
             }
           }

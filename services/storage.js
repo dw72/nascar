@@ -1,7 +1,7 @@
 import { openDB } from 'idb'
 
 const IDB_NAME = 'pphu-nascar'
-const IDB_VERSION = 2
+const IDB_VERSION = 3
 
 let db
 
@@ -14,12 +14,10 @@ const getDB = () => {
 						case 0:
 							idb.createObjectStore('slider', { keyPath: 'id' })
 						case 1:
-							idb.createObjectStore('diagnostics-pricelist', {
-								keyPath: 'id'
-							})
-							idb.createObjectStore('regeneration-pricelist', {
-								keyPath: 'id'
-							})
+							idb.createObjectStore('diagnostics-pricelist', { keyPath: 'id' })
+							idb.createObjectStore('regeneration-pricelist', { keyPath: 'id' })
+						case 2:
+							idb.createObjectStore('wash-pricelist', { keyPath: 'id' })
 					}
 				}
 			})
