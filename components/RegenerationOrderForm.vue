@@ -190,10 +190,10 @@
           </div>
         </div>
         <div class="field field--rodo">
-          <label
-            >Wyrażam zgodę na przetwarzanie moich danych osobowych przez firmę
-            PPHU Nascar w celu wykonania usługi.</label
-          >
+          <label>
+            Wyrażam zgodę na przetwarzanie moich danych osobowych przez firmę
+            PPHU Nascar w celu wykonania usługi.
+          </label>
           <input id="rodo" v-model="rodo" type="checkbox" name="rodo" />
         </div>
         <button class="button button--primary" type="submit" :disabled="!rodo">
