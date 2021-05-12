@@ -25,7 +25,7 @@
     "idb": "^5.0.7",
     "lazysizes": "^5.2.2",
     "nuxt": "^2.14.7",
-    "swiper": "^5.0.0",
+    "swiper": "^6.5.1",
     "vue-awesome-swiper": "^3.0.0",
     "vue-googlemaps": "^0.1.2",
     "vue-visible": "^1.0.2",
