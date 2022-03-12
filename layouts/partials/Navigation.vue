@@ -40,10 +40,18 @@
     </ul>
     <ul class="navbar__actions menu">
       <li class="menu__item">
-        <nuxt-link to="/termin" class="menu__link">
+        <!-- <nuxt-link to="/termin" class="menu__link">
           <icon name="calendar-check" size="sm" class="navbar__icon" />
           <span>Zarezerwuj termin</span>
-        </nuxt-link>
+        </nuxt-link> -->
+        <a
+          href="https://www.bookingforsure.eu/bc?servis=4143&lng=pl"
+          target="_blank"
+          class="menu__link"
+        >
+          <icon name="calendar-check" size="sm" class="navbar__icon" />
+          <span>Zarezerwuj termin</span>
+        </a>
       </li>
     </ul>
   </nav>
