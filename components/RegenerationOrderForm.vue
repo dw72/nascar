@@ -103,9 +103,6 @@
             <span v-if="!$v.order.zip.required" class="message">{{
               messages['required']
             }}</span>
-            <span v-else-if="!$v.order.zip.minLength" class="message">{{
-              messages['minLength3']
-            }}</span>
             <span v-else-if="!$v.order.zip.zip" class="message">{{
               messages['zip']
             }}</span>
@@ -156,7 +153,7 @@
               messages['required']
             }}</span>
             <span v-else-if="!$v.order.phone.minLength" class="message">{{
-              messages['minLength3']
+              messages['minLength9']
             }}</span>
             <span v-else-if="!$v.order.phone.phone" class="message">{{
               messages['phone']
@@ -252,9 +249,10 @@ const validations = {
     },
     phone: {
       required,
+      minLength: minLength(9),
       phone: helpers.regex(
         'phone',
-        /^\+48(?:[-\s])?(\d{9}|\d{3}((?:[-\s])?\d{3}){2}|(\d{2}|\(\d{2}\))(?:[-\s])?\d{3}((?:[-\s])?\d{2}){2})$/
+        /^(?:\+48)?(?:[-\s])?(\d{9}|\d{3}((?:[-\s])?\d{3}){2}|(\d{2}|\(\d{2}\))(?:[-\s])?\d{3}((?:[-\s])?\d{2}){2})$/
       ),
     },
     email: {
@@ -271,12 +269,13 @@ export default {
       messages: {
         required: 'Pole jest wymagane.',
         minLength3: 'Wpisz co najmniej 3 znaki.',
+        minLength9: 'Wpisz co najmniej 9 znaków.',
         alpha: 'Pole może zawierać tylko litery.',
         lastname: 'Pole może zawierać tylko litery i myślnik.',
         street: 'Pole może zawierać litery, cyfry, spację i znaki ",/;".',
         zip: 'Podaj poprawny kod pocztowy.',
         city: 'Pole może zawierać tylko litery, spację i myślnik.',
-        phone: 'Podaj numer zgodny z formatem +481234567.',
+        phone: 'Podaj poprawny numer telefonu.',
         email: 'Podaj poprawny adres email.',
       },
       rodo: false,
