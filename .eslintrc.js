@@ -33,6 +33,7 @@ module.exports = {
     'vue/multiline-html-element-content-newline': 'off',
     'vue/singleline-html-element-content-newline': 'off',
     'vue/html-closing-bracket-spacing': 'off',
+    'vue/multi-word-component-names': 'off',
     'vue/html-self-closing': [
       'error',
       {

@@ -8,10 +8,22 @@
       "
     >
       <flex-list item-width="1/4">
-        <icon-card title="Innowacyjna, ekologiczna metoda regeneracji." icon="leaf" />
-        <icon-card title="Obsługujemy wszystkie modele samochodów." icon="car-multiple" />
-        <icon-card title="Regeneracja i wysyłka tego samego dnia." icon="calendar" />
-        <icon-card title="Pełny raport dotyczący procesu regeneracji." icon="file-chart" />
+        <icon-card
+          title="Innowacyjna, ekologiczna metoda regeneracji."
+          icon="leaf"
+        />
+        <icon-card
+          title="Obsługujemy wszystkie modele samochodów."
+          icon="car-multiple"
+        />
+        <icon-card
+          title="Regeneracja i wysyłka tego samego dnia."
+          icon="calendar"
+        />
+        <icon-card
+          title="Pełny raport dotyczący procesu regeneracji."
+          icon="file-chart"
+        />
       </flex-list>
     </page-section>
     <page-section
@@ -61,8 +73,10 @@
         </ul>
       </div>
       <p>
-        Przed przystąpieniem do regeneracji filtra dokonamy jego dokładnych oględzin, aby upewnić się, czy Twój filtr DPF kwalifikuje się do naprawy,
-        nie jest wytopiony, popękany, ukruszony i czy nie jest zaklejony jakimiś substancjami chemicznymi lub uszczelniającymi.
+        Przed przystąpieniem do regeneracji filtra dokonamy jego dokładnych
+        oględzin, aby upewnić się, czy Twój filtr DPF kwalifikuje się do
+        naprawy, nie jest wytopiony, popękany, ukruszony i czy nie jest
+        zaklejony jakimiś substancjami chemicznymi lub uszczelniającymi.
       </p>
     </page-section>
     <call-to-action>
@@ -126,19 +140,19 @@ export default {
     Icon,
     CallToAction,
     PriceCard,
-    OrderForm
+    OrderForm,
+  },
+  head() {
+    return {
+      title: 'Regeneracja filtrów DPF / FAP',
+    }
   },
   computed: {
-    ...mapState('regeneration', ['pricelist', 'orderId'])
+    ...mapState('regeneration', ['pricelist', 'orderId']),
   },
   async created() {
     await this.$store.dispatch('regeneration/REGENERATION_PRICELIST_REQUEST')
   },
-  head() {
-    return {
-      title: 'Regeneracja filtrów DPF / FAP'
-    }
-  }
 }
 </script>
 
