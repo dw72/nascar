@@ -25,8 +25,9 @@
           rel="nofollow"
           href="https://www.alcar.pl/3DKonfigurator/index.php?lcs=rpkjdhla2a&country=pl;pl"
           target="_blank"
-          >Dobierz felgi do auta</a
         >
+          Dobierz felgi do auta
+        </a>
       </div>
       <div>
         <p class="disclaimer">
