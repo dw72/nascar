@@ -2,11 +2,18 @@
   <page-section full-width header="removed" class="call-to-action">
     <slot>
       <h2>Twoje auto potrzebuje fachowej pomocy?</h2>
-
-      <nuxt-link to="/termin" class="button button--big button--secondary">
+      <!-- <nuxt-link to="/termin" class="button button--big button--secondary">
         <icon name="calendar-check" size="sm" />
         <span>Zarezerwuj termin</span>
-      </nuxt-link>
+      </nuxt-link> -->
+      <a
+        href="https://www.bookingforsure.eu/bc?servis=4143&lng=pl"
+        target="_blank"
+        class="button button--big button--secondary"
+      >
+        <icon name="calendar-check" size="sm" />
+        <span>Zarezerwuj termin</span>
+      </a>
     </slot>
   </page-section>
 </template>
