@@ -6,7 +6,7 @@
       description="Użyj poniższej aplikacji aby umówić wizytę w naszym warsztacie w dogodnym dla Ciebie terminie."
       full-width
     >
-      <div>
+      <div align="center">
         <iframe id="calendar" ref="calendar" :src="source" />
       </div>
       <div>
@@ -26,7 +26,7 @@ export default {
   components: { PageSection },
   data() {
     return {
-      source: 'https://www.bookingforsure.eu/bc?servis=4143&lng=pl',
+      source: 'https://www.bookingforsure.eu/bc?servis=4143&lng=pl&iframe=yes',
     }
   },
 }
