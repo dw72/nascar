@@ -6,8 +6,15 @@
       description="Użyj poniższej aplikacji aby umówić wizytę w naszym warsztacie w dogodnym dla Ciebie terminie."
       full-width
     >
-      <div align="center">
-        <iframe id="calendar" ref="calendar" :src="source" />
+      <div align="center" class="calendar-wrapper">
+        <!-- <div v-show="!calendar.loaded" class="calendar-placeholder" /> -->
+        <iframe
+          v-show="calendar.loaded"
+          id="calendar"
+          ref="iframe"
+          :src="calendar.source"
+          @load="iframeLoaded"
+        />
       </div>
       <div>
         <p class="disclaimer">
@@ -26,17 +33,34 @@ export default {
   components: { PageSection },
   data() {
     return {
-      source: 'https://www.bookingforsure.eu/bc?servis=4143&lng=pl&iframe=yes',
+      calendar: {
+        source:
+          'https://www.bookingforsure.eu/bc?servis=4143&lng=pl&iframe=yes&nh&nf',
+        loaded: false,
+      },
     }
+  },
+  methods: {
+    iframeLoaded() {
+      this.calendar.loaded = true
+      let frame = this.$refs.iframe
+      // let doc = frame.contentWindow.document
+      // console.log(doc)
+      // doc.body.innerHtml += '<style></style>'
+    },
   },
 }
 </script>
 
 <style lang="scss">
+.calendar-wrapper {
+  min-height: 60vh;
+}
+
 #calendar {
   border: none;
   box-sizing: border-box;
-  min-height: 70vh;
+  min-height: 58vh;
   width: 100%;
 }
 </style>
