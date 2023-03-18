@@ -23,7 +23,6 @@
           Koszty ponoszone na myjni bezdotykowej są zdecydowanie niższe niż na
           myjniach samochodowych innego typu. Dzięki samoobsłudze użytkownik sam
           decyduje w jakim czasie i za jaką cenę umyje swój pojazd.
-          <strong>Minuta mycia = 1 zł</strong>.
         </icon-card>
       </flex-list>
     </page-section>
