@@ -22,8 +22,7 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     noscript: [
       {
-        innerHTML:
-          'Strona do poprawnego działania wymaga włączonego Javascipt!'
+        innerHTML: 'Strona do poprawnego działania wymaga włączonego Javascipt!'
       }
     ]
   },
@@ -62,12 +61,17 @@ export default {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
-    '@nuxtjs/dotenv',
-    '@nuxtjs/pwa',
     ['@nuxtjs/gtm', { id: process.env.GTM_KEY }],
+    '@nuxtjs/pwa',
     'nuxt-webfontloader'
   ],
-  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/style-resources', '@nuxtjs/svg-sprite', 'nuxt-responsive-loader'],
+  buildModules: [
+    ['@nuxtjs/dotenv', { systemvars: true }],
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/style-resources',
+    '@nuxtjs/svg-sprite',
+    'nuxt-responsive-loader'
+  ],
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
     proxy: true
@@ -114,14 +118,6 @@ export default {
     max: 1140,
     steps: 9,
     quality: 75
-  },
-
-  /*
-   ** Environment variables
-   */
-  env: {
-    AIRTABLE_API_KEY: process.env.AIRTABLE_API_KEY,
-    GMAPS_API_KEY: process.env.GMAPS_API_KEY
   },
 
   /*
