@@ -140,19 +140,19 @@ export default {
     Icon,
     CallToAction,
     PriceCard,
-    OrderForm,
+    OrderForm
   },
   head() {
     return {
-      title: 'Regeneracja filtrów DPF / FAP',
+      title: 'Regeneracja filtrów DPF / FAP'
     }
   },
   computed: {
-    ...mapState('regeneration', ['pricelist', 'orderId']),
+    ...mapState('regeneration', ['pricelist', 'orderId'])
   },
   async created() {
     await this.$store.dispatch('regeneration/REGENERATION_PRICELIST_REQUEST')
-  },
+  }
 }
 </script>
 

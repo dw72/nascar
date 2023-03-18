@@ -22,12 +22,12 @@ export const actions = {
   async [DIAGNOSTIC_PRICELIST_REQUEST]({ commit }) {
     const dbPromise = getData(store)
     const apiPromise = new Promise((resolve, reject) => {
-      let prices = []
+      const prices = []
       airtable('Cennik - Stacja kontroli')
         .select({ view: 'Badania okresowe' })
         .eachPage(
           (data, fetchNextPage) => {
-            data.forEach(item => {
+            data.forEach((item) => {
               prices.push({
                 name: item.get('Usługa').trim(),
                 price: `${item.get('Cena')} zł`
@@ -36,7 +36,7 @@ export const actions = {
 
             fetchNextPage()
           },
-          err => {
+          (err) => {
             if (err) {
               reject(err)
             } else {
@@ -47,7 +47,7 @@ export const actions = {
         )
     })
 
-    let dbData = await dbPromise
+    const dbData = await dbPromise
     const pricelist = dbData.length ? dbData : await apiPromise
 
     commit(DIAGNOSTIC_PRICELIST_SUCCESS, pricelist)

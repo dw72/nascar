@@ -52,9 +52,9 @@ export default {
   components: { PageSection },
   head() {
     return {
-      title: 'Felgi aluminiowe',
+      title: 'Felgi aluminiowe'
     }
-  },
+  }
 }
 </script>
 

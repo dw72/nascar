@@ -218,7 +218,7 @@ import {
   required,
   minLength,
   alpha,
-  email,
+  email
 } from 'vuelidate/lib/validators'
 
 const validations = {
@@ -226,26 +226,26 @@ const validations = {
     firstname: {
       required,
       minLength: minLength(3),
-      alpha,
+      alpha
     },
     lastname: {
       required,
       minLength: minLength(3),
-      lastname: helpers.regex('lastname', /^[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ-]*$/),
+      lastname: helpers.regex('lastname', /^[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ-]*$/)
     },
     street: {
       required,
       minLength: minLength(3),
-      street: helpers.regex('street', /^[0-9A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ ,/;]*$/),
+      street: helpers.regex('street', /^[0-9A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ ,/;]*$/)
     },
     zip: {
       required,
-      zip: helpers.regex('zip', /^\d{2}-\d{3}$/),
+      zip: helpers.regex('zip', /^\d{2}-\d{3}$/)
     },
     city: {
       required,
       minLength: minLength(3),
-      city: helpers.regex('city', /^[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ -]*$/),
+      city: helpers.regex('city', /^[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ -]*$/)
     },
     phone: {
       required,
@@ -253,13 +253,13 @@ const validations = {
       phone: helpers.regex(
         'phone',
         /^(?:\+48)?(?:[-\s])?(\d{9}|\d{3}((?:[-\s])?\d{3}){2}|(\d{2}|\(\d{2}\))(?:[-\s])?\d{3}((?:[-\s])?\d{2}){2})$/
-      ),
+      )
     },
     email: {
       required,
-      email,
-    },
-  },
+      email
+    }
+  }
 }
 
 export default {
@@ -276,13 +276,13 @@ export default {
         zip: 'Podaj poprawny kod pocztowy.',
         city: 'Pole może zawierać tylko litery, spację i myślnik.',
         phone: 'Podaj poprawny numer telefonu.',
-        email: 'Podaj poprawny adres email.',
+        email: 'Podaj poprawny adres email.'
       },
-      rodo: false,
+      rodo: false
     }
   },
   computed: {
-    ...mapState('regeneration', ['orderId', 'formHeight']),
+    ...mapState('regeneration', ['orderId', 'formHeight'])
   },
   validations,
   mounted() {
@@ -290,7 +290,7 @@ export default {
   },
   methods: {
     ...mapMutations('regeneration', {
-      setFormHeight: 'REGENERATION_SET_FORM_HEIGHT',
+      setFormHeight: 'REGENERATION_SET_FORM_HEIGHT'
     }),
     placeOrder() {
       this.$v.order.$touch()
@@ -306,8 +306,8 @@ export default {
     },
     beforeEnter(el) {
       el.style.height = this.formHeight + 'px'
-    },
-  },
+    }
+  }
 }
 </script>
 

@@ -62,9 +62,9 @@ export default {
         { path: '/serwis', title: 'Serwis' },
         { path: '/felgi', title: 'Felgi' },
         { path: '/myjnia', title: 'Myjnia' },
-        { path: '/uslugi-finansowe', title: 'Usługi finansowe' },
+        { path: '/uslugi-finansowe', title: 'Usługi finansowe' }
       ],
-      active: false,
+      active: false
     }
   },
   created() {
@@ -77,8 +77,8 @@ export default {
   methods: {
     toggle(event) {
       this.active = !this.active
-    },
-  },
+    }
+  }
 }
 </script>
 

@@ -30,7 +30,7 @@ export default {
     header: {
       type: String,
       default: 'visible',
-      validator: value => {
+      validator: (value) => {
         return ['visible', 'hidden', 'removed'].includes(value)
       }
     }

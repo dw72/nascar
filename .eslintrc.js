@@ -2,32 +2,30 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    es6: true,
     node: true
   },
-  parser: "@babel/eslint-parser"
   parserOptions: {
-    requireConfigFile: false
+    requireConfigFile: false,
+    parser: '@babel/eslint-parser',
     babelOptions: {
       babelrc: false,
       configFile: false,
       // your babel options
-      presets: ["@babel/preset-env"],
+      presets: ['@babel/preset-env']
     }
   },
   extends: [
-    // 'plugin:prettier/recommended',
-    'prettier/standard',
-    'prettier/vue',
-    'plugin:vue/recommended'
+    '@nuxtjs',
+    'plugin:nuxt/recommended'
   ],
   // required to lint *.vue files
-  plugins: ['standard', 'vue', 'prettier'],
+  plugins: [],
   // add your custom rules here
   rules: {
     // 'prettier/prettier': 'error',
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'quote-props': 'off',
     'space-before-function-paren': [
       'error',
       {

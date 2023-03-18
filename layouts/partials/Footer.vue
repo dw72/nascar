@@ -60,8 +60,8 @@
 </template>
 
 <script>
-import Icon from '@/components/Icon'
 import FooterMap from './FooterMap.vue'
+import Icon from '@/components/Icon'
 
 export default {
   components: { Icon, FooterMap },

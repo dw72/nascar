@@ -36,19 +36,15 @@ export default {
       calendar: {
         source:
           'https://www.bookingforsure.eu/bc?servis=4143&lng=pl&iframe=yes&nh&nf',
-        loaded: false,
-      },
+        loaded: false
+      }
     }
   },
   methods: {
     iframeLoaded() {
       this.calendar.loaded = true
-      let frame = this.$refs.iframe
-      // let doc = frame.contentWindow.document
-      // console.log(doc)
-      // doc.body.innerHtml += '<style></style>'
-    },
-  },
+    }
+  }
 }
 </script>
 

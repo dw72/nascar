@@ -1,5 +1,5 @@
-import airtable from '@/services/airtable'
 import { format } from 'date-fns'
+import airtable from '@/services/airtable'
 import { getData, putData } from '@/services/storage'
 
 export const REGENERATION_PRICELIST_REQUEST = 'REGENERATION_PRICELIST_REQUEST'
@@ -34,12 +34,12 @@ export const actions = {
   async [REGENERATION_PRICELIST_REQUEST]({ commit }) {
     const dbPromise = getData(store)
     const apiPromise = new Promise((resolve, reject) => {
-      let prices = []
+      const prices = []
       airtable('Cennik - Regeneracja DPF')
         .select({ view: 'Cennik', maxRecords: 4 })
         .eachPage(
           (data, fetchNextPage) => {
-            data.forEach(item => {
+            data.forEach((item) => {
               prices.push({
                 name: item.get('Typ pojazdu'),
                 icon: item.get('Ikona'),
@@ -50,7 +50,7 @@ export const actions = {
 
             fetchNextPage()
           },
-          err => {
+          (err) => {
             if (err) {
               reject(err)
             } else {
@@ -61,12 +61,12 @@ export const actions = {
         )
     })
 
-    let dbData = await dbPromise
+    const dbData = await dbPromise
     const pricelist = dbData.length ? dbData : await apiPromise
 
     commit(REGENERATION_PRICELIST_SUCCESS, pricelist)
   },
-  async [REGENERATION_PLACE_ORDER]({ commit }, order) {
+  [REGENERATION_PLACE_ORDER]({ commit }, order) {
     const date = new Date()
     const phone = order.phone.replace(/(\s|\(|\))/g, '')
 
@@ -80,7 +80,7 @@ export const actions = {
         'Kod pocztowy': order.zip,
         'Miejscowość': order.city,
         'Poczta': order.post,
-        'Data wpływu': format( new Date, 'YYYY-MM-DD'),
+        'Data wpływu': format(new Date(), 'YYYY-MM-DD'),
         'Telefon': phone,
         'Email': order.email
       },

@@ -123,6 +123,8 @@ import IconCard from '@/components/IconCard'
 import Icon from '@/components/Icon'
 import PriceList from '@/components/PriceList'
 
+import programs from '@/data/programs.json'
+
 export default {
   components: { PageSection, FlexList, IconCard, Icon, PriceList },
   data() {
@@ -131,59 +133,22 @@ export default {
         { name: 'name', title: 'Usługa' },
         { name: 'price_1', title: 'Małe' },
         { name: 'price_2', title: 'Średnie' },
-        { name: 'price_3', title: 'Duże' },
+        { name: 'price_3', title: 'Duże' }
       ],
-      programs: [
-        {
-          title: 'Oprysk felg',
-          icon: 'numeric-0-circle',
-          description:
-            'Naciśnij spust pistoletu i spryskaj felgi. Odległość lancy od samochodu nie powinna wynosić więcej niż 30 cm. W czasie tego programu wraz ze zmiękczoną i zdemineralizowaną wodą, naniesiony zostaje środek chemiczny pomagający usuwać nagar i naloty z klocków hamulcowych.',
-        },
-        {
-          title: 'Turbo oprysk',
-          icon: 'numeric-1-circle',
-          description:
-            'Naciśnij spust pistoletu i wstępnie umyj cały pojazd. Odległość lancy od samochodu nie powinna wynosić więcej niż 30 cm. W czasie tego programu następuje zmiękczenie silnych zanieczyszczeń poprzez naniesienie pod ciśnieniem środka chemicznego przy użyciu zmiękczonej i zdemineralizowanej wody.',
-        },
-        {
-          title: 'Mycie zasadnicze',
-          icon: 'numeric-2-circle',
-          description:
-            'Naciśnij spust pistoletu i dokładnie umyj cały pojazd. Odległość lancy od samochodu nie powinna wynosić więcej niż 30 cm. W czasie tego programu gorąca, zmiękczona woda, za pomocą precyzyjnego systemu dozowania, zostaje zmieszana w tzw. mikroproszkiem. Wysoka temperatura wspomaga rozpuszczanie tłustych nalotów.',
-        },
-        {
-          title: 'Spłukiwanie',
-          icon: 'numeric-3-circle',
-          description:
-            'Starannie spłucz powierzchnię samochodu. Zalecana odległość lancy od pojazdu to 30-50 cm. Podczas tego programu, czysta, zimna woda pod wysokim ciśnieniem słukuje detergent i zanieczyszczenia pozostałe po programie nr 1 oraz 2. Dokładne spłukanie (z góry do dołu) zapobiega powstawaniu smug na karoserii samochodu.',
-        },
-        {
-          title: 'Konserwacja',
-          icon: 'numeric-4-circle',
-          description:
-            'Pokryj całą powierzchnię pojazdu polimerem, najlepiej dwukrotnie, pamiętając, aby odległość lancy od pojazdu wynosiła ok. 50 cm. W programie 4 na powierzchnię pojazdu nanoszony jest gorący roztwór zmiękczonej wody z woskiem-polimerem. Powstała powłoka chroni Twój samochód przed niszczącym działaniem promieni UV, tworzeniem się mikrozarysowań oraz utrudnia ponowne brudzenie. Stosuj tylko na idealnie umyty lakier!',
-        },
-        {
-          title: 'Nabłyszczanie',
-          icon: 'numeric-5-circle',
-          description:
-            'Po umyciu, spłukaniu i nawoskowaniu wciśnij przycisk 4. Dokładnie spłucz całą powierzchnię samochodu. Odległość lancy od pojazdu powinna wynosić 30-50 cm. W tym programie do wody zmiękczonej i zdemineralizowanej dodany zostaje środek osuszająco-nabłyszczający, który umożliwia osiągnięcie efekt bez plam i zacieków. <strong>Nie Wycieraj!</strong> Ten programeliminuje konieczność wycierania czy suszenia pojazdu.',
-        },
-      ],
+      programs
     }
   },
   head() {
     return {
-      title: 'Myjnia samochodowa',
+      title: 'Myjnia samochodowa'
     }
   },
   computed: {
-    ...mapState('wash', ['pricelist']),
+    ...mapState('wash', ['pricelist'])
   },
   async created() {
     await this.$store.dispatch('wash/WASH_PRICELIST_REQUEST')
-  },
+  }
 }
 </script>
 

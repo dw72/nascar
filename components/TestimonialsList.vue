@@ -17,8 +17,8 @@
 </template>
 
 <script>
-import PageSection from '@/components/PageSection.vue'
 import TestimonialCard from './TestimonialCard.vue'
+import PageSection from '@/components/PageSection.vue'
 
 export default {
   components: { PageSection, TestimonialCard },

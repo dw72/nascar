@@ -92,7 +92,7 @@ export default {
   methods: {
     disableTabstops() {
       const links = this.$refs.gmap.$el.querySelectorAll('a')
-      links.forEach(link => {
+      links.forEach((link) => {
         link.setAttribute('tabindex', '-1')
       })
     }

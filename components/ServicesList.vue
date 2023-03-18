@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import PageSection from '@/components/PageSection.vue'
 import ServiceCard from './ServiceCard.vue'
+import PageSection from '@/components/PageSection.vue'
 
 export default {
   components: { PageSection, ServiceCard },

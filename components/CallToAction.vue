@@ -15,7 +15,7 @@ import Icon from '@/components/Icon'
 import PageSection from '@/components/PageSection'
 
 export default {
-  components: { Icon, PageSection },
+  components: { Icon, PageSection }
 }
 </script>
 

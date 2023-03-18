@@ -44,7 +44,6 @@
   </main>
 </template>
 
-
 <script>
 import PageSection from '@/components/PageSection'
 import FlexList from '@/components/FlexList'

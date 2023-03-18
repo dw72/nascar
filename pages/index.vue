@@ -18,14 +18,14 @@ export default {
     ServicesList,
     CallToAction,
     StrengthsList,
-    TestimonialsList,
+    TestimonialsList
   },
   asyncData: ({ req }) => ({
     userAgent: req
       ? req.headers['user-agent']
       : typeof navigator !== 'undefined'
-      ? navigator.userAgent
-      : 'No user agent (generated)',
-  }),
+        ? navigator.userAgent
+        : 'No user agent (generated)'
+  })
 }
 </script>

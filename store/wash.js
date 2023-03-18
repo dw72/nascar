@@ -1,5 +1,5 @@
 import airtable from '@/services/airtable'
-import { getData, putData } from '@/services/storage'
+import { putData } from '@/services/storage'
 
 export const WASH_PRICELIST_REQUEST = 'WASH_PRICELIST_REQUEST'
 export const WASH_PRICELIST_SUCCESS = 'WASH_PRICELIST_SUCCESS'
@@ -20,14 +20,13 @@ export const mutations = {
 
 export const actions = {
   async [WASH_PRICELIST_REQUEST]({ commit }) {
-    const dbPromise = getData(store)
     const apiPromise = new Promise((resolve, reject) => {
-      let prices = []
+      const prices = []
       airtable('Cennik - Myjnia')
         .select({ view: 'Usługi' })
         .eachPage(
           (data, fetchNextPage) => {
-            data.forEach(item => {
+            data.forEach((item) => {
               prices.push({
                 name: item.get('Nazwa').trim(),
                 price_1: `${item.get('Cena (małe)')} zł`,
@@ -38,7 +37,7 @@ export const actions = {
 
             fetchNextPage()
           },
-          err => {
+          (err) => {
             if (err) {
               reject(err)
             } else {

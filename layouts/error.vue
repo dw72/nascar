@@ -17,16 +17,12 @@ export default {
       switch (this.error.statusCode) {
         case 401:
           return 'Nieautoryzowany dostęp.'
-          break
         case 403:
           return 'Dostęp zabroniony.'
-          break
         case 404:
           return 'Nie znaleziono żądanej strony.'
-          break
         case 500:
           return 'Wystąpił wewnętrzny błąd serwera.'
-          break
         default:
           return this.error.message
       }
