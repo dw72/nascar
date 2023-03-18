@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Przeglądy rejestracyjne",
+    "icon": "card-text-outline",
+    "description": "Obowiązkowe przeglądy rejestracyjne i badania okresowe samochodów osobowych, motocykli i ciągników rolniczych."
+  },
+  {
+    "title": "Diagnostyka pojazdowa",
+    "icon": "alarm-plus",
+    "description": "Wstępne przeglądy pozwalające na wykrycie i usunięcie usterek, które mogą wpłynąć na wynik obowiązkowego badania okresowego."
+  },
+  {
+    "title": "Sprawdzenie przed kupnem",
+    "icon": "map",
+    "description": "Sprawdzenie pojazdu przed kupnem, okresem letnim bądź zimowym oraz przed dłuższą podróżą."
+  }
+]
