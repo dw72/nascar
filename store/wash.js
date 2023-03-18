@@ -1,4 +1,4 @@
-import airtable from '@/services/airtable'
+import base from '@/services/airtable'
 import { putData } from '@/services/storage'
 
 export const WASH_PRICELIST_REQUEST = 'WASH_PRICELIST_REQUEST'
@@ -22,7 +22,7 @@ export const actions = {
   async [WASH_PRICELIST_REQUEST]({ commit }) {
     const apiPromise = new Promise((resolve, reject) => {
       const prices = []
-      airtable('Cennik - Myjnia')
+      base('Cennik - Myjnia')
         .select({ view: 'Usługi' })
         .eachPage(
           (data, fetchNextPage) => {

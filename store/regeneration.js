@@ -1,5 +1,5 @@
 import { format } from 'date-fns'
-import airtable from '@/services/airtable'
+import base from '@/services/airtable'
 import { getData, putData } from '@/services/storage'
 
 export const REGENERATION_PRICELIST_REQUEST = 'REGENERATION_PRICELIST_REQUEST'
@@ -35,7 +35,7 @@ export const actions = {
     const dbPromise = getData(store)
     const apiPromise = new Promise((resolve, reject) => {
       const prices = []
-      airtable('Cennik - Regeneracja DPF')
+      base('Cennik - Regeneracja DPF')
         .select({ view: 'Cennik', maxRecords: 4 })
         .eachPage(
           (data, fetchNextPage) => {
@@ -70,7 +70,7 @@ export const actions = {
     const date = new Date()
     const phone = order.phone.replace(/(\s|\(|\))/g, '')
 
-    airtable('Regeneracja DPF').create(
+    base('Regeneracja DPF').create(
       /* eslint-disable quote-props */
       {
         'Nazwa': `${format(date, 'YYYYMMDDHHmm')}${phone}`,
