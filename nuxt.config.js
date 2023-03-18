@@ -121,6 +121,14 @@ export default {
   },
 
   /*
+   ** Environment variables
+   */
+  env: {
+    AIRTABLE_API_KEY: process.env.AIRTABLE_API_KEY,
+    GMAPS_API_KEY: process.env.GMAPS_API_KEY
+  },
+
+  /*
    ** Nuxt generate config
    */
   generate: { fallback: true, subFolders: false }
