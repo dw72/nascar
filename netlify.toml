@@ -1,6 +1,5 @@
 [build]
-  command = "npm run deploy"
-  functions = "lambda" #  netlify-lambda reads this
+  command = "pnpm run deploy"
   publish = "dist"
 
 [[headers]]
