@@ -71,7 +71,7 @@ export const actions = {
     const phone = order.phone.replace(/(\s|\(|\))/g, '')
 
     airtable('Regeneracja DPF').create(
-      // prettier-ignore
+      /* eslint-disable quote-props */
       {
         'Nazwa': `${format(date, 'YYYYMMDDHHmm')}${phone}`,
         'Imię': order.firstname,
@@ -84,6 +84,7 @@ export const actions = {
         'Telefon': phone,
         'Email': order.email
       },
+      /* eslint-enable quote-props */
       (err, record) => {
         if (err) {
           console.log(err)

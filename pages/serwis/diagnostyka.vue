@@ -26,39 +26,39 @@
           <h3>Diagnostyka obejmuje</h3>
           <ul>
             <li>
-              <icon name="check" size="sm"/>
+              <icon name="check" size="sm" />
               <p>silnik,</p>
             </li>
             <li>
-              <icon name="check" size="sm"/>
+              <icon name="check" size="sm" />
               <p>układ napędowy i jezdny,</p>
             </li>
             <li>
-              <icon name="check" size="sm"/>
+              <icon name="check" size="sm" />
               <p>diagnostyka ABS i ESP,</p>
             </li>
             <li>
-              <icon name="check" size="sm"/>
+              <icon name="check" size="sm" />
               <p>poduszki i pasy bezpieczeństwa,</p>
             </li>
             <li>
-              <icon name="check" size="sm"/>
+              <icon name="check" size="sm" />
               <p>odczyt i kasowanie kodów błędów,</p>
             </li>
             <li>
-              <icon name="check" size="sm"/>
+              <icon name="check" size="sm" />
               <p>odczyt bieżących parametrów,</p>
             </li>
             <li>
-              <icon name="check" size="sm"/>
+              <icon name="check" size="sm" />
               <p>kodowanie i adaptacja,</p>
             </li>
             <li>
-              <icon name="check" size="sm"/>
+              <icon name="check" size="sm" />
               <p>programowanie,</p>
             </li>
             <li>
-              <icon name="check" size="sm"/>
+              <icon name="check" size="sm" />
               <p>kasowanie inspekcji serwisowych,</p>
             </li>
           </ul>

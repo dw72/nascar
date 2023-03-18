@@ -9,15 +9,21 @@
         <icon-card
           title="Kredyty samochodowe"
           icon="car-sports"
-        >Oferta obejmuje każdy pojazd do 13 roku eksploatacji. Stosujemy procedurę uproszczoną, bez zaświadczeń o dochodach. Auto może pochodzić z salonu, komisu a także od osoby fizycznej.</icon-card>
+        >
+          Oferta obejmuje każdy pojazd do 13 roku eksploatacji. Stosujemy procedurę uproszczoną, bez zaświadczeń o dochodach. Auto może pochodzić z salonu, komisu a także od osoby fizycznej.
+        </icon-card>
         <icon-card
           title="Kredyty gotówkowe"
           icon="cash"
-        >Kredyty tego typu udzielane są w wysokości do 90 tysięcy złotych, bez zabezpieczeń czy poręczycieli. Spłata rozkładana jest na dogodny okres kredytowania, który może wynosić nawet do 8 lat.</icon-card>
+        >
+          Kredyty tego typu udzielane są w wysokości do 90 tysięcy złotych, bez zabezpieczeń czy poręczycieli. Spłata rozkładana jest na dogodny okres kredytowania, który może wynosić nawet do 8 lat.
+        </icon-card>
         <icon-card
           title="Kredyty konsolidacyjne"
           icon="cash-multiple"
-        >Za ich pomocą możemy spłacić nie tylko kredyty gotówkowe, debet na koncie czy kredyt samochodowy lub mieszkaniowy, ale także pozostałą jego część przeznaczyć na dowolny cel.</icon-card>
+        >
+          Za ich pomocą możemy spłacić nie tylko kredyty gotówkowe, debet na koncie czy kredyt samochodowy lub mieszkaniowy, ale także pozostałą jego część przeznaczyć na dowolny cel.
+        </icon-card>
       </flex-list>
     </page-section>
     <page-section
@@ -37,7 +43,7 @@
       title="Ubezpieczenia"
       description="Posiadamy bogaty wachlarz ubezpieczeń komunikacyjnych spośród ponad 20 towarzystw ubezpieczeniowych."
     >
-      <insurance-carousel/>
+      <insurance-carousel />
       <p>
         Nasi specjaliści fachowo i profesjonalnie udzielą informacji oraz dobiorą ofertę tak aby składka ubezpieczenia OC była jak najmniejsza, a polisa AC posiadała szeroki zakres ochrony.
         Zaproponują też ubezpieczenie NNW, które jest niedrogim a trafnym dodatkiem do polisy gwarantującym ochronę kierowcy i pasażerów w razie nieszczęśliwego wypadku.

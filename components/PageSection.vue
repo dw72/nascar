@@ -2,13 +2,17 @@
   <section :class="classNames">
     <header v-show="header === 'visible'" v-if="header !== 'removed'" class="section__header">
       <slot name="header">
-        <h2 v-if="title">{{ title }}</h2>
-        <divider v-if="(title || description) && !noDivider"/>
-        <p v-if="description">{{ description }}</p>
+        <h2 v-if="title">
+          {{ title }}
+        </h2>
+        <divider v-if="(title || description) && !noDivider" />
+        <p v-if="description">
+          {{ description }}
+        </p>
       </slot>
     </header>
     <div v-if="!!$slots.default" class="section__content">
-      <slot/>
+      <slot />
     </div>
   </section>
 </template>

@@ -40,7 +40,9 @@
     <page-section header="removed" full-width grey>
       <p
         class="centered bigger"
-      >Wymiana oleju, filtrów i płynów eksploatacyjnych jest bardzo istotna, by ochronić silnik oraz zapewnić bezawaryjną i długotrwałą eksploatację.</p>
+      >
+        Wymiana oleju, filtrów i płynów eksploatacyjnych jest bardzo istotna, by ochronić silnik oraz zapewnić bezawaryjną i długotrwałą eksploatację.
+      </p>
     </page-section>
   </main>
 </template>

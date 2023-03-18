@@ -11,23 +11,23 @@
           <h3>Przyczyny rozładowania akumulatora</h3>
           <ul>
             <li>
-              <icon name="check" size="sm"/>
+              <icon name="check" size="sm" />
               <p>eksploatowanie auta na krótkich odcinkach w dużych odstępach czasu,</p>
             </li>
             <li>
-              <icon name="check" size="sm"/>
+              <icon name="check" size="sm" />
               <p>nadmierne obciążenie instalacji elektrycznej,</p>
             </li>
             <li>
-              <icon name="check" size="sm"/>
+              <icon name="check" size="sm" />
               <p>niesprawna instalacja elektryczna,</p>
             </li>
             <li>
-              <icon name="check" size="sm"/>
+              <icon name="check" size="sm" />
               <p>niesprawny alternator,</p>
             </li>
             <li>
-              <icon name="check" size="sm"/>
+              <icon name="check" size="sm" />
               <p>pozostawione otwarte drzwi lub klapa bagażnika, włączone światła podczas postoju.</p>
             </li>
           </ul>
@@ -36,19 +36,19 @@
           <h3>Typy akumulatorów</h3>
           <ul>
             <li>
-              <icon name="check" size="sm"/>
+              <icon name="check" size="sm" />
               <p>
                 <strong>kwasowo-ołowiowe</strong> – najczęściej spotykane i stosowane w prawie każdym typie pojazdów, a wśród nich wyróżniamy akumulatory obsługowe, które wymagają kontroli stanu elektrolitu oraz bezobsługowe, które posiadają tzw. „magiczne oczko” informujące kolorem o stopniu naładowania
               </p>
             </li>
             <li>
-              <icon name="check" size="sm"/>
+              <icon name="check" size="sm" />
               <p>
                 <strong>żelowe</strong> – większa pojemność i odporność na rozładowania
               </p>
             </li>
             <li>
-              <icon name="check" size="sm"/>
+              <icon name="check" size="sm" />
               <p>
                 <strong>akumulatory AGM</strong> – zbudowane z nasączonej elektrolitem maty włókna szklanego, stosowane zazwyczaj w autach hybrydowych lub pojazdach intensywnie eksploatowanych
               </p>

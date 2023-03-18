@@ -1,7 +1,9 @@
 <template>
   <div class="service">
     <div class="service__header">
-      <h3 class="service__title">{{ name }}</h3>
+      <h3 class="service__title">
+        {{ name }}
+      </h3>
       <img
         v-if="image"
         :data-src="require(`@/assets/images/services/${image}`)"

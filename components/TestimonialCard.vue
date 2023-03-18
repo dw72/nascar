@@ -1,7 +1,7 @@
 <template>
   <div class="testimonial">
     <div class="testimonial__header">
-      <icon name="account-circle" size="lg"/>
+      <icon name="account-circle" size="lg" />
       <h3>
         {{ client }}
         <small>- {{ city }}</small>

@@ -7,9 +7,11 @@
       :size="iconSize"
     />
     <div>
-      <h3 v-if="title" class="iconcard-item__title">{{ title }}</h3>
+      <h3 v-if="title" class="iconcard-item__title">
+        {{ title }}
+      </h3>
       <div v-if="!!$slots.default" class="iconcard-item__content">
-        <slot/>
+        <slot />
       </div>
     </div>
   </div>

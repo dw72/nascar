@@ -67,7 +67,9 @@
     <page-section header="removed" full-width grey>
       <p
         class="centered bigger"
-      >Regularna kontrola i ocena sprawności układu hamulcowego to jedna z najważniejszych czynności związanych z eksploatacją auta.</p>
+      >
+        Regularna kontrola i ocena sprawności układu hamulcowego to jedna z najważniejszych czynności związanych z eksploatacją auta.
+      </p>
     </page-section>
   </main>
 </template>

@@ -61,7 +61,13 @@
             Wyczuwalne luzy w kierownicy to znak, że konieczna jest jego wymiana, po której niezbędne jest wykonanie prawidłowego ustawienia geometrii zawieszenia.
           </p>
         </icon-card>
-        <icon-card title="Wymiana wahacza" icon="check" icon-size="md" :bordered="false" horizontal>
+        <icon-card
+          title="Wymiana wahacza"
+          icon="check"
+          icon-size="md"
+          :bordered="false"
+          horizontal
+        >
           <p>
             Wahacz łączy zwrotnicę z nadwoziem i często wygina się lub pęka. W pojeździe występuje kilka wahaczy i mają one wpływ na ruch kół, co oznacza
             równorzędną współpracę nadwozia, podwozia i zawieszenia. Dlatego gdy tylko dojdzie do uszkodzenia, wahacz należy jak najszybciej wymienić.
@@ -72,7 +78,9 @@
     <page-section header="removed" full-width grey>
       <p
         class="centered bigger"
-      >Dysponujemy nowoczesnym sprzętem do pomiaru i regulacji geometrii zawieszenia, wykonamy prace mechaniczne związane z wymianą wahaczy, tulei i drążków.</p>
+      >
+        Dysponujemy nowoczesnym sprzętem do pomiaru i regulacji geometrii zawieszenia, wykonamy prace mechaniczne związane z wymianą wahaczy, tulei i drążków.
+      </p>
     </page-section>
   </main>
 </template>

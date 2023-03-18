@@ -22,7 +22,9 @@
           class="strength"
           :title="strength.name"
           :icon="strength.icon"
-        >{{ strength.description }}</icon-card>
+        >
+          {{ strength.description }}
+        </icon-card>
       </div>
     </div>
   </page-section>

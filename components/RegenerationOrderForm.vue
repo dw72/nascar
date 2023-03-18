@@ -191,12 +191,22 @@
             Wyrażam zgodę na przetwarzanie moich danych osobowych przez firmę
             PPHU Nascar w celu wykonania usługi.
           </label>
-          <input id="rodo" v-model="rodo" type="checkbox" name="rodo" />
+          <input
+            id="rodo"
+            v-model="rodo"
+            type="checkbox"
+            name="rodo"
+          />
         </div>
         <button class="button button--primary" type="submit" :disabled="!rodo">
           Wyślij zamówienie
         </button>
-        <input ref="trap" v-model="order.trap" class="trap" type="text" />
+        <input
+          ref="trap"
+          v-model="order.trap"
+          class="trap"
+          type="text"
+        />
       </form>
       <div v-else class="ordered" :style="{ 'min-height': formHeight + 'px' }">
         <div class="ordered__message">

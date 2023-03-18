@@ -1,14 +1,23 @@
 <template>
   <div class="card-wraper">
     <div class="card">
-      <icon v-if="!!icon" bordered :name="icon" size="md"/>
+      <icon
+        v-if="!!icon"
+        bordered
+        :name="icon"
+        size="md"
+      />
       <h2>{{ title }}</h2>
       <div class="price">
-        <div class="regular" :class="!!promoPrice ? 'striked' : null">{{ price }} zł</div>
-        <div v-if="!!promoPrice" class="promo">{{ promoPrice }} zł</div>
+        <div class="regular" :class="!!promoPrice ? 'striked' : null">
+          {{ price }} zł
+        </div>
+        <div v-if="!!promoPrice" class="promo">
+          {{ promoPrice }} zł
+        </div>
       </div>
       <div class="content">
-        <slot/>
+        <slot />
       </div>
     </div>
   </div>

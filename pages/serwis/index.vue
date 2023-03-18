@@ -8,16 +8,25 @@
       flex
     >
       <div v-for="(service, idx) in services" :key="idx" class="repair-service">
-        <icon-card :title="service.name" :icon="service.icon" icon-size="lg" :bordered="false">
+        <icon-card
+          :title="service.name"
+          :icon="service.icon"
+          icon-size="lg"
+          :bordered="false"
+        >
           <div class="repair__description">
             <p>{{ service.description }}</p>
-            <nuxt-link :to="`/serwis/${service.url}`">Czytaj więcej</nuxt-link>
+            <nuxt-link :to="`/serwis/${service.url}`">
+              Czytaj więcej
+            </nuxt-link>
           </div>
         </icon-card>
       </div>
     </page-section>
     <page-section full-width grey header="removed">
-      <p class="centered bigger">W razie jakichkolwiek pytań zapraszamy do kontaktu.</p>
+      <p class="centered bigger">
+        W razie jakichkolwiek pytań zapraszamy do kontaktu.
+      </p>
     </page-section>
   </main>
 </template>

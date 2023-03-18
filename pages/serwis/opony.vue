@@ -24,7 +24,13 @@
             Jeżeli zauważymy nieprawidłowość bądź defekt, niezwłocznie przywrócimy Twoje opony do stanu optymalnego lub sprawnie wymienimy na nowe.
           </p>
         </icon-card>
-        <icon-card title="Wyważanie kół" icon="check" icon-size="md" :bordered="false" horizontal>
+        <icon-card
+          title="Wyważanie kół"
+          icon="check"
+          icon-size="md"
+          :bordered="false"
+          horizontal
+        >
           <p>
             Nieprawidłowo wyważone koła powodują wibracje kierownicy, szybsze zużycie elementów zawieszenia, układu kierowniczego i łożysk oraz nierównomierne zużycie opon.
             Zmniejsza się przyczepność co pogarsza efektywność hamowania. Istotą wyważania kół jest równomierne rozłożenie mas wokół osi jego obrotu,
@@ -44,7 +50,9 @@
     <page-section header="removed" full-width grey>
       <p
         class="centered bigger"
-      >Stawiamy na najwyższą jakość, dlatego oferujemy opony takich marek, jak Goodyear, Dunlop, Fulda, Sava czy Dębica.</p>
+      >
+        Stawiamy na najwyższą jakość, dlatego oferujemy opony takich marek, jak Goodyear, Dunlop, Fulda, Sava czy Dębica.
+      </p>
     </page-section>
   </main>
 </template>

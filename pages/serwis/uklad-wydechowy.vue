@@ -32,7 +32,9 @@
     <page-section header="removed" full-width grey>
       <p class="centered bigger">
         Więcej o usłudze czyszczenia filtra przeczytasz na poświęconej tej usłudze
-        <nuxt-link to="/filtry">podstronie</nuxt-link>
+        <nuxt-link to="/filtry">
+          podstronie
+        </nuxt-link>
       </p>
     </page-section>
   </main>

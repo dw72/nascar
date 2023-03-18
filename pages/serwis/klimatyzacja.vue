@@ -49,12 +49,14 @@
           </p>
         </icon-card>
       </flex-list>
-      <p class="centered"/>
+      <p class="centered" />
     </page-section>
     <page-section header="removed" full-width grey>
       <p
         class="centered bigger"
-      >Sprawna klimatyzacja zapewnia nie tylko większy komfort jazdy, ale także neutralizuje alergeny, które niekorzystnie wpływają na nasze zdrowie.</p>
+      >
+        Sprawna klimatyzacja zapewnia nie tylko większy komfort jazdy, ale także neutralizuje alergeny, które niekorzystnie wpływają na nasze zdrowie.
+      </p>
     </page-section>
   </main>
 </template>

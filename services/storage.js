@@ -10,21 +10,19 @@ const getDB = () => {
     try {
       db = openDB(IDB_NAME, IDB_VERSION, {
         upgrade(idb, oldVersion) {
+          /* eslint-disable no-fallthrough */
           switch (oldVersion) {
             case 0:
               idb.createObjectStore('slider', { keyPath: 'id' })
-              break
             case 1:
               idb.createObjectStore('diagnostics-pricelist', { keyPath: 'id' })
               idb.createObjectStore('regeneration-pricelist', { keyPath: 'id' })
-              break
             case 2:
               idb.createObjectStore('wash-pricelist', { keyPath: 'id' })
-              break
             case 3:
               idb.deleteObjectStore('slider')
-              break
           }
+          /* eslint-enable no-fallthrough */
         }
       })
     } catch (err) {

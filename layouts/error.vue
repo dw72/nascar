@@ -1,9 +1,15 @@
 <template>
   <div class="page">
-    <div class="number">{{ error.statusCode }}</div>
-    <h2 class="message">Ops... coś poszło nie tak!</h2>
+    <div class="number">
+      {{ error.statusCode }}
+    </div>
+    <h2 class="message">
+      Ops... coś poszło nie tak!
+    </h2>
     <p>{{ message() }}</p>
-    <button class="button button--primary button--rounded" @click="$router.go(-1)">⬅&nbsp;&nbsp;Wróć</button>
+    <button class="button button--primary button--rounded" @click="$router.go(-1)">
+      ⬅&nbsp;&nbsp;Wróć
+    </button>
   </div>
 </template>
 

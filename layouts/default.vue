@@ -1,8 +1,8 @@
 <template>
   <div ref="container" class="container" :class="{'not-android': !isAndroid}">
-    <page-header/>
-    <nuxt class="page__content"/>
-    <page-footer/>
+    <page-header />
+    <nuxt class="page__content" />
+    <page-footer />
   </div>
 </template>
 

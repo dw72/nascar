@@ -24,7 +24,13 @@
             Jeżeli zauważymy nieprawidłowość bądź defekt, niezwłocznie przywrócimy Twoje opony do stanu optymalnego lub sprawnie wymienimy na nowe.
           </p>
         </icon-card>
-        <icon-card title="Wyważanie kół" icon="check" icon-size="md" :bordered="false" horizontal>
+        <icon-card
+          title="Wyważanie kół"
+          icon="check"
+          icon-size="md"
+          :bordered="false"
+          horizontal
+        >
           <p>
             Nieprawidłowo wyważone koła powodują wibracje kierownicy, szybsze zużycie elementów zawieszenia, układu kierowniczego i łożysk
             oraz nierównomierne zużycie opon. Zmniejsza się przyczepność co pogarsza efektywność hamowania. Istotą wyważania kół jest równomierne

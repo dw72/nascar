@@ -2,7 +2,12 @@
   <main>
     <page-section class="diagnostic-services" title="Stacja kontroli" description="Oferujemy pełną dignostykę i badania techniczne motocykli, autobusów, ciągników rolniczych, przyczep, samochodów osobowych oraz ciężarowych. Także tych sprowadzonych z zagranicy, powypadkowych i zasilanych gazem.">
       <flex-list>
-        <icon-card v-for="(service, idx) in services" :key="idx" :title="service.title" :icon="service.icon">
+        <icon-card
+          v-for="(service, idx) in services"
+          :key="idx"
+          :title="service.title"
+          :icon="service.icon"
+        >
           {{ service.description }}
         </icon-card>
       </flex-list>
@@ -17,11 +22,21 @@
         WSOP.
       </p>
     </page-section>
-    <page-section class="registration-review" title="Badania techniczne" description="Właściciel samochodu osobowego ma obowiązek zgłosić pojazd na przegląd okresowy. Celem jest ocena stanu technicznego, na której podstawie auto zostaje dopuszczone do użytkowania w ruchu drogowym." full-width>
+    <page-section
+      class="registration-review"
+      title="Badania techniczne"
+      description="Właściciel samochodu osobowego ma obowiązek zgłosić pojazd na przegląd okresowy. Celem jest ocena stanu technicznego, na której podstawie auto zostaje dopuszczone do użytkowania w ruchu drogowym."
+      full-width
+    >
       <flex-list item-width="1/2">
         <icon-card
-          v-for="(question, idx) in questions" :key="idx" class="question" :title="question.title"
-          :icon="question.icon" :bordered="false" horizontal
+          v-for="(question, idx) in questions"
+          :key="idx"
+          class="question"
+          :title="question.title"
+          :icon="question.icon"
+          :bordered="false"
+          horizontal
         >
           {{ question.answer }}
         </icon-card>

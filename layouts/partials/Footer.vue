@@ -22,7 +22,9 @@
         </div>
         <div class="departments">
           <div v-for="department in departments" :key="department.name" class="department">
-            <h4 class="department__name">{{ department.name }}</h4>
+            <h4 class="department__name">
+              {{ department.name }}
+            </h4>
             <div class="department__content">
               <div class="department__phone">
                 <icon name="phone" size="sm" />

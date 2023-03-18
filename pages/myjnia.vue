@@ -109,7 +109,9 @@
       "
     >
       <price-list :columns="columns" :data="pricelist" />
-      <p class="disclaimer">* Cena usługi zależy od wielkości pojazdu.</p>
+      <p class="disclaimer">
+        * Cena usługi zależy od wielkości pojazdu.
+      </p>
     </page-section>
   </main>
 </template>

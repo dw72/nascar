@@ -1,6 +1,8 @@
 <template>
   <nav class="navbar">
-    <h2 class="hidden">Menu główne</h2>
+    <h2 class="hidden">
+      Menu główne
+    </h2>
     <button
       :aria-label="active ? 'Zamknij menu' : 'Otwórz menu'"
       :aria-expanded="active"
@@ -33,9 +35,11 @@
         </nuxt-link>
       </li>
       <li v-for="route in routes" :key="route.title" class="menu__item">
-        <nuxt-link :to="route.path" class="menu__link">{{
-          route.title
-        }}</nuxt-link>
+        <nuxt-link :to="route.path" class="menu__link">
+          {{
+            route.title
+          }}
+        </nuxt-link>
       </li>
     </ul>
     <ul class="navbar__actions menu">

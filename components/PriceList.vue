@@ -2,12 +2,16 @@
   <table>
     <thead>
       <tr>
-        <th v-for="(column, idx) in columns" :key="idx">{{ column.title }}</th>
+        <th v-for="(column, idx) in columns" :key="idx">
+          {{ column.title }}
+        </th>
       </tr>
     </thead>
     <tbody>
       <tr v-for="(price, idx) in data" :key="idx">
-        <td v-for="(column, cid) in columns" :key="cid">{{ price[column.name] }}</td>
+        <td v-for="(column, cid) in columns" :key="cid">
+          {{ price[column.name] }}
+        </td>
       </tr>
     </tbody>
   </table>

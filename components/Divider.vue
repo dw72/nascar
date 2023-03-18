@@ -1,6 +1,6 @@
 <template>
   <div class="divider">
-    <icon name="car"/>
+    <icon name="car" />
   </div>
 </template>
 

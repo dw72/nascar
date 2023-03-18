@@ -9,7 +9,12 @@
         class="map"
         @tilesloaded="disableTabstops"
       >
-        <googlemaps-marker :position="nascar" :icon="icon" :clickable="false" title="PPHU Nascar" />
+        <googlemaps-marker
+          :position="nascar"
+          :icon="icon"
+          :clickable="false"
+          title="PPHU Nascar"
+        />
       </googlemaps-map>
     </client-only>
   </div>

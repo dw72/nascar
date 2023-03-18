@@ -3,7 +3,12 @@
     class="icon"
     :class="{'icon--bordered': bordered, 'icon--small': size === 'sm', 'icon--medium': size === 'md', 'icon--large': size === 'lg'}"
   >
-    <svg-icon :name="name" fill="currentColor" height="1em" width="1em"/>
+    <svg-icon
+      :name="name"
+      fill="currentColor"
+      height="1em"
+      width="1em"
+    />
   </div>
 </template>
 
