@@ -64,10 +64,10 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/dotenv',
     '@nuxtjs/pwa',
-    ['@nuxtjs/google-tag-manager', { id: process.env.GTM_KEY }],
+    ['@nuxtjs/gtm', { id: process.env.GTM_KEY }],
     'nuxt-webfontloader',
   ],
-  buildModules: ['@nuxtjs/style-resources', '@nuxtjs/svg-sprite'],
+  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/style-resources', '@nuxtjs/svg-sprite', 'nuxt-responsive-loader'],
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
     proxy: true,
@@ -106,13 +106,21 @@ module.exports = {
       families: ['Montserrat:400', 'Exo+2:400,700'],
     },
   },
+  responsiveLoader: {
+    adapter: require('responsive-loader/sharp'),
+    name: 'img/[hash:7]-[width].[ext]',
+    limit: 8192,
+    min: 250,
+    max: 1140,
+    steps: 9,
+    quality: 75,
+  },
 
   /*
    ** Environment variables
    */
   env: {
-    AIRTABLE_API_KEY: process.env.AIRTABLE_API_KEY,
-    AIRTABLE_BASE_ID: process.env.AIRTABLE_BASE_ID,
+    AIRTABLE_TOKEN: process.env.AIRTABLE_API_KEY,
     GMAPS_API_KEY: process.env.GMAPS_API_KEY,
   },
 
@@ -120,36 +128,4 @@ module.exports = {
    ** Nuxt generate config
    */
   generate: { fallback: true, subFolders: false },
-
-  /*
-   ** Build configuration
-   */
-  build: {
-    loaders: {
-      imgUrl: {
-        limit: 8192,
-        fallback: 'responsive-loader',
-        min: 250,
-        max: 1140,
-        steps: 9,
-        quality: 75,
-        adapter: require('responsive-loader/sharp'),
-      },
-    },
-
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/,
-        })
-      }
-    },
-  },
 }

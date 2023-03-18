@@ -5,8 +5,15 @@ module.exports = {
     es6: true,
     node: true
   },
+  parser: "@babel/eslint-parser"
   parserOptions: {
-    parser: 'babel-eslint'
+    requireConfigFile: false
+    babelOptions: {
+      babelrc: false,
+      configFile: false,
+      // your babel options
+      presets: ["@babel/preset-env"],
+    }
   },
   extends: [
     // 'plugin:prettier/recommended',
