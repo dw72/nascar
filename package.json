@@ -54,7 +54,7 @@
     "responsive-loader": "^2.3.0",
     "sass": "^1.59.3",
     "sass-loader": "10",
-    "sharp": "^0.31.3"
+    "sharp": "^0.32.6"
   },
   "volta": {
     "node": "16.14.0",
