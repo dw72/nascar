@@ -2566,7 +2566,7 @@ packages:
       watchpack: 2.4.0
       webpack: 4.46.0
       webpack-bundle-analyzer: 4.8.0
-      webpack-dev-middleware: 5.3.3(webpack@4.46.0)
+      webpack-dev-middleware: 5.3.4(webpack@4.46.0)
       webpack-hot-middleware: 2.25.3
       webpack-node-externals: 3.0.0
       webpackbar: 5.0.2(webpack@4.46.0)
@@ -4758,7 +4758,7 @@ packages:
       postcss-modules-scope: 3.0.0(postcss@8.4.21)
       postcss-modules-values: 4.0.0(postcss@8.4.21)
       postcss-value-parser: 4.2.0
-      schema-utils: 3.1.1
+      schema-utils: 3.3.0
       semver: 7.3.8
       webpack: 4.46.0
     dev: false
@@ -5935,7 +5935,7 @@ packages:
       webpack: ^4.0.0 || ^5.0.0
     dependencies:
       loader-utils: 2.0.4
-      schema-utils: 3.1.1
+      schema-utils: 3.3.0
       webpack: 4.46.0
     dev: false
 
@@ -8902,7 +8902,7 @@ packages:
       klona: 2.0.6
       loader-utils: 2.0.4
       postcss: 8.4.21
-      schema-utils: 3.1.1
+      schema-utils: 3.3.0
       semver: 7.3.8
       webpack: 4.46.0
     dev: false
@@ -9968,6 +9968,7 @@ packages:
       '@types/json-schema': 7.0.11
       ajv: 6.12.6
       ajv-keywords: 3.5.2(ajv@6.12.6)
+    dev: true
 
   /schema-utils@3.3.0:
     resolution: {integrity: sha512-pN/yOAvcC+5rQ5nERGuwrjLlYvLTbCibnZ1I7B1LaiAz9BRBlE9GMgE/eqV30P7aJQUf7Ddimy/RsbYO/GrVGg==}
@@ -9976,7 +9977,6 @@ packages:
       '@types/json-schema': 7.0.11
       ajv: 6.12.6
       ajv-keywords: 3.5.2(ajv@6.12.6)
-    dev: true
 
   /schema-utils@4.0.0:
     resolution: {integrity: sha512-1edyXKgh6XnJsJSQ8mKWXnN/BVaIbFMLpouRUrXgVq7WYne5kw3MW7UPhO44uRXQSIpTSXoJbmrR2X0w9kUTyg==}
@@ -10726,7 +10726,7 @@ packages:
       find-cache-dir: 3.3.2
       jest-worker: 26.6.2
       p-limit: 3.1.0
-      schema-utils: 3.1.1
+      schema-utils: 3.3.0
       serialize-javascript: 5.0.1
       source-map: 0.6.1
       terser: 5.16.6
@@ -10807,7 +10807,7 @@ packages:
       loader-runner: 4.3.0
       loader-utils: 2.0.4
       neo-async: 2.6.2
-      schema-utils: 3.1.1
+      schema-utils: 3.3.0
       webpack: 4.46.0
     dev: false
 
@@ -11150,7 +11150,7 @@ packages:
       file-loader: 6.2.0(webpack@4.46.0)
       loader-utils: 2.0.4
       mime-types: 2.1.35
-      schema-utils: 3.1.1
+      schema-utils: 3.3.0
       webpack: 4.46.0
     dev: false
 
@@ -11499,8 +11499,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /webpack-dev-middleware@5.3.3(webpack@4.46.0):
-    resolution: {integrity: sha512-hj5CYrY0bZLB+eTO+x/j67Pkrquiy7kWepMHmUMoPsmcUaeEnQJqFzHJOyxgWlq746/wUuA64p9ta34Kyb01pA==}
+  /webpack-dev-middleware@5.3.4(webpack@4.46.0):
+    resolution: {integrity: sha512-BVdTqhhs+0IfoeAf7EoH5WE+exCmqGerHfDM0IL096Px60Tq2Mn9MAbnaGUe6HiMa41KMCYF19gyzZmBcq/o4Q==}
     engines: {node: '>= 12.13.0'}
     peerDependencies:
       webpack: ^4.0.0 || ^5.0.0
