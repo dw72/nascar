@@ -50,6 +50,9 @@ importers:
       vue-googlemaps:
         specifier: ^0.1.2
         version: 0.1.2(vue@2.7.16)
+      vue-template-compiler:
+        specifier: 2.7.16
+        version: 2.7.16
       vue-visible:
         specifier: ^1.0.2
         version: 1.0.2
